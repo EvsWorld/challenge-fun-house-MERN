@@ -10,7 +10,7 @@ app.use('/ping', (req, res) => {
   res.status(200).json({
     appName: 'API',
     version: process.env.npm_package_version,
-    status: 'OK!!!!',
+    status: 'Reallly good!!',
   });
 });
 
