@@ -36,7 +36,7 @@ server.listen(PORT, (error) => {
   if (error) {
     console.log(`
     \n\n
-    PONG!
+    Server Listening!
 
     API:
 

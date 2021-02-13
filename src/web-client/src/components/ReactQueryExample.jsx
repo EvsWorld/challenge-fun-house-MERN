@@ -14,7 +14,7 @@ export function ReactQueryExample() {
   if (error) return 'An error has occurred: ' + error.message;
 
   return (
-    <div>
+    <>
       <h1>{data.name}</h1>
       <p>{data.description}</p>
       <p>message: {data.message}</p>
@@ -22,7 +22,7 @@ export function ReactQueryExample() {
       <strong>✨ {data.stargazers_count}</strong>{' '}
       <strong>🍴 {data.forks_count}</strong>
       <div>{isFetching ? 'Updating...' : ''}</div>
-      <ReactQueryDevtools initialIsOpen />
-    </div>
+      <ReactQueryDevtools />
+    </>
   );
 }
