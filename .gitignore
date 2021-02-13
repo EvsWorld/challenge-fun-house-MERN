@@ -1,3 +1,4 @@
 .vscode/settings.json
 src/api/node_modules
 src/web-client/node_modules
+src/api/.env
