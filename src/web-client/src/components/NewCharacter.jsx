@@ -1,33 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMutation } from 'react-query';
 import client from '../utils/axiosConfig';
 
-export function NewCharacter() {
-  const mutation = useMutation((newCharacter) =>
-    client.post(`api/characters`, newCharacter)
+function useInput({ type /*...*/ }) {
+  const [value, setValue] = useState('');
+  const input = (
+    <input
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+      type={type}
+    />
   );
+  return [value, input];
+}
+
+export function NewCharacter() {
+  const [username, userInput] = useInput({ type: 'text' });
+  const handleUpdateCharacter = async (username) => {
+    await client.post(`api/characters`, username);
+  };
 
   return (
-    <div>
-      {mutation.isLoading ? (
-        'Adding character...'
-      ) : (
-        <>
-          {mutation.isError ? (
-            <div>An error occurred: {mutation.error.message}</div>
-          ) : null}
-
-          {mutation.isSuccess ? <div>character added!</div> : null}
-
-          <button
-            onClick={() => {
-              mutation.mutate({ name: `A Character ${new Date()}` });
-            }}
-          >
-            Create character
-          </button>
-        </>
-      )}
-    </div>
+    <>
+      {userInput}
+      <button onClick={() => handleUpdateCharacter(username)}>
+        Create character
+      </button>
+    </>
   );
 }

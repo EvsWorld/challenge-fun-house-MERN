@@ -3,7 +3,8 @@
   "rules":{
     "prettier/prettier": ["error", { "singleQuote": true }]
   },
-   "parserOptions": {
+  "parcer": "babel-eslint",
+  "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
           "experimentalObjectRestSpread": true

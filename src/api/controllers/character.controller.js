@@ -1,6 +1,7 @@
 const db = require('../models');
 const Character = db.characters;
 
+
 // Create and Save a new Character
 exports.create = (req, res) => {
   // Validate request
