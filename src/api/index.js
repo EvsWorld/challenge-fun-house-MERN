@@ -32,6 +32,8 @@ app.use('/ping', (req, res) => {
   });
 });
 
+require('./routes/character.routes')(app);
+
 app.get('*', function (req, res, next) {
   const error = new Error(`${req.ip} tried to access ${req.originalUrl}`);
 
@@ -41,11 +43,12 @@ app.get('*', function (req, res, next) {
 });
 
 app.use((error, req, res, next) => {
+  console.error('hit the error middleware!');
   if (!error.statusCode) error.statusCode = 500;
 
-  if (error.statusCode === 301) {
-    return res.status(301).redirect('/not-found');
-  }
+  // if (error.statusCode === 301) {
+  //   return res.status(301).redirect('/not-found');
+  // }
 
   return res.status(error.statusCode).json({ error: error.toString() });
 });

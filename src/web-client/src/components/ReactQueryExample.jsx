@@ -1,6 +1,5 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
 
 export function ReactQueryExample() {
   const { isLoading, error, data, isFetching } = useQuery('repoData', () =>
@@ -22,7 +21,6 @@ export function ReactQueryExample() {
       <strong>✨ {data.stargazers_count}</strong>{' '}
       <strong>🍴 {data.forks_count}</strong>
       <div>{isFetching ? 'Updating...' : ''}</div>
-      <ReactQueryDevtools />
     </>
   );
 }
