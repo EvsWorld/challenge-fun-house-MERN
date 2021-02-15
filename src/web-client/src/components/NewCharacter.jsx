@@ -1,12 +1,10 @@
 import React from 'react';
 import { useMutation } from 'react-query';
-import axios from 'axios';
-
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+import client from '../utils/axiosConfig';
 
 export function NewCharacter() {
   const mutation = useMutation((newCharacter) =>
-    axios.post(`${API_URL}/api/characters`, newCharacter)
+    client.post(`api/characters`, newCharacter)
   );
 
   return (

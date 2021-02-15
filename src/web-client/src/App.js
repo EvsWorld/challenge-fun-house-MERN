@@ -8,7 +8,7 @@ import { Characters } from './components/Characters';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Application">
       <header className="App-header">
         <NewCharacter />
         <Characters />

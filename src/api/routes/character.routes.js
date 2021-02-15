@@ -5,6 +5,7 @@ module.exports = (app) => {
 
   router.post('/', characters.create);
   router.get('/', characters.findAll);
+  router.put('/:id', characters.update);
 
   app.use('/api/characters', router);
 };

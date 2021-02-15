@@ -1,12 +1,16 @@
+import axios from 'axios';
 import React, { useContext } from 'react';
-import { useQuery } from 'react-query';
+import { useMutation, useQuery } from 'react-query';
 import { Character } from './Character.jsx';
-
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+import client from '../utils/axiosConfig';
 
 export function Characters() {
   const { isLoading, error, data, isFetching } = useQuery('characters', () =>
-    fetch(`${API_URL}/api/characters`).then((res) => res.json())
+    client.get(`api/characters`).then((res) => res.data)
+  );
+
+  const favoriteACharacter = useMutation((newCharacter) =>
+    client.post(`/api/characters`, newCharacter)
   );
 
   if (isLoading) return 'Loading...';

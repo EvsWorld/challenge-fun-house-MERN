@@ -9,6 +9,7 @@ module.exports = (mongoose) => {
     { timestamps: true }
   );
 
+
   const Character = mongoose.model('character', schema);
   return Character;
 };
