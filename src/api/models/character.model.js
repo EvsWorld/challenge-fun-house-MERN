@@ -1,20 +1,18 @@
-module.exports = (mongoose) => {
-  var schema = mongoose.Schema(
-    {
-      name: {
-        type: String,
-        required: true,
-      },
+import mongoose from 'mongoose';
+
+const characterSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
     },
-    { timestamps: true }
-  );
+    trait: {
+      type: String,
+      required: true,
+    },
+    usersWhoFavorited: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+  },
+  { timestamps: true }
+);
 
-schema.method("toJSON", function() {
-    const { __v, _id, ...object } = this.toObject();
-    object.id = _id;
-    return object;
-  });
-
-  const Character = mongoose.model('character', schema);
-  return Character;
-};
+export const Character = mongoose.model('Character', characterSchema);

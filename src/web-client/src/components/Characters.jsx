@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Character } from './Character';
-import client from '../utils/axiosConfig';
+import api from '../utils/axiosConfig';
 import * as actions from '../redux/actions/actionTypes';
 import {
   fetchCharacters,
@@ -32,5 +32,10 @@ export function Characters() {
   } else if (characterStatus === 'failed') {
     content = <div>{error}</div>;
   }
-  return <section className="Characters">{content}</section>;
+  return (
+    <section className="Characters">
+      <h2> Here's where the characters are!</h2>
+      {content}
+    </section>
+  );
 }

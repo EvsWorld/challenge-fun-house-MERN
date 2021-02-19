@@ -1,12 +1,6 @@
 import { createAsyncThunk, nanoid, createSlice } from '@reduxjs/toolkit';
 import client from '../../utils/axiosConfig';
 
-const initialState = {
-  characters: [],
-  status: 'idle',
-  error: null,
-};
-
 export const fetchCharacters = createAsyncThunk(
   'characters/fetchCharacters',
   async () => {
@@ -17,7 +11,11 @@ export const fetchCharacters = createAsyncThunk(
 
 const charactersSlice = createSlice({
   name: 'characters',
-  initialState,
+  initialState: {
+    characters: [],
+    status: 'idle',
+    error: null,
+  },
   reducers: {},
   extraReducers: {
     [fetchCharacters.pending]: (state, action) => {

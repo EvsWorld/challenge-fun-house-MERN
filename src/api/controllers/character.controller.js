@@ -1,9 +1,8 @@
-const db = require('../models');
-const Character = db.characters;
+import { Character } from '../models/character.model'
 
 
 // Create and Save a new Character
-exports.create = (req, res) => {
+export const create = (req, res) => {
   // Validate request
   if (!req.body.name) {
     res.status(400).send({ message: 'Content can not be empty!' });
@@ -28,7 +27,7 @@ exports.create = (req, res) => {
 };
 
 // Retrieve all characters from the database.
-exports.findAll = (req, res) => {
+export const findAll = (req, res) => {
   Character.find({})
     .then((data) => {
       res.send(data);
@@ -41,7 +40,7 @@ exports.findAll = (req, res) => {
     });
 };
 
-exports.update = (req, res) => {
+export const update = (req, res) => {
   const id = req.params.id;
 
   Character.findByIdAndUpdate(id, req.body, { useFindAndModify: false })

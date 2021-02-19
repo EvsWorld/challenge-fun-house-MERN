@@ -1,9 +1,17 @@
-const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
+import mongoose from 'mongoose';
 
-const db = {};
-db.mongoose = mongoose;
-db.url = process.env.DATABASE_URL;
-db.characters = require('./character.model.js')(mongoose);
+import { User } from './user.model';
+import { Character } from './character.model';
 
-module.exports = db;
+const connectDb = () => {
+  return mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+};
+
+const models = { User, Character };
+
+export { connectDb };
+
+export default models;

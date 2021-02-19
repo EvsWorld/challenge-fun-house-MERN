@@ -1,29 +1,18 @@
 import React, { useState } from 'react';
 import { useMutation } from 'react-query';
-import client from '../utils/axiosConfig';
-
-function useInput({ type /*...*/ }) {
-  const [value, setValue] = useState('');
-  const input = (
-    <input
-      value={value}
-      onChange={(e) => setValue(e.target.value)}
-      type={type}
-    />
-  );
-  return [value, input];
-}
+import { useInput } from '../hooks';
+import api from '../utils/axiosConfig';
 
 export function NewCharacter() {
-  const [username, userInput] = useInput({ type: 'text' });
-  const handleUpdateCharacter = async (username) => {
-    await client.post(`api/characters`, username);
+  const [characterName, characterNameInput] = useInput({ type: 'text' });
+  const handleUpdateCharacter = async (characterName) => {
+    await api.post(`api/characters`, characterName);
   };
 
   return (
     <>
-      {userInput}
-      <button onClick={() => handleUpdateCharacter(username)}>
+      {characterNameInput}
+      <button onClick={() => handleUpdateCharacter(characterName)}>
         Create character
       </button>
     </>

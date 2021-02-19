@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import charactersReducer from './charactersSlice';
+import characters from './charactersSlice';
+import user from './userSlice';
 
 export default combineReducers({
-  characters: charactersReducer,
+  user,
+  characters,
 });
