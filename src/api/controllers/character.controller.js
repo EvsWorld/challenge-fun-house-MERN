@@ -1,5 +1,4 @@
-import { Character } from '../models/character.model'
-
+import { Character } from '../models/character.model';
 
 // Create and Save a new Character
 export const create = (req, res) => {
