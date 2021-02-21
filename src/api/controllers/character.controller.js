@@ -14,6 +14,7 @@ export const findAll = (req, res) => {
     });
 };
 
+// BulkUpserts characters checking on the name field to not add characters already in db
 export const bulkAdd = (arrayToBulkAdd) => {
   const bulkOps = arrayToBulkAdd.map((doc) => ({
     updateOne: {

@@ -4,6 +4,8 @@ import cors from 'cors';
 import models, { connectDb } from './models';
 import routes from './routes';
 import { getCharactersFromExternal } from './services/characters';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -13,8 +15,10 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(express.json());
-app.use(express.json({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.json({ extended: true }));
+
+app.use(morgan(' :method :url   :req[header]  :response-time  |  :date[web]'));
 
 app.use('/ping', (req, res) => {
   res.status(200).json({
