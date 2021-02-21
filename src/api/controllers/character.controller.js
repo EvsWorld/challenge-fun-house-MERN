@@ -3,9 +3,11 @@ import { Character } from '../models/character.model';
 // Retrieve all characters from the database.
 export const findAll = (req, res) => {
   const authHeader = req.headers['authorization'];
-  const token = authHeader.split(' ').pop();
-  console.log('jwt: token :>> ', token);
-
+  if (authHeader) {
+    const token = authHeader.split(' ').pop();
+    console.log('jwt: token :>> ', token);
+  }
+ 
   Character.find({})
     .then((data) => {
       res.send(data);

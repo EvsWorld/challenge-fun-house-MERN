@@ -46,8 +46,7 @@ export const info = () => {
   const id = req.params.id;
 
   User.findById(id)
-    .populate('favoriteCharacters')
-    .exec((data) => {
+    .then((data) => {
       if (!data) {
         res.status(404).send({
           message: `Cannot find User with id=${id}.`,

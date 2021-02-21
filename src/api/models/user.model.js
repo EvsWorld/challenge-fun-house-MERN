@@ -17,6 +17,7 @@ const userSchema = new mongoose.Schema(
     },
     favoriteCharacters: {
       type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Character' }],
+      default: [],
     },
   },
   { timestamps: true }

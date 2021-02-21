@@ -27,6 +27,12 @@ export const login = createAsyncThunk(
     return response.data;
   }
 );
+
+export const fetchUser = createAsyncThunk('user/fetch', async ({ id }) => {
+  const response = await api.get(`/api/user/${id}`);
+  return response.data;
+});
+
 const userSlice = createSlice({
   name: 'user',
   initialState: {
@@ -67,6 +73,17 @@ const userSlice = createSlice({
       localStorage.setItem('token', JSON.stringify(action.payload.token));
     },
     [login.rejected]: (state, action) => {
+      state.status = 'failed';
+      state.error = action.error.message;
+    },
+    [fetchUser.pending]: (state, action) => {
+      state.status = 'loading';
+    },
+    [fetchUser.fulfilled]: (state, action) => {
+      state.status = 'succeeded';
+      state.user = action.payload;
+    },
+    [fetchUser.rejected]: (state, action) => {
       state.status = 'failed';
       state.error = action.error.message;
     },

@@ -35,6 +35,8 @@ export const login = (req, res) => {
   User.findOne({
     username: req.body.username,
   }).exec((err, user) => {
+    console.log('login: found user: ', user);
+    console.log({ user, err });
     if (err) {
       res.status(500).send({ message: err });
       return;
