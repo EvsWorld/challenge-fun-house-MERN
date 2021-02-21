@@ -17,6 +17,16 @@ export const signup = createAsyncThunk(
   }
 );
 
+export const login = createAsyncThunk(
+  'user/login',
+  async ({ username, password }) => {
+    const response = await api.post('/api/auth/login', {
+      username,
+      password,
+    });
+    return response.data;
+  }
+);
 const userSlice = createSlice({
   name: 'user',
   initialState: {
@@ -25,20 +35,10 @@ const userSlice = createSlice({
     error: null,
   },
   reducers: {
-    signupSuccess: (state, action) => {
-      state.user = action.payload;
-      localStorage.setItem('user', JSON.stringify(action.payload));
-      localStorage.setItem('token', JSON.stringify(action.payload.token));
-    },
-    loginSuccess: (state, action) => {
-      state.user = action.payload;
-      localStorage.setItem('user', JSON.stringify(action.payload));
-      localStorage.setItem('token', JSON.stringify(action.payload.token));
-    },
     logoutSuccess: (state, action) => {
       state.user = null;
       localStorage.removeItem('user');
-      localStorage.remoeItem('token');
+      localStorage.removeItem('token');
     },
   },
   extraReducers: {
@@ -56,37 +56,27 @@ const userSlice = createSlice({
       state.status = 'failed';
       state.error = action.error.message;
     },
+    [login.pending]: (state, action) => {
+      state.status = 'loading';
+    },
+    [login.fulfilled]: (state, action) => {
+      state.status = 'succeeded';
+      // Add any fetched characters to the array
+      state.user = action.payload;
+      localStorage.setItem('user', JSON.stringify(action.payload));
+      localStorage.setItem('token', JSON.stringify(action.payload.token));
+    },
+    [login.rejected]: (state, action) => {
+      state.status = 'failed';
+      state.error = action.error.message;
+    },
   },
 });
 
-const { signupSuccess, loginSuccess, logoutSuccess } = userSlice.actions;
-
-// export const signup = ({ username, email, password }) => async (dispatch) => {
-//   try {
-//     await api.post('/api/auth/signup', {
-//       username,
-//       email,
-//       password,
-//     });
-//     // console.log('res = ', await res);
-//     dispatch(signupSuccess({ username, email }));
-//   } catch (e) {
-//     return console.error(e.message);
-//   }
-// };
-
-export const login = ({ username, email, password }) => async (dispatch) => {
-  try {
-    const res = await api.post('/api/auth/login', { username, password });
-    dispatch(loginSuccess({ username, email }));
-  } catch (e) {
-    return console.error(e.message);
-  }
-};
+const { logoutSuccess } = userSlice.actions;
 
 export const logout = () => async (dispatch) => {
   try {
-    // const res = await api.post('/api/auth/logout/')
     return dispatch(logoutSuccess());
   } catch (e) {
     return console.error(e.message);

@@ -1,14 +1,17 @@
 const jwt = require('jsonwebtoken');
+import { sessionSecret } from '../config';
 import { User } from '../models/user.model';
 
 export const verifyToken = (req, res, next) => {
-  let token = req.headers['x-access-token'];
+  const authHeader = req.headers['authorization'];
+  const token = authHeader.split(' ').pop();
+  console.log('jwt: token :>> ', token);
 
   if (!token) {
     return res.status(403).send({ message: 'No token provided!' });
   }
 
-  jwt.verify(token, config.secret, (err, decoded) => {
+  jwt.verify(token, sessionSecret, (err, decoded) => {
     if (err) {
       return res.status(401).send({ message: 'Unauthorized!' });
     }

@@ -12,13 +12,7 @@ const app = express();
 
 const corsOptions = {
   origin: process.env.CLIENT_URL || 'http://localhost:3000',
-  // methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  // allowedHeaders: 'Authorization',
 };
-
-// Access-Control-Allow-Origin: *
-// Access-Control-Allow-Methods: GET, POST, PUT, DELETE
-// Access-Control-Allow-Headers: Authorization
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
@@ -35,14 +29,6 @@ app.use('/ping', (req, res) => {
     status: 'Reallly good!!',
   });
 });
-
-// app.use((req, res, next) => {
-//   res.header(
-//     'Access-Control-Allow-Headers',
-//     'x-access-token, Origin, Content-Type, Accept'
-//   );
-//   next();
-// });
 
 app.use('/api/characters', routes.character);
 app.use('/api/users', routes.user);

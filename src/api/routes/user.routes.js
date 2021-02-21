@@ -6,6 +6,6 @@ const router = Router();
 
 router.post('/', userController.create);
 router.put('/:id', userController.update);
-router.get('/info', jwtMiddlware.verifyToken, userController.info);
+router.get('/:id', jwtMiddlware.verifyToken, userController.info);
 
 export default router;

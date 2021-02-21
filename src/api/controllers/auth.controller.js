@@ -1,6 +1,7 @@
 import { User } from '../models/user.model';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import { sessionSecret } from '../config';
 
 export const signup = (req, res) => {
   console.log('signup: req.body = ', req.body);
@@ -18,9 +19,8 @@ export const signup = (req, res) => {
     }
 
     console.log('going to save user: ', user);
-    const token = jwt.sign({ id: user.id }, 'super-duper-session-secret', {
-      expiresIn: 86400, // 24 hours
-    });
+    const token = makeToken(user);
+
     res.status(200).send({
       id: user._id,
       username: user.username,
@@ -58,15 +58,19 @@ export const login = (req, res) => {
       });
     }
 
-    const token = jwt.sign({ id: user.id }, 'super-duper-session-secret', {
-      expiresIn: 86400, // 24 hours
-    });
+    const token = makeToken(user);
 
     res.status(200).send({
       id: user._id,
       username: user.username,
       email: user.email,
-      accessToken: token,
+      token,
     });
   });
 };
+
+function makeToken(user) {
+  return jwt.sign({ id: user.id }, sessionSecret, {
+    expiresIn: 86400,
+  });
+}

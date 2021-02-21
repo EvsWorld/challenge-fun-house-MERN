@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import { selectCharacterById } from '../redux/reducers/charactersSlice';
 import api from '../utils/axiosConfig';
 

@@ -7,17 +7,26 @@ export function SignUp() {
   const dispatch = useDispatch();
 
   const userStatus = useSelector((state) => state.user.status);
-  const [username, usernameInput] = useInput({ type: 'text' });
-  const [password, passwordInput] = useInput({ type: 'password' });
-  const [email, emailInput] = useInput({ type: 'email' });
+  const [username, usernameInput] = useInput({
+    type: 'text',
+    placeholder: 'Username',
+  });
+  const [password, passwordInput] = useInput({
+    type: 'password',
+    placeholder: 'Password',
+  });
+  const [email, emailInput] = useInput({
+    type: 'email',
+    placeholder: 'Email',
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (userStatus === 'idle') dispatch(signup({ username, email, password }));
+    dispatch(signup({ username, email, password }));
   };
 
   return (
     <div>
-      {/* <form onSubmit={() => dispatch(signup({ username, email, password }))}> */}
       <form onSubmit={(e) => handleSubmit(e)}>
         {usernameInput}
         <br />
