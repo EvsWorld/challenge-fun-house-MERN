@@ -14,6 +14,9 @@ export function Characters() {
   const characters = useSelector(selectAllCharacters);
   const characterStatus = useSelector((state) => state.characters.status);
   const error = useSelector((state) => state.characters.error);
+  // TODO: a way to favorite characters
+  // update user > characters
+  //
 
   useEffect(() => {
     if (characterStatus === 'idle') {
@@ -34,7 +37,7 @@ export function Characters() {
   }
   return (
     <section className="Characters">
-      <h2> Here's where the characters are!</h2>
+      <h2> All Characters!</h2>
       {content}
     </section>
   );

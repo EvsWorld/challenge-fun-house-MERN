@@ -7,14 +7,14 @@ const userSchema = new mongoose.Schema(
       unique: true,
       required: true,
     },
-      email: {
-        type: String,
-        required: true,
-      },
-      password: {
-        type: String,
-        required: true,
-      },
+    email: {
+      type: String,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );
@@ -31,7 +31,7 @@ userSchema.statics.findByLogin = async function (login) {
   return user;
 };
 
-userSchema.pre('remove', function(next) {
+userSchema.pre('remove', function (next) {
   this.model('Character').deleteMany({ user: this._id }, next);
 });
 

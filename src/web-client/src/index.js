@@ -7,12 +7,9 @@ import reportWebVitals from './reportWebVitals';
 import configureAppStore from './redux/store';
 import { Provider } from 'react-redux';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { fetchCharacters } from './redux/reducers/charactersSlice';
 
 const store = configureAppStore();
 const queryClient = new QueryClient();
-
-// store.dispatch(fetchCharacters());
 
 ReactDOM.render(
   <React.StrictMode>
