@@ -15,6 +15,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    favoriteCharacters: {
+      type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Character' }],
+    },
   },
   { timestamps: true }
 );
@@ -30,9 +33,5 @@ userSchema.statics.findByLogin = async function (login) {
 
   return user;
 };
-
-userSchema.pre('remove', function (next) {
-  this.model('Character').deleteMany({ user: this._id }, next);
-});
 
 export const User = mongoose.model('User', userSchema);

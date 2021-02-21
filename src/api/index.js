@@ -3,18 +3,18 @@ import express from 'express';
 import cors from 'cors';
 import models, { connectDb } from './models';
 import routes from './routes';
+import { getCharactersFromExternal } from './services/characters';
 
 const PORT = process.env.PORT || 5000;
 const app = express();
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL || "http://localhost:3000"
+  origin: process.env.CLIENT_URL || 'http://localhost:3000',
 };
 
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.json({ extended: true }));
-
 
 app.use('/ping', (req, res) => {
   res.status(200).json({
@@ -48,10 +48,12 @@ app.use((error, req, res, next) => {
 });
 
 connectDb().then(async () => {
+  // TODO: fetch characters from Rick and Morty api and save in characters db
+  getCharactersFromExternal();
 
-app.listen(PORT, (error) => {
-  if (error) {
-    console.log(`
+  app.listen(PORT, (error) => {
+    if (error) {
+      console.log(`
     \n\n
     Server Listening!
 
@@ -62,15 +64,14 @@ app.listen(PORT, (error) => {
     \n\n
 
     `);
-  } else {
-    console.log(`
+    } else {
+      console.log(`
     \n\n
 
     API server running on port ${PORT}
 
       \n\n
     `);
-  }
+    }
+  });
 });
-
-})

@@ -10,7 +10,6 @@ const characterSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    usersWhoFavorited: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   },
   { timestamps: true }
 );
