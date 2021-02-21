@@ -24,7 +24,6 @@ export const create = (req, res) => {
     });
 };
 
-
 export const update = (req, res) => {
   const id = req.params.id;
 
@@ -41,4 +40,8 @@ export const update = (req, res) => {
         message: 'Error updating User with id=' + id,
       });
     });
+};
+
+export const info = () => {
+  res.json({ info: 'dummy user info' });
 };

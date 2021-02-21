@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import { useInput } from '../hooks';
-import { login, logout } from '../redux/reducers/userSlice';
+import { login } from '../redux/reducers/userSlice';
 
 export function Login() {
   const dispatch = useDispatch();

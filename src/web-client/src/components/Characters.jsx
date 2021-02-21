@@ -16,7 +16,6 @@ export function Characters() {
   const error = useSelector((state) => state.characters.error);
   // TODO: a way to favorite characters
   // update user > characters
-  //
 
   useEffect(() => {
     if (characterStatus === 'idle') {
@@ -30,7 +29,7 @@ export function Characters() {
     content = <div className="loader">Loading...</div>;
   } else if (characterStatus === 'succeeded') {
     content = characters.map((character) => (
-      <Character {...character} key={character.id} />
+      <Character {...character} key={character._id.toString()} />
     ));
   } else if (characterStatus === 'failed') {
     content = <div>{error}</div>;

@@ -1,10 +1,10 @@
 import { createAsyncThunk, nanoid, createSlice } from '@reduxjs/toolkit';
-import client from '../../utils/axiosConfig';
+import api from '../../utils/axiosConfig';
 
 export const fetchCharacters = createAsyncThunk(
   'characters/fetchCharacters',
   async () => {
-    const response = await client.get('/api/characters');
+    const response = await api.get('/api/characters');
     return response.data;
   }
 );

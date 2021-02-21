@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import models, { connectDb } from './models';
 import routes from './routes';
-import { getCharactersFromExternal } from './services/characters';
+import { getCharactersFromExternal } from './services/characters.service';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 
@@ -12,13 +12,21 @@ const app = express();
 
 const corsOptions = {
   origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  // methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  // allowedHeaders: 'Authorization',
 };
+
+// Access-Control-Allow-Origin: *
+// Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+// Access-Control-Allow-Headers: Authorization
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ extended: true }));
 
-app.use(morgan(' :method :url   :req[header]  :response-time  |  :date[web]'));
+app.use(
+  morgan(':method :url  :req[header]  |   :response-time  |  :date[web]')
+);
 
 app.use('/ping', (req, res) => {
   res.status(200).json({
@@ -28,9 +36,17 @@ app.use('/ping', (req, res) => {
   });
 });
 
+// app.use((req, res, next) => {
+//   res.header(
+//     'Access-Control-Allow-Headers',
+//     'x-access-token, Origin, Content-Type, Accept'
+//   );
+//   next();
+// });
+
 app.use('/api/characters', routes.character);
 app.use('/api/users', routes.user);
-// app.use('/messages', routes.message);
+app.use('/api/auth', routes.auth);
 
 app.get('*', function (req, res, next) {
   const error = new Error(`${req.ip} tried to access ${req.originalUrl}`);
