@@ -22,7 +22,7 @@ export const findAll = (req, res) => {
 
 // BulkUpserts characters checking on the name field to not add characters already in db
 export const bulkAdd = (arrayToBulkAdd) => {
-  console.log('arrayToBulkAdd :>> ', arrayToBulkAdd);
+  // console.log('arrayToBulkAdd :>> ', arrayToBulkAdd);
   const bulkOps = arrayToBulkAdd.map((doc) => ({
     updateOne: {
       filter: { name: doc.name },
@@ -33,10 +33,10 @@ export const bulkAdd = (arrayToBulkAdd) => {
 
   Character.bulkWrite(bulkOps)
     .then(function (characters) {
-      console.log(
-        'got characters from rick and morty api and saved in db. characters = ',
-        characters
-      );
+      // console.log(
+      //   'got characters from rick and morty api and saved in db. characters = ',
+      //   characters
+      // );
     })
     .catch(function (err) {
       console.error(err);

@@ -5,7 +5,7 @@ import * as jwtMiddlware from '../middlewares/jwtMiddlware.js';
 const router = Router();
 
 router.post('/', userController.create);
-router.put('/:id', userController.update);
-router.get('/:id', jwtMiddlware.verifyToken, userController.info);
+router.put('/:id', userController.update); // TODO: put back jwtMiddlware: jwtMiddlware.verifyToken
+router.get('/:id', userController.info); // TODO: put back jwtMiddlware: jwtMiddlware.verifyToken
 
 export default router;

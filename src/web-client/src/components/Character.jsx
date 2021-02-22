@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { selectCharacterById } from '../redux/reducers/charactersSlice';
 import api from '../utils/axiosConfig';
+
 const Container = styled.div`
   background: #fff;
   width: 15em;
@@ -38,7 +39,22 @@ const Name = styled.h2`
   font-family: 'Montserrat', sans-serif;
 `;
 
-export function Character({ id, name, gender, image, species, status, url }) {
+export function Character({
+  isFavorite,
+  onToggleFavorite,
+  id,
+  name,
+  gender,
+  image,
+  species,
+  status,
+  url,
+}) {
+  const renderFavoriteButton = () => {
+    const text = isFavorite(id) ? 'Unfavorite' : 'Make Favorite';
+    return <button onClick={onToggleFavorite}> {text}</button>;
+  };
+
   return (
     <Container>
       <Image alt="character" src={image} />
@@ -47,6 +63,7 @@ export function Character({ id, name, gender, image, species, status, url }) {
         <p>
           {gender}, {species}, {status}
         </p>
+        {renderFavoriteButton()}
       </CardBody>
     </Container>
   );

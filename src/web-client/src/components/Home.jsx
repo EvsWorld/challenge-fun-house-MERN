@@ -7,7 +7,6 @@ export function Home() {
     <>
       <h1>Welcome to Funhouse Home!</h1>
       <Authentication />
-      <Characters />
     </>
   );
 }

@@ -25,15 +25,23 @@ export const create = (req, res) => {
 };
 
 export const update = (req, res) => {
+  console.log('userController.update: req.body :>> ', req.body);
   const id = req.params.id;
 
-  User.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+  User.findByIdAndUpdate(id, req.body, { useFindAndModify: false, new: true })
     .then((data) => {
+      console.log('userController.update: data passed after update: ', data);
       if (!data) {
         res.status(404).send({
           message: `Cannot update User with id=${id}. Maybe User was not found!`,
         });
-      } else res.send({ message: 'User was updated successfully.' });
+      } else
+        res.send({
+          message: 'User was updated successfully.',
+          user: {
+            favoriteCharacters: data.favoriteCharacters,
+          },
+        });
     })
     .catch((err) => {
       res.status(500).send({
@@ -45,17 +53,25 @@ export const update = (req, res) => {
 export const info = () => {
   const id = req.params.id;
 
-  User.findById(id)
-    .then((data) => {
-      if (!data) {
-        res.status(404).send({
-          message: `Cannot find User with id=${id}.`,
-        });
-      } else res.send({ data });
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: 'Error finding User with id=' + id,
-      });
+  User.findById(id).exec((err, user) => {
+    console.log('info: found user: ', user);
+    console.log({ user, err });
+    if (err) {
+      res.status(500).send({ message: err });
+      return;
+    }
+
+    if (!user) {
+      console.log('info: user not found!');
+      return res.status(404).send({ message: 'User Not found.' });
+    }
+
+    res.status(200).send({
+      user: {
+        username: user.username,
+        email: user.email,
+        favoriteCharacters: user.favoriteCharacters,
+      },
     });
+  });
 };

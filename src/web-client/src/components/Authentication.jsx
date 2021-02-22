@@ -1,13 +1,19 @@
-import React, { useContext, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUser } from '../redux/reducers/userSlice';
 
 import { LoginAndSignUp } from './LoginAndSignUp';
 import { UserProfile } from './UserProfile';
 
 export function Authentication() {
+  const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
 
-  console.log('Authentication: user :>> ', user);
+  // TODO: fetch user here
+  useEffect(() => {
+    dispatch(fetchUser());
+  }, []);
+
   return (
     <div>
       <h2>Authentication Component</h2>

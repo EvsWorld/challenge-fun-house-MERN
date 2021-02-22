@@ -67,6 +67,7 @@ export const login = (req, res) => {
       username: user.username,
       email: user.email,
       token,
+      favoriteCharacters: user.favoriteCharacters,
     });
   });
 };

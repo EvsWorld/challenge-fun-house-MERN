@@ -28,10 +28,31 @@ export const login = createAsyncThunk(
   }
 );
 
-export const fetchUser = createAsyncThunk('user/fetch', async ({ id }) => {
-  const response = await api.get(`/api/user/${id}`);
-  return response.data;
-});
+export const fetchUser = createAsyncThunk(
+  'user/fetch',
+  async ({}, thunkAPI) => {
+    const userId = '6032bbcb5028eb826b5c078c'; // TODO: get this from thunkAPI.getState(user.id)
+    const response = await api.get(`/api/users/${userId}`);
+    console.log('returned from update user call :>> ', response);
+    return response.data;
+  }
+);
+
+// UPDATE
+export const updateUser = createAsyncThunk(
+  'user/update',
+  async ({ favoriteCharacters }, thunkAPI) => {
+    console.log('updateUser: args passed >> ', {
+      favoriteCharacters,
+      thunkAPI,
+    });
+    const userId = '6032bbcb5028eb826b5c078c'; // TODO: get this from thunkAPI.getState(user.id)
+    const response = await api.put(`/api/users/${userId}`, {
+      favoriteCharacters,
+    });
+    return response.data; // returns user object
+  }
+);
 
 const userSlice = createSlice({
   name: 'user',
@@ -81,9 +102,20 @@ const userSlice = createSlice({
     },
     [fetchUser.fulfilled]: (state, action) => {
       state.status = 'succeeded';
-      state.user = action.payload;
+      state.user = { ...state.user, ...action.payload.user };
     },
     [fetchUser.rejected]: (state, action) => {
+      state.status = 'failed';
+      state.error = action.error.message;
+    },
+    [updateUser.pending]: (state, action) => {
+      state.status = 'loading';
+    },
+    [updateUser.fulfilled]: (state, action) => {
+      state.status = 'succeeded';
+      state.user = { ...state.user, ...action.payload.user };
+    },
+    [updateUser.rejected]: (state, action) => {
       state.status = 'failed';
       state.error = action.error.message;
     },
