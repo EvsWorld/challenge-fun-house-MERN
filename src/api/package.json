@@ -2,11 +2,12 @@
   "name": "api",
   "version": "1.0.0",
   "description": "Express API",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "nodemon": "nodemon --exec  babel-node index.js"
+    "build": "babel index.js -d dist",
+    "start": "npm run build && node dist/index.js",
+    "nodemon": "nodemon --exec  babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "@babel/core": "^7.12.16",
     "@babel/node": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",

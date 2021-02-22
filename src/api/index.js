@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import models, { connectDb } from './models';
+import { connectDb } from './db';
 import routes from './routes';
 import { getCharactersFromExternal } from './services/characters.service';
 import bodyParser from 'body-parser';
