@@ -4,6 +4,9 @@
   "description": "Express API",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "14.15.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --experimental-modules index.js",
@@ -20,12 +23,12 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.16",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
+    "morgan": "^1.10.0",
     "@babel/core": "^7.12.16",
     "@babel/node": "^7.12.16",
-    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-env": "^7.12.16"
+  },
+  "devDependencies": {
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
