@@ -19,9 +19,4 @@ export const getCharactersFromExternal = async () => {
   const characters = await fetchCharacters();
 
   bulkAdd(characters);
-  const charactersArray = [
-    { name: 'Rick', status: 'fun' },
-    { name: 'Morty', status: 'wild' },
-    { name: 'Jerry', status: 'nutty' },
-  ];
 };

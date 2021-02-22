@@ -34,7 +34,13 @@ export function SignUp() {
         <br />
         {passwordInput}
         <br />
-        <input type="submit" value="Signup" />
+        {
+          <input
+            type="submit"
+            disabled={userStatus === 'loading'}
+            value="Signup"
+          />
+        }
       </form>
     </div>
   );

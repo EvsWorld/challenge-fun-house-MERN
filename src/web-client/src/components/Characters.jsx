@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useContext, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+
 import { Character } from './Character';
 import api from '../utils/axiosConfig';
 import * as actions from '../redux/actions/actionTypes';
@@ -8,6 +10,12 @@ import {
   fetchCharacters,
   selectAllCharacters,
 } from '../redux/reducers/charactersSlice';
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 export function Characters() {
   const dispatch = useDispatch();
@@ -34,10 +42,5 @@ export function Characters() {
   } else if (characterStatus === 'failed') {
     content = <div>{error}</div>;
   }
-  return (
-    <section className="Characters">
-      <h2> All Characters!</h2>
-      {content}
-    </section>
-  );
+  return <Container>{content}</Container>;
 }

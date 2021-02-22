@@ -5,6 +5,7 @@ import { login } from '../redux/reducers/userSlice';
 export function Login() {
   const dispatch = useDispatch();
 
+  const userStatus = useSelector((state) => state.user.status);
   const [username, usernameInput] = useInput({
     type: 'text',
     placeholder: 'Username',
@@ -26,7 +27,11 @@ export function Login() {
         <br />
         {passwordInput}
         <br />
-        <input type="submit" value="Login" />
+        <input
+          type="submit"
+          disabled={userStatus === 'loading'}
+          value="Login"
+        />
       </form>
     </div>
   );
