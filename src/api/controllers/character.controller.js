@@ -7,7 +7,7 @@ export const findAll = (req, res) => {
     const token = authHeader.split(' ').pop();
     console.log('jwt: token :>> ', token);
   }
- 
+
   Character.find({})
     .then((data) => {
       res.send(data);
@@ -22,6 +22,7 @@ export const findAll = (req, res) => {
 
 // BulkUpserts characters checking on the name field to not add characters already in db
 export const bulkAdd = (arrayToBulkAdd) => {
+  console.log('arrayToBulkAdd :>> ', arrayToBulkAdd);
   const bulkOps = arrayToBulkAdd.map((doc) => ({
     updateOne: {
       filter: { name: doc.name },
