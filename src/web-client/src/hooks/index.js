@@ -8,6 +8,7 @@ const Input = styled.input`
   margin: 5px;
   width: 150px;
   box-sizing: border-box;
+  outline: none;
 `;
 
 export function useInput({ type, placeholder }) {
