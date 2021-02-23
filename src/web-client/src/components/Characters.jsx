@@ -18,14 +18,14 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-export function Characters() {
+export function Characters({ user }) {
   const dispatch = useDispatch();
   const characters = useSelector(selectAllCharacters);
   const characterStatus = useSelector((state) => state.characters.status);
   const error = useSelector((state) => state.characters.error);
   // TODO: a way to favorite characters
   // update user > characters
-  const user = useSelector((state) => state.user.user);
+  // const user = useSelector((state) => state.user.user);
   const favoriteCharactersFromRedux = user.favoriteCharacters;
   console.log('favoriteCharactersFromRedux :>> ', favoriteCharactersFromRedux);
   const [favoriteCharacters, setFavoriteCharacters] = useState([]);
@@ -61,16 +61,8 @@ export function Characters() {
       console.log('indexItem :>> ', indexItem);
       if (indexItem === -1) {
         newFavoriteCharacters.push(charId);
-        console.log(
-          'just pushed:  newFavoriteCharacters :>> ',
-          newFavoriteCharacters
-        );
       } else {
         newFavoriteCharacters.splice(indexItem, 1);
-        console.log(
-          'just spliced:  newFavoriteCharacters :>> ',
-          newFavoriteCharacters
-        );
       }
 
       setFavoriteCharacters(newFavoriteCharacters);

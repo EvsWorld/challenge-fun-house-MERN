@@ -10,7 +10,7 @@ export function UserProfile({ user }) {
     <>
       <div> Youre logged in, {user.username} </div>
       <button onClick={() => dispatch(logout())}>Logout</button>
-      <Characters />
+      <Characters user={user} />
     </>
   );
 }

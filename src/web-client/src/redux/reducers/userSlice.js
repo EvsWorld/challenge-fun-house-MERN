@@ -31,14 +31,12 @@ export const login = createAsyncThunk(
 export const fetchUser = createAsyncThunk(
   'user/fetch',
   async ({}, thunkAPI) => {
-    const userId = '6032bbcb5028eb826b5c078c'; // TODO: get this from thunkAPI.getState(user.id)
-    const response = await api.get(`/api/users/${userId}`);
+    const response = await api.get(`/api/users/own`);
     console.log('returned from update user call :>> ', response);
     return response.data;
   }
 );
 
-// UPDATE
 export const updateUser = createAsyncThunk(
   'user/update',
   async ({ favoriteCharacters }, thunkAPI) => {
@@ -46,8 +44,7 @@ export const updateUser = createAsyncThunk(
       favoriteCharacters,
       thunkAPI,
     });
-    const userId = '6032bbcb5028eb826b5c078c'; // TODO: get this from thunkAPI.getState(user.id)
-    const response = await api.put(`/api/users/${userId}`, {
+    const response = await api.put(`/api/users/own`, {
       favoriteCharacters,
     });
     return response.data; // returns user object
@@ -74,7 +71,6 @@ const userSlice = createSlice({
     },
     [signup.fulfilled]: (state, action) => {
       state.status = 'succeeded';
-      // Add any fetched characters to the array
       state.user = action.payload;
       localStorage.setItem('user', JSON.stringify(action.payload));
       localStorage.setItem('token', JSON.stringify(action.payload.token));

@@ -3,8 +3,9 @@ import { sessionSecret } from '../config';
 import { User } from '../models/user.model';
 
 export const verifyToken = (req, res, next) => {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader.split(' ').pop();
+  const token =
+    req.headers['x-access-token'] && JSON.parse(req.headers['x-access-token']);
+
   console.log('jwt: token :>> ', token);
 
   if (!token) {
@@ -12,10 +13,14 @@ export const verifyToken = (req, res, next) => {
   }
 
   jwt.verify(token, sessionSecret, (err, decoded) => {
+    console.log('token, sessionSecret :>> ', { token, sessionSecret });
+    console.log('token, :>> ', sessionSecret);
+    console.log('typeof token, :>> ', typeof sessionSecret);
     if (err) {
+      console.log('jwt.verify: error :>> ', err);
       return res.status(401).send({ message: 'Unauthorized!' });
     }
-    req.userId = decoded.id;
+    req.user = decoded;
     next();
   });
 };

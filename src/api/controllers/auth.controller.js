@@ -26,6 +26,7 @@ export const signup = (req, res) => {
       username: user.username,
       email: user.email,
       token,
+      favoriteCharacters: user.favoriteCharacters,
     });
   });
 };
@@ -73,7 +74,7 @@ export const login = (req, res) => {
 };
 
 function makeToken(user) {
-  return jwt.sign({ id: user.id }, sessionSecret, {
+  return jwt.sign({ user }, sessionSecret, {
     expiresIn: 86400,
   });
 }
