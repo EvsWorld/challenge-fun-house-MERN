@@ -32,7 +32,6 @@ export const fetchUser = createAsyncThunk(
   'user/fetch',
   async ({}, thunkAPI) => {
     const response = await api.get(`/api/users/own`);
-    console.log('returned from update user call :>> ', response);
     return response.data;
   }
 );
@@ -40,10 +39,6 @@ export const fetchUser = createAsyncThunk(
 export const updateUser = createAsyncThunk(
   'user/update',
   async ({ favoriteCharacters }, thunkAPI) => {
-    console.log('updateUser: args passed >> ', {
-      favoriteCharacters,
-      thunkAPI,
-    });
     const response = await api.put(`/api/users/own`, {
       favoriteCharacters,
     });

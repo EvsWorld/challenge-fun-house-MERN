@@ -4,7 +4,6 @@ import bcrypt from 'bcryptjs';
 import { sessionSecret } from '../config';
 
 export const signup = (req, res) => {
-  console.log('signup: req.body = ', req.body);
   const user = new User({
     username: req.body.username,
     email: req.body.email,
@@ -18,7 +17,6 @@ export const signup = (req, res) => {
       return;
     }
 
-    console.log('going to save user: ', user);
     const token = makeToken(user);
 
     res.status(200).send({
@@ -32,19 +30,15 @@ export const signup = (req, res) => {
 };
 
 export const login = (req, res) => {
-  console.log('login: req.body = ', req.body);
   User.findOne({
     username: req.body.username,
   }).exec((err, user) => {
-    console.log('login: found user: ', user);
-    console.log({ user, err });
     if (err) {
       res.status(500).send({ message: err });
       return;
     }
 
     if (!user) {
-      console.log('login: user not found!');
       return res.status(404).send({ message: 'User Not found.' });
     }
 
@@ -54,7 +48,6 @@ export const login = (req, res) => {
     );
 
     if (!passwordIsValid) {
-      console.log('password invalid!');
       return res.status(401).send({
         token: null,
         message: 'Invalid Password!',

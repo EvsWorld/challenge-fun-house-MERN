@@ -5,7 +5,6 @@ export const findAll = (req, res) => {
   const authHeader = req.headers['authorization'];
   if (authHeader) {
     const token = authHeader.split(' ').pop();
-    console.log('jwt: token :>> ', token);
   }
 
   Character.find({})
@@ -22,7 +21,6 @@ export const findAll = (req, res) => {
 
 // BulkUpserts characters checking on the name field to not add characters already in db
 export const bulkAdd = (arrayToBulkAdd) => {
-  // console.log('arrayToBulkAdd :>> ', arrayToBulkAdd);
   const bulkOps = arrayToBulkAdd.map((doc) => ({
     updateOne: {
       filter: { name: doc.name },
@@ -32,12 +30,7 @@ export const bulkAdd = (arrayToBulkAdd) => {
   }));
 
   Character.bulkWrite(bulkOps)
-    .then(function (characters) {
-      // console.log(
-      //   'got characters from rick and morty api and saved in db. characters = ',
-      //   characters
-      // );
-    })
+    .then(function (characters) {})
     .catch(function (err) {
       console.error(err);
     });

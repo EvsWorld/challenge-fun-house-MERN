@@ -6,18 +6,12 @@ export const verifyToken = (req, res, next) => {
   const token =
     req.headers['x-access-token'] && JSON.parse(req.headers['x-access-token']);
 
-  console.log('jwt: token :>> ', token);
-
   if (!token) {
     return res.status(403).send({ message: 'No token provided!' });
   }
 
   jwt.verify(token, sessionSecret, (err, decoded) => {
-    console.log('token, sessionSecret :>> ', { token, sessionSecret });
-    console.log('token, :>> ', sessionSecret);
-    console.log('typeof token, :>> ', typeof sessionSecret);
     if (err) {
-      console.log('jwt.verify: error :>> ', err);
       return res.status(401).send({ message: 'Unauthorized!' });
     }
     req.user = decoded;
@@ -26,7 +20,6 @@ export const verifyToken = (req, res, next) => {
 };
 
 export const checkForUsedUsernameOrEmail = async (req, res, next) => {
-  console.log('checkForuserUsernameOrEmail: req.body = ', req.body);
   try {
     const foundUsername = await User.findOne({
       username: req.body.username,

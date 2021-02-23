@@ -1,12 +1,17 @@
-import React from 'react';
-import { Authentication } from './Authentication';
-import { Characters } from './Characters';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUser } from '../redux/reducers/userSlice';
+
+import { LoginAndSignUp } from './LoginAndSignUp';
+import { UserProfile } from './UserProfile';
 
 export function Home() {
-  return (
-    <>
-      <h1>Welcome to Funhouse Home!</h1>
-      <Authentication />
-    </>
-  );
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    dispatch(fetchUser());
+  }, []);
+
+  return <>{user ? <UserProfile user={user} /> : <LoginAndSignUp />}</>;
 }

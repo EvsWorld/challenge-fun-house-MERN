@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { selectCharacterById } from '../redux/reducers/charactersSlice';
-import api from '../utils/axiosConfig';
+import { ReactComponent as Icon } from '../heart-filled.svg';
 
 const Container = styled.div`
   background: #fff;
@@ -25,9 +24,20 @@ const Container = styled.div`
 const CardBody = styled.div`
   padding: 1.2em;
 `;
-const Image = styled.img`
-  width: 100%;
-  object-fit: cover;
+
+const Image = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  background: url(${(props) => props.image});
+  min-height: 18em;
+  background-size: 'cover';
+`;
+
+const FavoriteIcon = styled(Icon)`
+  fill: ${(props) => (props.isFavorite ? 'palevioletred' : 'white')};
+  stroke: ${(props) => (props.isFavorite ? 'none' : '#646464')};
+  stroke-width: 0.1em;
+  margin: 0.6em;
 `;
 
 const Name = styled.h2`
@@ -50,20 +60,16 @@ export function Character({
   status,
   url,
 }) {
-  const renderFavoriteButton = () => {
-    const text = isFavorite(id) ? 'Unfavorite' : 'Make Favorite';
-    return <button onClick={onToggleFavorite}> {text}</button>;
-  };
-
   return (
     <Container>
-      <Image alt="character" src={image} />
+      <Image image={image} alt="character">
+        <FavoriteIcon isFavorite={isFavorite(id)} onClick={onToggleFavorite} />
+      </Image>
       <CardBody>
         <Name>{name}</Name>
         <p>
           {gender}, {species}, {status}
         </p>
-        {renderFavoriteButton()}
       </CardBody>
     </Container>
   );

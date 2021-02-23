@@ -2,10 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-
 import { Character } from './Character';
-import api from '../utils/axiosConfig';
-import * as actions from '../redux/actions/actionTypes';
 import {
   fetchCharacters,
   selectAllCharacters,
@@ -23,11 +20,8 @@ export function Characters({ user }) {
   const characters = useSelector(selectAllCharacters);
   const characterStatus = useSelector((state) => state.characters.status);
   const error = useSelector((state) => state.characters.error);
-  // TODO: a way to favorite characters
-  // update user > characters
   // const user = useSelector((state) => state.user.user);
   const favoriteCharactersFromRedux = user.favoriteCharacters;
-  console.log('favoriteCharactersFromRedux :>> ', favoriteCharactersFromRedux);
   const [favoriteCharacters, setFavoriteCharacters] = useState([]);
 
   // Initially get favorite characters from redux
@@ -46,19 +40,14 @@ export function Characters({ user }) {
 
   // funciton for Character component to know if should render heart
   const isFavorite = (characterId) => {
-    // console.log('isFavorite called with ', characterId);
     const result = favoriteCharacters.includes(characterId);
-    // console.log('isFavorite: ', result);
     return result;
   };
 
   const handleToggleFavorite = (characterId) => {
-    console.log('handleToggleFavorite called with ', characterId, '\n');
     const addOrRemoveCharacterToFavorites = (charId) => {
       var newFavoriteCharacters = [...favoriteCharacters];
-      console.log('newFavoriteCharacters :>> ', newFavoriteCharacters);
       var indexItem = newFavoriteCharacters.indexOf(charId);
-      console.log('indexItem :>> ', indexItem);
       if (indexItem === -1) {
         newFavoriteCharacters.push(charId);
       } else {

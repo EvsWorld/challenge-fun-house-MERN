@@ -9,7 +9,6 @@ export const getCharactersFromExternal = async () => {
       const result = await axios.get(
         ' https://rickandmortyapi.com/api/character'
       );
-      // console.log('characters fetched from R&M: >> ', result.data);
       return result.data.results;
     } catch (error) {
       console.error(error);

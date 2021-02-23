@@ -54,7 +54,6 @@ app.use((error, req, res, next) => {
 });
 
 connectDb().then(async () => {
-  // TODO: fetch characters from Rick and Morty api and save in characters db
   getCharactersFromExternal();
 
   app.listen(PORT, (error) => {

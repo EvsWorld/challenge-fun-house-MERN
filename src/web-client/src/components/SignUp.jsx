@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-
 import { useInput } from '../hooks';
 import { signup } from '../redux/reducers/userSlice';
+import { LoginSignUpBox, Submit } from './LoginSignUpBoxComponents';
 
 export function SignUp() {
   const dispatch = useDispatch();
@@ -26,7 +26,8 @@ export function SignUp() {
   };
 
   return (
-    <div>
+    <LoginSignUpBox>
+      <h2>Sign Up</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         {usernameInput}
         <br />
@@ -34,14 +35,13 @@ export function SignUp() {
         <br />
         {passwordInput}
         <br />
-        {
-          <input
-            type="submit"
-            disabled={userStatus === 'loading'}
-            value="Signup"
-          />
-        }
+        <Submit
+          type="submit"
+          disabled={userStatus === 'loading'}
+          value="Signup"
+          id="submit"
+        />
       </form>
-    </div>
+    </LoginSignUpBox>
   );
 }
