@@ -8,7 +8,6 @@ import configureAppStore from './redux/store';
 import { Provider } from 'react-redux';
 
 const store = configureAppStore();
-const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
