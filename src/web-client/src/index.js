@@ -6,7 +6,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import configureAppStore from './redux/store';
 import { Provider } from 'react-redux';
-import { QueryClient, QueryClientProvider } from 'react-query';
 
 const store = configureAppStore();
 const queryClient = new QueryClient();
@@ -15,9 +14,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
-        <QueryClientProvider client={queryClient}>
-          <App />
-        </QueryClientProvider>
+        <App />
       </Provider>
     </Router>
   </React.StrictMode>,
