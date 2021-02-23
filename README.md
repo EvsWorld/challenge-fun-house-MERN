@@ -2,7 +2,7 @@
 App is available at: https://client-11111.herokuapp.com/
 
 ## Notes
-I took a bit longer than I would have liked to, but I went down a few rabbit holes. I was thinking I would try out react-query library but then realized you asked for redux. And I wanted to have it deployed, and so I spent a bit of time on hooking that up, and getting it deploy when I pushed. Then I really wanted to use esm style imports and exports and switched the backend over to that, but then that broke it when it deployed. So I lost time on that. I'm going to submit it now, without the character detail view. There are many other things I didn't include just in interest of time, for example: form validation, duplicate email/id verification, responsive/beautiful design, testing, seperating services out from controllers, et al.
+I took a bit longer than I would have liked to, but I went down a few rabbit holes. I was thinking I would try out react-query library but then realized you asked for redux. And I wanted to have it deployed, and so I spent a bit of time on hooking that up, and getting it to deploy when I pushed. Then I really wanted to use esm style imports and exports and switched the backend over to that, but then that broke it when it deployed. So I lost time on that. I'm going to submit it now, without the character detail view. There are many other things I didn't include just in interest of time, for example: form validation, duplicate email/id verification, responsive/beautiful design, testing, seperating services out from controllers, et al.
 
 ---
 ## Notes on packages
