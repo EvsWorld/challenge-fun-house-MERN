@@ -60,6 +60,14 @@ export function Character({
   status,
   url,
 }) {
+  const renderDetail = (detail) => {
+    return detail && detail !== 'unknown' ? `${detail}, ` : null;
+  };
+  const renderDetails = () =>
+    [gender, species, status]
+      .filter((detail) => detail !== 'unknown')
+      .join(',  ');
+
   return (
     <Container>
       <Image image={image} alt="character">
@@ -67,9 +75,7 @@ export function Character({
       </Image>
       <CardBody>
         <Name>{name}</Name>
-        <p>
-          {gender}, {species}, {status}
-        </p>
+        <p>{renderDetails()}</p>
       </CardBody>
     </Container>
   );
