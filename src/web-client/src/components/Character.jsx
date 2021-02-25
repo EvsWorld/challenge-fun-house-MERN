@@ -28,7 +28,7 @@ const CardBody = styled.div`
 const Image = styled.div`
   display: flex;
   justify-content: flex-end;
-  background: url(${(props) => props.image});
+  background: url(${(props) => props.iconImage});
   min-height: 18em;
   background-size: 'cover';
 `;
@@ -70,8 +70,12 @@ export function Character({
 
   return (
     <Container>
-      <Image image={image} alt="character">
-        <FavoriteIcon isFavorite={isFavorite(id)} onClick={onToggleFavorite} />
+      <Image iconImage={image} alt="character">
+        <FavoriteIcon
+          isWll={'no'}
+          isFavorite={isFavorite(id)}
+          onClick={onToggleFavorite}
+        />
       </Image>
       <CardBody>
         <Name>{name}</Name>

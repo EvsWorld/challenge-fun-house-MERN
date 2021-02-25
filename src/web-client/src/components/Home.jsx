@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { fetchUser } from '../redux/reducers/userSlice';
 
 import { LoginAndSignUp } from './LoginAndSignUp';
@@ -12,6 +13,16 @@ export function Home() {
   useEffect(() => {
     dispatch(fetchUser());
   }, []);
-
-  return <>{user ? <UserProfile user={user} /> : <LoginAndSignUp />}</>;
+  // if (user) {
+  //   return <UserProfile />
+  // } else {
+  //   <Redirect to='/login-and-signup'/>
+  // }
+  // return <>{user ? <UserProfile user={user} /> : <LoginAndSignUp />}</>;
+  return (
+    <>
+      {' '}
+      <div> Home page </div>{' '}
+    </>
+  );
 }

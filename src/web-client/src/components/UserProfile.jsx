@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { logout } from '../redux/reducers/userSlice';
 import { Characters } from './Characters';
@@ -13,6 +13,7 @@ const Container = styled.div`
 `;
 
 const WelcomeDialogue = styled.div`
+  border: 1px solid #000;
   width: 20em;
   display: flex;
   align-items: center;
@@ -31,8 +32,10 @@ const NiceButton = styled.button`
   box-sizing: border-box;
 `;
 
-export function UserProfile({ user }) {
+export function UserProfile() {
   const dispatch = useDispatch();
+
+  const { user } = useSelector((state) => state.user);
 
   return (
     <Container>
@@ -40,7 +43,7 @@ export function UserProfile({ user }) {
         <div> Welcome, {user.username} </div>
         <NiceButton onClick={() => dispatch(logout())}>Logout</NiceButton>
       </WelcomeDialogue>
-      <Characters user={user} />
+      {/* <Characters /> */}
     </Container>
   );
 }

@@ -14,12 +14,12 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-export function Characters({ user }) {
+export function Characters() {
   const dispatch = useDispatch();
   const characters = useSelector(selectAllCharacters);
   const characterStatus = useSelector((state) => state.characters.status);
   const error = useSelector((state) => state.characters.error);
-  // const user = useSelector((state) => state.user.user);
+  const user = useSelector((state) => state.user.user);
   const favoriteCharactersFromRedux = user.favoriteCharacters;
   const [favoriteCharacters, setFavoriteCharacters] = useState([]);
 

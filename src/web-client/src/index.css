@@ -1,13 +1,7 @@
 body {
-  margin: 0;
   font-family: 'Titilillium Web';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    line-height: 1.6;
   background: #c2edf2;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { useInput } from '../hooks';
 import { signup } from '../redux/reducers/userSlice';
 import { LoginSignUpBox, Submit } from './LoginSignUpBoxComponents';
@@ -6,7 +7,7 @@ import { LoginSignUpBox, Submit } from './LoginSignUpBoxComponents';
 export function SignUp() {
   const dispatch = useDispatch();
 
-  const userStatus = useSelector((state) => state.user.status);
+  const { user } = useSelector((state) => state.user);
   const [username, usernameInput] = useInput({
     type: 'text',
     placeholder: 'Username',
@@ -25,6 +26,10 @@ export function SignUp() {
     dispatch(signup({ username, email, password }));
   };
 
+  if (user) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <LoginSignUpBox>
       <h2>Sign Up</h2>
@@ -37,7 +42,7 @@ export function SignUp() {
         <br />
         <Submit
           type="submit"
-          disabled={userStatus === 'loading'}
+          disabled={user && user.status === 'loading'}
           value="Signup"
           id="submit"
         />
