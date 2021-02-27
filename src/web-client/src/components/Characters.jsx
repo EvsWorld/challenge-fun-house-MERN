@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
+import ClipLoader from 'react-spinners/ClipLoader';
+
 import { Character } from './Character';
 import {
   fetchCharacters,
@@ -67,7 +69,7 @@ export function Characters() {
   let content;
 
   if (characterStatus === 'loading') {
-    content = <div className="loader">Loading...</div>;
+    content = <ClipLoader size={150} color={'#123abc'} loading={true} />;
   } else if (characterStatus === 'succeeded') {
     content = characters.map((character) => (
       <Character

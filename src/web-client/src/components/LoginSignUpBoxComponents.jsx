@@ -27,3 +27,14 @@ export const Submit = styled.input`
   border-radius: 10px;
   box-sizing: border-box;
 `;
+
+export const NiceButton = styled.button`
+  background: rgb(139, 0, 0);
+  color: #fff;
+  padding: 8px;
+  margin: 5px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+`;

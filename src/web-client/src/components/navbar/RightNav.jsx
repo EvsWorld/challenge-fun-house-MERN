@@ -27,8 +27,9 @@ const Ul = styled.ul`
     }
   }
 `;
+
 const StyledLink = styled(Link)`
-  // color: black;
+  color: red;
   text-decoration: none;
   &:focus,
   &:hover,

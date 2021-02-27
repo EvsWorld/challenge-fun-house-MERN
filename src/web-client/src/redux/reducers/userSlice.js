@@ -28,13 +28,11 @@ export const login = createAsyncThunk(
   }
 );
 
-export const fetchUser = createAsyncThunk(
-  'user/fetch',
-  async ({}, thunkAPI) => {
-    const response = await api.get(`/api/users/own`);
-    return response.data;
-  }
-);
+export const fetchUser = createAsyncThunk('user/fetch', async (thunkAPI) => {
+  console.log('fetchUser: thunkAPI :>> ', thunkAPI);
+  const response = await api.get(`/api/users/own`);
+  return response.data;
+});
 
 export const updateUser = createAsyncThunk(
   'user/update',
@@ -74,6 +72,7 @@ const userSlice = createSlice({
       state.status = 'failed';
       state.error = action.error.message;
     },
+
     [login.pending]: (state, action) => {
       state.status = 'loading';
     },
@@ -88,6 +87,7 @@ const userSlice = createSlice({
       state.status = 'failed';
       state.error = action.error.message;
     },
+
     [fetchUser.pending]: (state, action) => {
       state.status = 'loading';
     },
@@ -99,6 +99,7 @@ const userSlice = createSlice({
       state.status = 'failed';
       state.error = action.error.message;
     },
+
     [updateUser.pending]: (state, action) => {
       state.status = 'loading';
     },
