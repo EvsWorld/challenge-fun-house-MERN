@@ -1,17 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const LayoutOne = ({ children }) => (
+export const LayoutOne = ({ children }) => (
   <div>
-    <h2>Layout One</h2>
+    {/* <h2>Layout One</h2> */}
     {children}
   </div>
 );
 
-const LayoutTwo = ({ children }) => (
-  <div>
-    <h2>Layout Two</h2>
-    {children}
-  </div>
-);
+export const CenterSmallContainer = styled.div`
+  margin-top: 5em;
+`;
 
-export { LayoutOne, LayoutTwo };
+export const CenterSmallLayout = ({ children }) => (
+  <CenterSmallContainer>
+    {/* <h2>Layout Two</h2> */}
+
+    {children}
+  </CenterSmallContainer>
+);

@@ -6,14 +6,12 @@ import { Characters } from './Characters';
 
 const Container = styled.div`
   display: flex;
-  // margin: 1em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
 const WelcomeDialogue = styled.div`
-  border: 1px solid #000;
   width: 20em;
   display: flex;
   align-items: center;
@@ -30,7 +28,8 @@ export function UserProfile() {
   return (
     <Container>
       <WelcomeDialogue>
-        <div> Welcome, {user.username} </div>
+        <div>username: {user.username}</div>
+        <div>email: {user.email}</div>
       </WelcomeDialogue>
     </Container>
   );

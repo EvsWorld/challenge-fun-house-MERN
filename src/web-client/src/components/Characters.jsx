@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import ClipLoader from 'react-spinners/ClipLoader';
 
+import { CenterSmallLayout } from '../components/Layouts';
 import { Character } from './Character';
 import {
   fetchCharacters,
@@ -10,10 +11,12 @@ import {
 } from '../redux/reducers/charactersSlice';
 import { updateUser } from '../redux/reducers/userSlice';
 
-const Container = styled.div`
+const CharactersContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: 1s all ease-in;
+  max-width: 1200px;
 `;
 
 export function Characters() {
@@ -65,7 +68,11 @@ export function Characters() {
   let content;
 
   if (characterStatus === 'loading') {
-    content = <ClipLoader size={150} color={'#123abc'} loading={true} />;
+    content = (
+      <CenterSmallLayout>
+        <ClipLoader size={150} color={'#123abc'} loading={true} />
+      </CenterSmallLayout>
+    );
   } else if (characterStatus === 'succeeded') {
     content = characters.map((character) => (
       <Character
@@ -78,5 +85,5 @@ export function Characters() {
   } else if (characterStatus === 'failed') {
     content = <div>{error}</div>;
   }
-  return <Container>{content}</Container>;
+  return <CharactersContainer>{content}</CharactersContainer>;
 }
