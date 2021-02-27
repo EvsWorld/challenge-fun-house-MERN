@@ -23,48 +23,44 @@ export function Characters() {
   const error = useSelector((state) => state.characters.error);
   const user = useSelector((state) => state.user.user);
   const favoriteCharactersFromRedux = user.favoriteCharacters;
-  const [favoriteCharacters, setFavoriteCharacters] = useState([]);
 
-  // Initially get favorite characters from redux
-  useEffect(() => {
-    setFavoriteCharacters(favoriteCharactersFromRedux);
-  }, []);
-
-  // When favoriteCharacters is updated, send to update backend
-  useEffect(() => {
-    dispatch(
-      updateUser({
-        favoriteCharacters,
-      })
-    );
-  }, [favoriteCharacters, dispatch]);
-
-  // funciton for Character component to know if should render heart
-  const isFavorite = (characterId) => {
-    const result = favoriteCharacters.includes(characterId);
-    return result;
-  };
-
-  const handleToggleFavorite = (characterId) => {
-    const addOrRemoveCharacterToFavorites = (charId) => {
-      var newFavoriteCharacters = [...favoriteCharacters];
-      var indexItem = newFavoriteCharacters.indexOf(charId);
-      if (indexItem === -1) {
-        newFavoriteCharacters.push(charId);
-      } else {
-        newFavoriteCharacters.splice(indexItem, 1);
-      }
-
-      setFavoriteCharacters(newFavoriteCharacters);
-    };
-    addOrRemoveCharacterToFavorites(characterId);
-  };
+  console.log(
+    'initial: favoriteCharactersFromRedux :>> ',
+    favoriteCharactersFromRedux
+  );
 
   useEffect(() => {
     if (characterStatus === 'idle') {
       dispatch(fetchCharacters());
     }
   }, [characterStatus, dispatch]);
+
+  const handleToggleFavorite = (characterId) => {
+    var newFavoriteCharacters = [...favoriteCharactersFromRedux];
+    console.log(' newFavoriteCharacters:>> ', newFavoriteCharacters);
+    var indexItem = newFavoriteCharacters.indexOf(characterId);
+    if (indexItem === -1) {
+      newFavoriteCharacters.push(characterId);
+    } else {
+      newFavoriteCharacters.splice(indexItem, 1);
+    }
+
+    console.log(
+      'after update: newFavoriteCharacters :>> ',
+      newFavoriteCharacters
+    );
+    dispatch(
+      updateUser({
+        user: { ...user, favoriteCharacters: newFavoriteCharacters },
+      })
+    );
+  };
+
+  // funciton for Character component to know if should render heart
+  const isFavorite = (characterId) => {
+    const result = favoriteCharactersFromRedux.includes(characterId);
+    return result;
+  };
 
   let content;
 
@@ -76,7 +72,7 @@ export function Characters() {
         isFavorite={() => isFavorite(character._id)}
         onToggleFavorite={() => handleToggleFavorite(character._id)}
         {...character}
-        key={character._id.toString()}
+        key={character._id}
       />
     ));
   } else if (characterStatus === 'failed') {

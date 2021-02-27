@@ -3,6 +3,7 @@ import { User } from '../models/user.model';
 export const update = (req, res) => {
   // const id = req.params.id
   const id = req.user.user['_id'];
+  console.log('update: req.body :>> ', req.body);
 
   User.findByIdAndUpdate(id, req.body, { useFindAndModify: false, new: true })
     .then((data) => {

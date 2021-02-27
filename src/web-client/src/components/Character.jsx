@@ -34,8 +34,8 @@ const Image = styled.div`
 `;
 
 const FavoriteIcon = styled(Icon)`
-  fill: ${(props) => (props.isFavorite ? 'palevioletred' : 'white')};
-  stroke: ${(props) => (props.isFavorite ? 'none' : '#646464')};
+  fill: ${(props) => (props.$isFavorite ? 'palevioletred' : 'white')};
+  stroke: ${(props) => (props.$isFavorite ? 'none' : '#646464')};
   stroke-width: 0.1em;
   margin: 0.6em;
 `;
@@ -52,7 +52,7 @@ const Name = styled.h2`
 export function Character({
   isFavorite,
   onToggleFavorite,
-  id,
+  _id,
   name,
   gender,
   image,
@@ -60,9 +60,6 @@ export function Character({
   status,
   url,
 }) {
-  const renderDetail = (detail) => {
-    return detail && detail !== 'unknown' ? `${detail}, ` : null;
-  };
   const renderDetails = () =>
     [gender, species, status]
       .filter((detail) => detail !== 'unknown')
@@ -71,11 +68,7 @@ export function Character({
   return (
     <Container>
       <Image iconImage={image} alt="character">
-        <FavoriteIcon
-          isWll={'no'}
-          isFavorite={isFavorite(id)}
-          onClick={onToggleFavorite}
-        />
+        <FavoriteIcon $isFavorite={isFavorite()} onClick={onToggleFavorite} />
       </Image>
       <CardBody>
         <Name>{name}</Name>

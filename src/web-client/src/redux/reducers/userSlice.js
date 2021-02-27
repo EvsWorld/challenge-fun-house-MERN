@@ -36,7 +36,8 @@ export const fetchUser = createAsyncThunk('user/fetch', async (thunkAPI) => {
 
 export const updateUser = createAsyncThunk(
   'user/update',
-  async ({ favoriteCharacters }, thunkAPI) => {
+  async ({ user }, thunkAPI) => {
+    const { favoriteCharacters } = user;
     const response = await api.put(`/api/users/own`, {
       favoriteCharacters,
     });
@@ -106,6 +107,7 @@ const userSlice = createSlice({
     [updateUser.fulfilled]: (state, action) => {
       state.status = 'succeeded';
       state.user = { ...state.user, ...action.payload.user };
+      localStorage.setItem('user', JSON.stringify(state.user));
     },
     [updateUser.rejected]: (state, action) => {
       state.status = 'failed';
