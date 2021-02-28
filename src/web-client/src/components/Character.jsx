@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Icon } from '../heart-filled.svg';
+import { useComponentVisible } from './hooks/useComponentVisible';
+import { NiceButton } from './LoginSignUpBoxComponents';
+import { Modal } from './Modal';
 
 const Card = styled.div`
   background: #fff;
@@ -62,34 +65,45 @@ export function Character({
   origin,
   location,
 }) {
-  console.log({
-    _id,
-    origin,
-    location,
-    isFavorite,
-    onToggleFavorite,
-    name,
-    gender,
-    image,
-    species,
-    status,
-    url,
-  });
   const renderDetails = () =>
     [gender, species, status]
       .filter((detail) => detail !== 'unknown')
       .join(',  ');
 
+  const [
+    isDetailViewOpen,
+    setIsDetailViewOpen,
+    detailRef,
+  ] = useComponentVisible(false);
+
   return (
-    <Card>
-      <Image iconImage={image} alt="character">
-        <FavoriteIcon $isFavorite={isFavorite()} onClick={onToggleFavorite} />
-      </Image>
-      <CardBody>
-        <Name>{name}</Name>
-        <p>{renderDetails()}</p>
-      </CardBody>
-    </Card>
+    <>
+      <Card>
+        <Image iconImage={image} alt="character">
+          <FavoriteIcon $isFavorite={isFavorite()} onClick={onToggleFavorite} />
+        </Image>
+        <CardBody>
+          <Name>{name}</Name>
+          <p>{renderDetails()}</p>
+          <NiceButton onClick={() => setIsDetailViewOpen(true)}>
+            Click for details
+          </NiceButton>
+        </CardBody>
+      </Card>
+      <Modal
+        ref={detailRef}
+        showModal={isDetailViewOpen}
+        setShowModal={setIsDetailViewOpen}
+        name={name}
+        gender={gender}
+        image={image}
+        species={species}
+        status={status}
+        url={url}
+        origin={origin}
+        location={location}
+      />
+    </>
   );
 }
 

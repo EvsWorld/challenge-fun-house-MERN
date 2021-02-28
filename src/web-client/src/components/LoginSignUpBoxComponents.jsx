@@ -6,9 +6,7 @@ export const LoginSignUpBox = styled.div`
   flex-flow: column;
   width: 200px;
   height: 200px;
-  // margin: 10em auto;
   padding: 0.3em;
-  border: 2px solid #000;
   border-radius: 20px;
   background: #eee;
   h2 {
@@ -31,8 +29,10 @@ export const Submit = styled.input`
 export const NiceButton = styled.button`
   background: rgb(139, 0, 0);
   color: #fff;
-  padding: 8px;
-  margin: 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 0.3em;
+  margin: 0em;
   width: 100px;
   border: none;
   border-radius: 10px;

@@ -1,17 +1,18 @@
 import { Characters } from './components/Characters';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { UserProfile } from './components/UserProfile';
 import { Character } from './components/Character';
 import { NotFound } from './components/NotFound';
 import { Home } from './components/Home';
 import styled from 'styled-components';
-import { CenterSmallLayout, LayoutOne, LayoutTwo } from './components/Layouts';
+import { CenterSmallLayout, LayoutOne } from './components/Layouts';
 import Navbar from './components/navbar/Navbar';
 import { SignUp } from './components/SignUp';
 import { Login } from './components/Login';
 import { LoginAndSignUp } from './components/LoginAndSignUp';
 
 const Container = styled.div`
+  overflow-y: auto;
   font-family: 'Arimo';
   display: flex;
   flex-direction: column;

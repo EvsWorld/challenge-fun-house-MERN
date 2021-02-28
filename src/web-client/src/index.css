@@ -1,5 +1,4 @@
   body {
-    overflow: hidden;
     margin: 0px;
     padding: 0px;
     font-family: 'Titilillium Web';
@@ -7,3 +6,10 @@
     -moz-osx-font-smoothing: grayscale;
     background: #c2edf2;
   }
+
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
