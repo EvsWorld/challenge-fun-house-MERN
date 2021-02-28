@@ -36,3 +36,4 @@ I took a bit longer than I would have liked to, but I went down a few rabbit hol
 - axios - requests
 - react-router-dom - client side routing
 - styled-components - Its nice for keeping your components more together
+- reactIcon - quick icon

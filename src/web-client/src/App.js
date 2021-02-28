@@ -63,7 +63,6 @@ function App() {
           component={LoginAndSignUp}
           layout={CenterSmallLayout}
         />
-        <Route exact path="/phones" component={() => <div>Phones page</div>} />
         <Route exact path="/characters/:id" component={Character} />
         <RouteWrapper
           path="/one"

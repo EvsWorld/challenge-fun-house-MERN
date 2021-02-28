@@ -73,9 +73,6 @@ const RightNav = ({ open }) => {
           <StyledLink to="/profile">Profile</StyledLink>
         </li>
       ) : null}
-      <li>
-        <StyledLink to="/phones">Phones</StyledLink>
-      </li>
       {characters && user ? (
         <li>
           <StyledLink to="/characters">Characters</StyledLink>

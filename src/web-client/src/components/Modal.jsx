@@ -19,8 +19,8 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
   overflow-y: auto;
-  width: 800px;
-  height: 500px;
+  width: 45em;
+  height: 30em;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
