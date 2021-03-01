@@ -27,11 +27,6 @@ export function Characters() {
   const user = useSelector((state) => state.user.user);
   const favoriteCharactersFromRedux = user.favoriteCharacters;
 
-  console.log(
-    'initial: favoriteCharactersFromRedux :>> ',
-    favoriteCharactersFromRedux
-  );
-
   useEffect(() => {
     if (characterStatus === 'idle') {
       dispatch(fetchCharacters());
@@ -40,7 +35,6 @@ export function Characters() {
 
   const handleToggleFavorite = (characterId) => {
     var newFavoriteCharacters = [...favoriteCharactersFromRedux];
-    console.log(' newFavoriteCharacters:>> ', newFavoriteCharacters);
     var indexItem = newFavoriteCharacters.indexOf(characterId);
     if (indexItem === -1) {
       newFavoriteCharacters.push(characterId);
@@ -48,10 +42,6 @@ export function Characters() {
       newFavoriteCharacters.splice(indexItem, 1);
     }
 
-    console.log(
-      'after update: newFavoriteCharacters :>> ',
-      newFavoriteCharacters
-    );
     dispatch(
       updateUser({
         user: { ...user, favoriteCharacters: newFavoriteCharacters },

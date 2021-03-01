@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { MdClose } from 'react-icons/md';
-import { DetailModal } from './DetailModal';
+import { CharacterDetailsExtended } from './CharacterDetailsExtended';
 
 const Background = styled.div`
   z-index: 222222;
@@ -29,6 +29,10 @@ const ModalWrapper = styled.div`
   position: relative;
   z-index: 10;
   border-radius: 10px;
+  @media (max-width: 600px) {
+    grid-template-columns: none;
+    height: 50em;
+  }
 `;
 
 const ModalImg = styled.img`
@@ -69,7 +73,6 @@ const CloseModalButton = styled(MdClose)`
 `;
 
 export const Modal = ({
-  ref,
   name,
   gender,
   image,
@@ -82,18 +85,14 @@ export const Modal = ({
   showModal,
   setShowModal,
 }) => {
-  const closeModal = (e) => {
-    setShowModal(false);
-  };
-
   return (
     <>
       {showModal ? (
-        <Background onClick={closeModal}>
-          <ModalWrapper showModal={showModal}>
+        <Background onClick={() => setShowModal(false)}>
+          <ModalWrapper>
             <ModalImg src={image} iconImage={image} alt="character" />
             <ModalContent>
-              <DetailModal
+              <CharacterDetailsExtended
                 name={name}
                 gender={gender}
                 image={image}
@@ -106,7 +105,7 @@ export const Modal = ({
             </ModalContent>
             <CloseModalButton
               arial-label="Close modal"
-              onClick={() => setShowModal((prev) => !prev)}
+              onClick={() => setShowModal(false)}
             />
           </ModalWrapper>
         </Background>
@@ -117,7 +116,7 @@ export const Modal = ({
 
 Modal.propTypes = {
   setShowModal: PropTypes.func,
-  showModal: PropTypes.func,
+  showModal: PropTypes.bool,
   gender: PropTypes.string,
   image: PropTypes.string,
   isFavorite: PropTypes.func,

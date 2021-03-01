@@ -18,20 +18,3 @@ export const findAll = (req, res) => {
       });
     });
 };
-
-// BulkUpserts characters checking on the name field to not add characters already in db
-export const bulkAdd = (arrayToBulkAdd) => {
-  const bulkOps = arrayToBulkAdd.map((doc) => ({
-    updateOne: {
-      filter: { name: doc.name },
-      update: doc,
-      upsert: true,
-    },
-  }));
-
-  Character.bulkWrite(bulkOps)
-    .then(function (characters) {})
-    .catch(function (err) {
-      console.error(err);
-    });
-};

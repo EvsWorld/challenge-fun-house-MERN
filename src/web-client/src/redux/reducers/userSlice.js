@@ -29,7 +29,6 @@ export const login = createAsyncThunk(
 );
 
 export const fetchUser = createAsyncThunk('user/fetch', async (thunkAPI) => {
-  console.log('fetchUser: thunkAPI :>> ', thunkAPI);
   const response = await api.get(`/api/users/own`);
   return response.data;
 });

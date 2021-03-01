@@ -1,9 +1,18 @@
-# Ricky and Morty Challenge
-App is available at: https://client-11111.herokuapp.com/
+# CRUD MERN Challenge
+App is available at: https://client-11111.herokuapp.com
 
 ## Notes
-I took a bit longer than I would have liked to, but I went down a few rabbit holes. I was thinking I would try out react-query library but then realized you asked for redux. And I wanted to have it deployed, and so I spent a bit of time on hooking that up, and getting it to deploy when I pushed. Then I really wanted to use esm style imports and exports and switched the backend over to that, but then that broke it when it deployed. So I lost time on that. I'm going to submit it now, without the character detail view. There are many other things I didn't include just in interest of time, for example: form validation, duplicate email/id verification, responsive/beautiful design, testing, seperating services out from controllers, et al.
+This is a create-react-app with an express backend and mongodb database. It has some basic signup/login functionality, using jwt.  Once the user is logged in, they can see the characters and mark characters as favorites, and that is persisted in the db.  The characters GET route and user PUT and GET routes are protected by a middleware that requires a valid token. I did some light responsiveness functionality like a collapsible navbar, and just having the characters view wrap and stack. Because of a requirement from another code challenge, I hit the Rick and Morty api from my backend and load some of the characters into my database when the app starts. The function that does that looks for duplicates (by the name field) and will only add characters fetched from the api that aren’t already in the database. And finally this is hooked up to build and deploy to two heroku apps whenever I push to the github repo, using github actions. 
 
+---
+
+## To run it
+1.  From src/api: `npm install`
+2. From src/web-client: `npm install`
+3. Start up a mongodb instance and assign that connection string to DATABASE_URL in the src/api/.env file
+4. From src/api: `npm run nodemon`
+5. From src/web-client: `npm run start`
+6. Should be up and running on localhost:3000
 ---
 ## Notes on packages
 ### Back-End

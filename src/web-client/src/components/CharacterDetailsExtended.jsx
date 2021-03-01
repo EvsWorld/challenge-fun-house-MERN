@@ -2,7 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-const ProfileDetailsUsername = styled.div`
+const DetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const HeaderAndFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,17 +28,20 @@ const DataButton = styled.a`
   margin-left: 20px;
 `;
 
-const HeadingThreeText = styled.h3``;
-const ParagraphText = styled.p``;
+const HeadingThreeText = styled.h3`
+  line-height: 4em;
+`;
+const ParagraphText = styled.div``;
 
 const ProfileDetailsMeta = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  margin: 0 2em;
 `;
 
-export function DetailModal({
+export function CharacterDetailsExtended({
   name,
   gender,
   image,
@@ -44,13 +52,10 @@ export function DetailModal({
   location,
 }) {
   return (
-    <>
-      <ProfileDetailsUsername>
+    <DetailsContainer>
+      <HeaderAndFooter>
         <HeadingThreeText>{name}</HeadingThreeText>
-        <DataButton target="_blank" href={url}>
-          Data
-        </DataButton>
-      </ProfileDetailsUsername>
+      </HeaderAndFooter>
 
       <ProfileDetailsMeta>
         <ParagraphText>
@@ -69,11 +74,16 @@ export function DetailModal({
           Living: <strong>{status === 'Alive' ? 'Yes' : 'No'}</strong>
         </ParagraphText>
       </ProfileDetailsMeta>
-    </>
+      <HeaderAndFooter>
+        <DataButton target="_blank" href={url}>
+          Data
+        </DataButton>
+      </HeaderAndFooter>
+    </DetailsContainer>
   );
 }
 
-DetailModal.propTypes = {
+CharacterDetailsExtended.propTypes = {
   gender: PropTypes.string,
   image: PropTypes.string,
   location: PropTypes.shape({

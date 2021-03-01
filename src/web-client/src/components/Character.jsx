@@ -70,11 +70,7 @@ export function Character({
       .filter((detail) => detail !== 'unknown')
       .join(',  ');
 
-  const [
-    isDetailViewOpen,
-    setIsDetailViewOpen,
-    detailRef,
-  ] = useComponentVisible(false);
+  const [isDetailViewOpen, setIsDetailViewOpen] = useComponentVisible(false);
 
   return (
     <>
@@ -91,7 +87,6 @@ export function Character({
         </CardBody>
       </Card>
       <Modal
-        ref={detailRef}
         showModal={isDetailViewOpen}
         setShowModal={setIsDetailViewOpen}
         name={name}

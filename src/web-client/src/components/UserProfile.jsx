@@ -1,8 +1,6 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { logout } from '../redux/reducers/userSlice';
-import { Characters } from './Characters';
 
 const Container = styled.div`
   display: flex;
@@ -12,24 +10,25 @@ const Container = styled.div`
 `;
 
 const WelcomeDialogue = styled.div`
-  width: 20em;
+  ${'' /* width: 20em; */}
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Titilillium Web';
+  padding: 1em;
+`;
+
+const Field = styled.div`
+  margin: 1em;
 `;
 
 export function UserProfile() {
-  const dispatch = useDispatch();
-
   const { user } = useSelector((state) => state.user);
-  console.log('UserProfile: user :>> ', user);
 
   return (
     <Container>
       <WelcomeDialogue>
-        <div>username: {user.username}</div>
-        <div>email: {user.email}</div>
+        <Field>username: {user.username}</Field>
+        <Field>email: {user.email}</Field>
       </WelcomeDialogue>
     </Container>
   );

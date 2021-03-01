@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import { connectDb } from './db';
 import routes from './routes';
-import { getCharactersFromExternal } from './services/characters.service';
+import { getCharactersFromExternal } from './services/character.service';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -22,7 +23,7 @@ const Ul = styled.ul`
     height: 100vh;
     width: 300px;
     padding-top: 3rem;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in;
     li a {
       color: white;
     }
@@ -41,24 +42,35 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const RightNav = ({ open }) => {
+const RightNav = ({ open, setOpen }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
   const { characters } = useSelector((state) => state.characters);
+  const handleCloseMenu = () => {
+    setOpen(false);
+  };
   const renderLogoutOrSignupLogin = () => {
+    const handleLogout = () => {
+      setOpen(false);
+      dispatch(logout());
+    };
     return user ? (
       <li>
-        <StyledLink to="/" onClick={() => dispatch(logout())}>
+        <StyledLink to="/" onClick={handleLogout}>
           Logout
         </StyledLink>
       </li>
     ) : (
       <>
         <li>
-          <StyledLink to="/signup">Signup</StyledLink>
+          <StyledLink onClick={handleCloseMenu} to="/signup">
+            Signup
+          </StyledLink>
         </li>
         <li>
-          <StyledLink to="/login">Login</StyledLink>
+          <StyledLink onClick={handleCloseMenu} to="/login">
+            Login
+          </StyledLink>
         </li>
       </>
     );
@@ -66,21 +78,32 @@ const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
       <li>
-        <StyledLink to="/">Home</StyledLink>
+        <StyledLink onClick={handleCloseMenu} to="/">
+          Home
+        </StyledLink>
       </li>
       {user ? (
         <li>
-          <StyledLink to="/profile">Profile</StyledLink>
+          <StyledLink onClick={handleCloseMenu} to="/profile">
+            Profile
+          </StyledLink>
         </li>
       ) : null}
       {characters && user ? (
         <li>
-          <StyledLink to="/characters">Characters</StyledLink>
+          <StyledLink onClick={handleCloseMenu} to="/characters">
+            Characters
+          </StyledLink>
         </li>
       ) : null}
       {renderLogoutOrSignupLogin()}
     </Ul>
   );
+};
+
+RightNav.propTypes = {
+  open: PropTypes.bool,
+  setOpen: PropTypes.func,
 };
 
 export default RightNav;
