@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: process.env.CLIENT_URL || 'http://localhost:3002',
 };
 
 app.use(cors(corsOptions));
@@ -30,6 +30,7 @@ app.use('/ping', (req, res) => {
   });
 });
 
+app.use("/api/company", routes.company);
 app.use('/api/characters', routes.character);
 app.use('/api/users', routes.user);
 app.use('/api/auth', routes.auth);

@@ -1,0 +1,5008 @@
+[
+  {
+    "id": 1,
+    "company_name": "Watsica, Barrows and Conn",
+    "city": "Itapé",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/107x100.png/ff4444/ffffff",
+    "specialties": [
+      "Asphalt Paving",
+      "Marlite Panels (FED)",
+      "Site Furnishings",
+      "RF Shielding"
+    ]
+  },
+  {
+    "id": 2,
+    "company_name": "Hickle, Barrows and Fahey",
+    "city": "Woloara",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/176x100.png/dddddd/000000",
+    "specialties": [
+      "Marlite Panels (FED)",
+      "Framing (Steel)",
+      "Sitework & Site Utilities"
+    ]
+  },
+  {
+    "id": 3,
+    "company_name": "Lemke, Hintz and Hahn",
+    "city": "La Tinguiña",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/193x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Fire Sprinkler System",
+      "Fire Protection",
+      "Framing (Steel)",
+      "Marlite Panels (FED)"
+    ]
+  },
+  {
+    "id": 4,
+    "company_name": "Emard, Rogahn and Wolf",
+    "city": "Pokój",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/172x100.png/5fa2dd/ffffff",
+    "specialties": ["Masonry & Precast", "Framing (Steel)"]
+  },
+  {
+    "id": 5,
+    "company_name": "Purdy Group",
+    "city": "Zongzhai",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/201x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Retaining Wall and Brick Pavers",
+      "Marlite Panels (FED)",
+      "Wall Protection"
+    ]
+  },
+  {
+    "id": 6,
+    "company_name": "Prohaska, Olson and Cremin",
+    "city": "Kameyama",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/116x100.png/ff4444/ffffff",
+    "specialties": [
+      "Prefabricated Aluminum Metal Canopies",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 7,
+    "company_name": "Stroman Inc",
+    "city": "Yangkou",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/120x100.png/dddddd/000000",
+    "specialties": [
+      "Rebar & Wire Mesh Install",
+      "Elevator",
+      "Structural & Misc Steel Erection"
+    ]
+  },
+  {
+    "id": 8,
+    "company_name": "Rippin, DuBuque and Kovacek",
+    "city": "Sengeti",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/217x100.png/dddddd/000000",
+    "specialties": ["Rebar & Wire Mesh Install", "Elevator"]
+  },
+  {
+    "id": 9,
+    "company_name": "Simonis-Mraz",
+    "city": "Mahendranagar",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Retaining Wall and Brick Pavers",
+      "Drywall & Acoustical (FED)",
+      "Prefabricated Aluminum Metal Canopies",
+      "Drywall & Acoustical (MOB)"
+    ]
+  },
+  {
+    "id": 10,
+    "company_name": "Carroll and Sons",
+    "city": "Ponta Porã",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/156x100.png/dddddd/000000",
+    "specialties": ["Curb & Gutter"]
+  },
+  {
+    "id": 11,
+    "company_name": "Christiansen-Aufderhar",
+    "city": "Gabahan",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/100x100.png/dddddd/000000",
+    "specialties": ["Overhead Doors"]
+  },
+  {
+    "id": 12,
+    "company_name": "Waelchi, Crist and Breitenberg",
+    "city": "Shishan",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/169x100.png/cc0000/ffffff",
+    "specialties": ["Sitework & Site Utilities", "Drywall & Acoustical (FED)"]
+  },
+  {
+    "id": 13,
+    "company_name": "Walker-McCullough",
+    "city": "Guachetá",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/192x100.png/ff4444/ffffff",
+    "specialties": [
+      "Epoxy Flooring",
+      "Roofing (Metal)",
+      "Sitework & Site Utilities"
+    ]
+  },
+  {
+    "id": 14,
+    "company_name": "Zulauf-Hermann",
+    "city": "Bīrganj",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/241x100.png/dddddd/000000",
+    "specialties": ["Temp Fencing, Decorative Fencing and Gates"]
+  },
+  {
+    "id": 15,
+    "company_name": "Marvin-Rath",
+    "city": "Wincrange",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/114x100.png/ff4444/ffffff",
+    "specialties": ["Roofing (Metal)", "Glass & Glazing"]
+  },
+  {
+    "id": 16,
+    "company_name": "Mertz, Ryan and Wunsch",
+    "city": "Masuguru",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/102x100.png/dddddd/000000",
+    "specialties": ["Drywall & Acoustical (FED)", "Roofing (Metal)"]
+  },
+  {
+    "id": 17,
+    "company_name": "Beier, Lang and Collins",
+    "city": "Guáimaro",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/113x100.png/ff4444/ffffff",
+    "specialties": [
+      "Fire Sprinkler System",
+      "Temp Fencing, Decorative Fencing and Gates"
+    ]
+  },
+  {
+    "id": 18,
+    "company_name": "Goldner-Waters",
+    "city": "Dazhangzhuang",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/205x100.png/dddddd/000000",
+    "specialties": ["EIFS"]
+  },
+  {
+    "id": 19,
+    "company_name": "Lueilwitz-Walker",
+    "city": "Pankshin",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/133x100.png/ff4444/ffffff",
+    "specialties": ["Termite Control", "Granite Surfaces"]
+  },
+  {
+    "id": 20,
+    "company_name": "Smitham Group",
+    "city": "Shiyan",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/157x100.png/ff4444/ffffff",
+    "specialties": ["Termite Control"]
+  },
+  {
+    "id": 21,
+    "company_name": "Littel-Lubowitz",
+    "city": "Ponte Nova",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/145x100.png/dddddd/000000",
+    "specialties": [
+      "Doors, Frames & Hardware",
+      "Site Furnishings",
+      "Rebar & Wire Mesh Install"
+    ]
+  },
+  {
+    "id": 22,
+    "company_name": "Schimmel, Kohler and Kemmer",
+    "city": "Zibu",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/219x100.png/dddddd/000000",
+    "specialties": [
+      "Structural & Misc Steel Erection",
+      "RF Shielding",
+      "Drywall & Acoustical (MOB)",
+      "Framing (Steel)"
+    ]
+  },
+  {
+    "id": 23,
+    "company_name": "Kemmer LLC",
+    "city": "Ottawa",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/245x100.png/cc0000/ffffff",
+    "specialties": [
+      "Asphalt Paving",
+      "Elevator",
+      "Retaining Wall and Brick Pavers",
+      "Curb & Gutter"
+    ]
+  },
+  {
+    "id": 24,
+    "company_name": "Buckridge LLC",
+    "city": "Sovetsk",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/191x100.png/5fa2dd/ffffff",
+    "specialties": ["Asphalt Paving", "Framing (Steel)"]
+  },
+  {
+    "id": 25,
+    "company_name": "Pacocha, Gusikowski and Cartwright",
+    "city": "Gaopi",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/189x100.png/cc0000/ffffff",
+    "specialties": ["Asphalt Paving", "Framing (Wood)", "EIFS"]
+  },
+  {
+    "id": 26,
+    "company_name": "Pollich, Hickle and Hickle",
+    "city": "Shushary",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/159x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Site Furnishings",
+      "Termite Control",
+      "Hard Tile & Stone",
+      "Soft Flooring and Base"
+    ]
+  },
+  {
+    "id": 27,
+    "company_name": "Monahan Inc",
+    "city": "Tiout",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/140x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Framing (Steel)",
+      "Fire Sprinkler System",
+      "Landscaping & Irrigation",
+      "Asphalt Paving"
+    ]
+  },
+  {
+    "id": 28,
+    "company_name": "Ullrich, Kutch and Weissnat",
+    "city": "Shijing",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/108x100.png/dddddd/000000",
+    "specialties": ["Termite Control", "Asphalt Paving"]
+  },
+  {
+    "id": 29,
+    "company_name": "Ferry, Olson and Fritsch",
+    "city": "Yangzhuang",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/103x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Electrical and Fire Alarm",
+      "Casework",
+      "Rebar & Wire Mesh Install"
+    ]
+  },
+  {
+    "id": 30,
+    "company_name": "Hickle-Hackett",
+    "city": "Punta de Piedra",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/160x100.png/ff4444/ffffff",
+    "specialties": ["Drilled Shafts", "Rebar & Wire Mesh Install"]
+  },
+  {
+    "id": 31,
+    "company_name": "Schneider, Waters and Jakubowski",
+    "city": "Taikang",
+    "specialty": "RF Shielding",
+    "logo": "http://dummyimage.com/190x100.png/dddddd/000000",
+    "specialties": ["Drywall & Acoustical (FED)"]
+  },
+  {
+    "id": 32,
+    "company_name": "Greenfelder-Hodkiewicz",
+    "city": "São Mateus",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/200x100.png/cc0000/ffffff",
+    "specialties": ["Asphalt Paving", "Framing (Steel)", "HVAC", "Masonry"]
+  },
+  {
+    "id": 33,
+    "company_name": "Olson-Nienow",
+    "city": "Carpiquet",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/246x100.png/5fa2dd/ffffff",
+    "specialties": ["Epoxy Flooring", "Landscaping & Irrigation"]
+  },
+  {
+    "id": 34,
+    "company_name": "Stark, Cronin and Rosenbaum",
+    "city": "Medvedok",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/141x100.png/cc0000/ffffff",
+    "specialties": ["RF Shielding", "EIFS"]
+  },
+  {
+    "id": 35,
+    "company_name": "Christiansen Group",
+    "city": "Okakarara",
+    "specialty": "Construction Clean and Final Clean",
+    "logo": "http://dummyimage.com/147x100.png/dddddd/000000",
+    "specialties": [
+      "Plumbing & Medical Gas",
+      "Exterior Signage",
+      "HVAC",
+      "Structural and Misc Steel (Fabrication)"
+    ]
+  },
+  {
+    "id": 36,
+    "company_name": "Dibbert, Stracke and Gleason",
+    "city": "Carquefou",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/211x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Exterior Signage",
+      "EIFS",
+      "Sitework & Site Utilities",
+      "RF Shielding"
+    ]
+  },
+  {
+    "id": 37,
+    "company_name": "Stehr-Schmitt",
+    "city": "Hveragerði",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/126x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Sitework & Site Utilities",
+      "Waterproofing & Caulking",
+      "Framing (Wood)"
+    ]
+  },
+  {
+    "id": 38,
+    "company_name": "Harvey, Schneider and Mann",
+    "city": "Kamieniec Ząbkowicki",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/219x100.png/cc0000/ffffff",
+    "specialties": ["Temp Fencing, Decorative Fencing and Gates"]
+  },
+  {
+    "id": 39,
+    "company_name": "Hodkiewicz-Emard",
+    "city": "Real",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/154x100.png/5fa2dd/ffffff",
+    "specialties": ["Elevator", "Site Furnishings"]
+  },
+  {
+    "id": 40,
+    "company_name": "Blanda and Sons",
+    "city": "Tūkrah",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/185x100.png/cc0000/ffffff",
+    "specialties": ["Prefabricated Aluminum Metal Canopies"]
+  },
+  {
+    "id": 41,
+    "company_name": "Waelchi-Nader",
+    "city": "Krasnolesnyy",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/200x100.png/cc0000/ffffff",
+    "specialties": [
+      "Waterproofing & Caulking",
+      "Drywall & Acoustical (FED)",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 42,
+    "company_name": "Lind LLC",
+    "city": "Sungsang",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/167x100.png/cc0000/ffffff",
+    "specialties": ["EIFS", "Doors, Frames & Hardware"]
+  },
+  {
+    "id": 43,
+    "company_name": "Hackett, Fahey and Wolff",
+    "city": "Arboga",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/213x100.png/cc0000/ffffff",
+    "specialties": ["Sitework & Site Utilities", "HVAC"]
+  },
+  {
+    "id": 44,
+    "company_name": "Ryan-Williamson",
+    "city": "Burgos",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/234x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Painting & Vinyl Wall Covering",
+      "Termite Control",
+      "Drywall & Acoustical (FED)"
+    ]
+  },
+  {
+    "id": 45,
+    "company_name": "Bahringer, Hickle and Cummerata",
+    "city": "Watangan",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/129x100.png/cc0000/ffffff",
+    "specialties": ["Termite Control"]
+  },
+  {
+    "id": 46,
+    "company_name": "Kohler Group",
+    "city": "La Loma",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/216x100.png/cc0000/ffffff",
+    "specialties": ["Hard Tile & Stone", "Retaining Wall and Brick Pavers"]
+  },
+  {
+    "id": 47,
+    "company_name": "Hand Group",
+    "city": "Ibrā’",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/202x100.png/5fa2dd/ffffff",
+    "specialties": ["Soft Flooring and Base", "RF Shielding", "Termite Control"]
+  },
+  {
+    "id": 48,
+    "company_name": "Kovacek, Gleichner and Gusikowski",
+    "city": "Darwin",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/167x100.png/cc0000/ffffff",
+    "specialties": ["Curb & Gutter", "Masonry & Precast"]
+  },
+  {
+    "id": 49,
+    "company_name": "Zemlak, Parker and Baumbach",
+    "city": "Villa Hayes",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/215x100.png/ff4444/ffffff",
+    "specialties": ["Framing (Wood)"]
+  },
+  {
+    "id": 50,
+    "company_name": "Zemlak Group",
+    "city": "Paradela",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/152x100.png/ff4444/ffffff",
+    "specialties": ["Painting & Vinyl Wall Covering"]
+  },
+  {
+    "id": 51,
+    "company_name": "Ledner-Wiegand",
+    "city": "Yokotemachi",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/247x100.png/ff4444/ffffff",
+    "specialties": ["EIFS", "Structural & Misc Steel Erection"]
+  },
+  {
+    "id": 52,
+    "company_name": "Rohan-VonRueden",
+    "city": "Martyush",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/233x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Drywall & Acoustical (MOB)",
+      "Masonry",
+      "Elevator",
+      "Retaining Wall and Brick Pavers"
+    ]
+  },
+  {
+    "id": 53,
+    "company_name": "Streich Group",
+    "city": "Chashan",
+    "specialty": "RF Shielding",
+    "logo": "http://dummyimage.com/242x100.png/ff4444/ffffff",
+    "specialties": [
+      "Waterproofing & Caulking",
+      "Retaining Wall and Brick Pavers"
+    ]
+  },
+  {
+    "id": 54,
+    "company_name": "Nicolas Group",
+    "city": "Ningshan Chengguanzhen",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/249x100.png/dddddd/000000",
+    "specialties": ["Overhead Doors", "Site Furnishings", "Masonry & Precast"]
+  },
+  {
+    "id": 55,
+    "company_name": "Ryan Group",
+    "city": "Zhezqazghan",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/117x100.png/5fa2dd/ffffff",
+    "specialties": ["RF Shielding", "Drywall & Acoustical (FED)"]
+  },
+  {
+    "id": 56,
+    "company_name": "Trantow-Dickinson",
+    "city": "Chroustovice",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/226x100.png/dddddd/000000",
+    "specialties": [
+      "Electrical",
+      "Site Furnishings",
+      "Retaining Wall and Brick Pavers",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 57,
+    "company_name": "Rodriguez, Kunde and Quitzon",
+    "city": "San Pedro",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/212x100.png/ff4444/ffffff",
+    "specialties": ["Electrical", "Marlite Panels (FED)", "Site Furnishings"]
+  },
+  {
+    "id": 58,
+    "company_name": "West-Bernier",
+    "city": "El Mirador",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/102x100.png/cc0000/ffffff",
+    "specialties": ["Prefabricated Aluminum Metal Canopies"]
+  },
+  {
+    "id": 59,
+    "company_name": "Johnston, Kohler and Hermiston",
+    "city": "Paris 16",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/120x100.png/dddddd/000000",
+    "specialties": ["Masonry & Precast"]
+  },
+  {
+    "id": 60,
+    "company_name": "Jacobi Inc",
+    "city": "Haruman",
+    "specialty": "Termite Control",
+    "logo": "http://dummyimage.com/111x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Painting & Vinyl Wall Covering",
+      "Exterior Signage",
+      "Drilled Shafts",
+      "Wall Protection"
+    ]
+  },
+  {
+    "id": 61,
+    "company_name": "Lueilwitz LLC",
+    "city": "Sukonolo Krajan",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/146x100.png/dddddd/000000",
+    "specialties": ["Epoxy Flooring", "Roofing (Asphalt)"]
+  },
+  {
+    "id": 62,
+    "company_name": "Ratke-Renner",
+    "city": "Huayana",
+    "specialty": "RF Shielding",
+    "logo": "http://dummyimage.com/217x100.png/dddddd/000000",
+    "specialties": ["Marlite Panels (FED)", "Drywall & Acoustical (MOB)"]
+  },
+  {
+    "id": 63,
+    "company_name": "Williamson Inc",
+    "city": "Hongyanxi",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/128x100.png/cc0000/ffffff",
+    "specialties": [
+      "Retaining Wall and Brick Pavers",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Curb & Gutter"
+    ]
+  },
+  {
+    "id": 64,
+    "company_name": "Thiel and Sons",
+    "city": "Svojat",
+    "specialty": "Retaining Wall and Brick Pavers",
+    "logo": "http://dummyimage.com/229x100.png/dddddd/000000",
+    "specialties": ["Structural & Misc Steel Erection"]
+  },
+  {
+    "id": 65,
+    "company_name": "Bogan, Deckow and Mayert",
+    "city": "Jingyang",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/187x100.png/cc0000/ffffff",
+    "specialties": [
+      "Glass & Glazing",
+      "Plumbing & Medical Gas",
+      "Fire Sprinkler System",
+      "Termite Control"
+    ]
+  },
+  {
+    "id": 66,
+    "company_name": "Collins Inc",
+    "city": "Atimonan",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/149x100.png/cc0000/ffffff",
+    "specialties": [
+      "Granite Surfaces",
+      "Rebar & Wire Mesh Install",
+      "Marlite Panels (FED)",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 67,
+    "company_name": "Bahringer Group",
+    "city": "Xiongguan",
+    "specialty": "Marlite Panels (FED)",
+    "logo": "http://dummyimage.com/167x100.png/dddddd/000000",
+    "specialties": [
+      "Epoxy Flooring",
+      "Soft Flooring and Base",
+      "Glass & Glazing",
+      "Hard Tile & Stone"
+    ]
+  },
+  {
+    "id": 68,
+    "company_name": "Gibson Group",
+    "city": "Hariang",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/169x100.png/ff4444/ffffff",
+    "specialties": ["Retaining Wall and Brick Pavers", "Site Furnishings"]
+  },
+  {
+    "id": 69,
+    "company_name": "Zulauf-Hessel",
+    "city": "Prado",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/115x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Doors, Frames & Hardware",
+      "Structural & Misc Steel Erection",
+      "Hard Tile & Stone",
+      "Soft Flooring and Base"
+    ]
+  },
+  {
+    "id": 70,
+    "company_name": "Hamill Inc",
+    "city": "Pelabuhanratu",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/203x100.png/cc0000/ffffff",
+    "specialties": [
+      "Doors, Frames & Hardware",
+      "Construction Clean and Final Clean",
+      "Drywall & Acoustical (FED)"
+    ]
+  },
+  {
+    "id": 71,
+    "company_name": "Hayes Inc",
+    "city": "Soledar",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/104x100.png/cc0000/ffffff",
+    "specialties": [
+      "Roofing (Metal)",
+      "Exterior Signage",
+      "Structural and Misc Steel (Fabrication)",
+      "Curb & Gutter"
+    ]
+  },
+  {
+    "id": 72,
+    "company_name": "Macejkovic, Kuphal and Boyer",
+    "city": "Bazi",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/166x100.png/ff4444/ffffff",
+    "specialties": [
+      "Doors, Frames & Hardware",
+      "Roofing (Asphalt)",
+      "Fire Sprinkler System",
+      "Fire Protection"
+    ]
+  },
+  {
+    "id": 73,
+    "company_name": "Mueller, Stracke and Brakus",
+    "city": "São João Nepomuceno",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/192x100.png/5fa2dd/ffffff",
+    "specialties": ["RF Shielding", "Granite Surfaces", "Framing (Wood)"]
+  },
+  {
+    "id": 74,
+    "company_name": "Metz-Rice",
+    "city": "Pedreira",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/248x100.png/ff4444/ffffff",
+    "specialties": [
+      "Doors, Frames & Hardware",
+      "Roofing (Asphalt)",
+      "Framing (Steel)",
+      "Marlite Panels (FED)"
+    ]
+  },
+  {
+    "id": 75,
+    "company_name": "Stamm and Sons",
+    "city": "Pancol",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/115x100.png/cc0000/ffffff",
+    "specialties": [
+      "Rebar & Wire Mesh Install",
+      "Ornamental Railings",
+      "Casework"
+    ]
+  },
+  {
+    "id": 76,
+    "company_name": "Cruickshank-Hermiston",
+    "city": "Liangbing",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/105x100.png/ff4444/ffffff",
+    "specialties": [
+      "Roofing (Asphalt)",
+      "Casework",
+      "Site Furnishings",
+      "Curb & Gutter"
+    ]
+  },
+  {
+    "id": 77,
+    "company_name": "Cormier Group",
+    "city": "Yag La",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/131x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Granite Surfaces",
+      "EIFS",
+      "Epoxy Flooring",
+      "Site Furnishings"
+    ]
+  },
+  {
+    "id": 78,
+    "company_name": "O'Conner and Sons",
+    "city": "Sainyabuli",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/217x100.png/cc0000/ffffff",
+    "specialties": ["EIFS", "Waterproofing & Caulking", "Roofing (Metal)"]
+  },
+  {
+    "id": 79,
+    "company_name": "Bergnaum-Jacobi",
+    "city": "Boyeros",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Waterproofing & Caulking",
+      "Fire Protection",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 80,
+    "company_name": "Balistreri-Fay",
+    "city": "Simo",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/190x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Glass & Glazing",
+      "Casework",
+      "Retaining Wall and Brick Pavers",
+      "Prefabricated Aluminum Metal Canopies"
+    ]
+  },
+  {
+    "id": 81,
+    "company_name": "Kunde LLC",
+    "city": "Suining",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/120x100.png/dddddd/000000",
+    "specialties": ["Glass & Glazing"]
+  },
+  {
+    "id": 82,
+    "company_name": "Rohan-Schmidt",
+    "city": "Machang",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/105x100.png/dddddd/000000",
+    "specialties": ["Sitework & Site Utilities"]
+  },
+  {
+    "id": 83,
+    "company_name": "Barrows, Ortiz and Kertzmann",
+    "city": "Huayang",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/101x100.png/cc0000/ffffff",
+    "specialties": ["Asphalt Paving", "Wall Protection", "Framing (Steel)"]
+  },
+  {
+    "id": 84,
+    "company_name": "Nicolas-Ruecker",
+    "city": "San Bartolomé Milpas Altas",
+    "specialty": "Termite Control",
+    "logo": "http://dummyimage.com/211x100.png/cc0000/ffffff",
+    "specialties": [
+      "Fire Protection",
+      "Glass & Glazing",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 85,
+    "company_name": "Cruickshank-Collier",
+    "city": "Shuanglongchang",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/234x100.png/dddddd/000000",
+    "specialties": ["Epoxy Flooring", "Electrical"]
+  },
+  {
+    "id": 86,
+    "company_name": "Abernathy Group",
+    "city": "Shreveport",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/109x100.png/dddddd/000000",
+    "specialties": ["RF Shielding", "Glass & Glazing", "Ornamental Railings"]
+  },
+  {
+    "id": 87,
+    "company_name": "Turner LLC",
+    "city": "Merkezköy",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/184x100.png/cc0000/ffffff",
+    "specialties": [
+      "Granite Surfaces",
+      "Electrical and Fire Alarm",
+      "EIFS",
+      "Curb & Gutter"
+    ]
+  },
+  {
+    "id": 88,
+    "company_name": "Morar, Barrows and Will",
+    "city": "Ibirataia",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/101x100.png/ff4444/ffffff",
+    "specialties": ["Curb & Gutter", "Structural and Misc Steel (Fabrication)"]
+  },
+  {
+    "id": 89,
+    "company_name": "Goodwin, Okuneva and Nitzsche",
+    "city": "Zhucun",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/243x100.png/dddddd/000000",
+    "specialties": [
+      "Roofing (Asphalt)",
+      "Casework",
+      "Overhead Doors",
+      "Fire Protection"
+    ]
+  },
+  {
+    "id": 90,
+    "company_name": "Orn-Doyle",
+    "city": "Taltal",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/145x100.png/cc0000/ffffff",
+    "specialties": ["Retaining Wall and Brick Pavers", "Elevator", "Casework"]
+  },
+  {
+    "id": 91,
+    "company_name": "Hickle-Treutel",
+    "city": "Campanário",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+    "specialties": ["Site Furnishings"]
+  },
+  {
+    "id": 92,
+    "company_name": "Schulist-Klein",
+    "city": "Kiarajangkung",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/196x100.png/cc0000/ffffff",
+    "specialties": ["Roofing (Asphalt)", "Painting & Vinyl Wall Covering"]
+  },
+  {
+    "id": 93,
+    "company_name": "Bernhard, Hermiston and Ratke",
+    "city": "Gosen",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/222x100.png/ff4444/ffffff",
+    "specialties": ["Roofing (Metal)", "Doors, Frames & Hardware"]
+  },
+  {
+    "id": 94,
+    "company_name": "VonRueden, Haley and Kiehn",
+    "city": "Changning",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/146x100.png/dddddd/000000",
+    "specialties": ["Masonry"]
+  },
+  {
+    "id": 95,
+    "company_name": "Leuschke-Purdy",
+    "city": "Ficksburg",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/186x100.png/ff4444/ffffff",
+    "specialties": [
+      "Roofing (Metal)",
+      "Structural and Misc Steel (Fabrication)"
+    ]
+  },
+  {
+    "id": 96,
+    "company_name": "Crist, Cole and Monahan",
+    "city": "Yangqiaodian",
+    "specialty": "Marlite Panels (FED)",
+    "logo": "http://dummyimage.com/121x100.png/dddddd/000000",
+    "specialties": ["Roofing (Metal)"]
+  },
+  {
+    "id": 97,
+    "company_name": "Kessler, Jacobson and Satterfield",
+    "city": "Togu",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/215x100.png/dddddd/000000",
+    "specialties": [
+      "Plumbing & Medical Gas",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Landscaping & Irrigation",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 98,
+    "company_name": "Berge-Zieme",
+    "city": "Kurba",
+    "specialty": "Retaining Wall and Brick Pavers",
+    "logo": "http://dummyimage.com/110x100.png/ff4444/ffffff",
+    "specialties": ["Asphalt Paving", "Waterproofing & Caulking"]
+  },
+  {
+    "id": 99,
+    "company_name": "Stanton, Doyle and Pouros",
+    "city": "Vardenik",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/151x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Structural & Misc Steel Erection",
+      "Granite Surfaces",
+      "Drilled Shafts",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 100,
+    "company_name": "Quigley, Stark and Jakubowski",
+    "city": "Göteborg",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/182x100.png/ff4444/ffffff",
+    "specialties": ["Electrical and Fire Alarm"]
+  },
+  {
+    "id": 101,
+    "company_name": "Christiansen-Schiller",
+    "city": "Isugod",
+    "specialty": "Exterior Signage",
+    "logo": "http://dummyimage.com/149x100.png/dddddd/000000",
+    "specialties": ["Sitework & Site Utilities", "Electrical and Fire Alarm"]
+  },
+  {
+    "id": 102,
+    "company_name": "Osinski-Lang",
+    "city": "Mondorf-les-Bains",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/206x100.png/cc0000/ffffff",
+    "specialties": ["Exterior Signage", "Wall Protection", "Termite Control"]
+  },
+  {
+    "id": 103,
+    "company_name": "Altenwerth-Kunze",
+    "city": "Hong’an",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/205x100.png/dddddd/000000",
+    "specialties": [
+      "Roofing (Asphalt)",
+      "Ornamental Railings",
+      "Overhead Doors"
+    ]
+  },
+  {
+    "id": 104,
+    "company_name": "Hermiston-Jenkins",
+    "city": "Jetis",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/183x100.png/ff4444/ffffff",
+    "specialties": ["Electrical"]
+  },
+  {
+    "id": 105,
+    "company_name": "Kassulke, Durgan and Swaniawski",
+    "city": "Sacramento",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/161x100.png/ff4444/ffffff",
+    "specialties": ["Glass & Glazing", "Roofing (Metal)", "Electrical"]
+  },
+  {
+    "id": 106,
+    "company_name": "Gottlieb and Sons",
+    "city": "Dao",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/237x100.png/dddddd/000000",
+    "specialties": ["Asphalt Paving"]
+  },
+  {
+    "id": 107,
+    "company_name": "Fisher Group",
+    "city": "Novouzensk",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/124x100.png/ff4444/ffffff",
+    "specialties": ["Framing (Steel)"]
+  },
+  {
+    "id": 108,
+    "company_name": "Bradtke Group",
+    "city": "Zakhim",
+    "specialty": "Retaining Wall and Brick Pavers",
+    "logo": "http://dummyimage.com/240x100.png/cc0000/ffffff",
+    "specialties": [
+      "Sitework & Site Utilities",
+      "Structural and Misc Steel (Fabrication)",
+      "Masonry",
+      "Plumbing & Medical Gas"
+    ]
+  },
+  {
+    "id": 109,
+    "company_name": "Erdman-Funk",
+    "city": "Tarxien",
+    "specialty": "Wall Protection",
+    "logo": "http://dummyimage.com/219x100.png/cc0000/ffffff",
+    "specialties": [
+      "Soft Flooring and Base",
+      "Construction Clean and Final Clean",
+      "Sitework & Site Utilities"
+    ]
+  },
+  {
+    "id": 110,
+    "company_name": "Windler Group",
+    "city": "Yuandianhui",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/193x100.png/cc0000/ffffff",
+    "specialties": [
+      "Electrical and Fire Alarm",
+      "Soft Flooring and Base",
+      "Curb & Gutter",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 111,
+    "company_name": "Paucek-Boehm",
+    "city": "Ouyang",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/249x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Termite Control",
+      "Drywall & Acoustical (FED)",
+      "Retaining Wall and Brick Pavers"
+    ]
+  },
+  {
+    "id": 112,
+    "company_name": "Stokes-Fritsch",
+    "city": "Pīrgaaj",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/199x100.png/dddddd/000000",
+    "specialties": [
+      "Construction Clean and Final Clean",
+      "Drywall & Acoustical (FED)"
+    ]
+  },
+  {
+    "id": 113,
+    "company_name": "Gulgowski-Emard",
+    "city": "São Bento",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/191x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Roofing (Asphalt)",
+      "Rebar & Wire Mesh Install",
+      "Masonry",
+      "Structural & Misc Steel Erection"
+    ]
+  },
+  {
+    "id": 114,
+    "company_name": "Tillman Inc",
+    "city": "Kamirenjaku",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/164x100.png/dddddd/000000",
+    "specialties": [
+      "Waterproofing & Caulking",
+      "Casework",
+      "Asphalt Paving",
+      "Termite Control"
+    ]
+  },
+  {
+    "id": 115,
+    "company_name": "Orn-Kertzmann",
+    "city": "Caen",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/228x100.png/dddddd/000000",
+    "specialties": ["Glass & Glazing"]
+  },
+  {
+    "id": 116,
+    "company_name": "Gerhold Inc",
+    "city": "Sandouping",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/205x100.png/cc0000/ffffff",
+    "specialties": ["Framing (Wood)", "Casework"]
+  },
+  {
+    "id": 117,
+    "company_name": "Wolf-Beer",
+    "city": "Shuishiying",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/145x100.png/cc0000/ffffff",
+    "specialties": ["Asphalt Paving"]
+  },
+  {
+    "id": 118,
+    "company_name": "Gleason, Rowe and Wolff",
+    "city": "Phak Hai",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/186x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Landscaping & Irrigation",
+      "Casework",
+      "Drywall & Acoustical (MOB)",
+      "Plumbing & Medical Gas"
+    ]
+  },
+  {
+    "id": 119,
+    "company_name": "Jaskolski-Rosenbaum",
+    "city": "Consuelo",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/167x100.png/ff4444/ffffff",
+    "specialties": [
+      "Hard Tile & Stone",
+      "Drywall & Acoustical (MOB)",
+      "Epoxy Flooring",
+      "Masonry & Precast"
+    ]
+  },
+  {
+    "id": 120,
+    "company_name": "O'Conner, Kutch and Little",
+    "city": "Paratunka",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/120x100.png/dddddd/000000",
+    "specialties": ["Rebar & Wire Mesh Install", "Electrical"]
+  },
+  {
+    "id": 121,
+    "company_name": "Legros, Lang and Hoppe",
+    "city": "Linshe",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/161x100.png/ff4444/ffffff",
+    "specialties": [
+      "Rebar & Wire Mesh Install",
+      "Drywall & Acoustical (FED)",
+      "Epoxy Flooring",
+      "Marlite Panels (FED)"
+    ]
+  },
+  {
+    "id": 122,
+    "company_name": "MacGyver Inc",
+    "city": "Chisht-e Sharīf",
+    "specialty": "Exterior Signage",
+    "logo": "http://dummyimage.com/207x100.png/dddddd/000000",
+    "specialties": ["Fire Sprinkler System", "Electrical"]
+  },
+  {
+    "id": 123,
+    "company_name": "Maggio Inc",
+    "city": "Oepula",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/224x100.png/ff4444/ffffff",
+    "specialties": ["Prefabricated Aluminum Metal Canopies", "Overhead Doors"]
+  },
+  {
+    "id": 124,
+    "company_name": "Ryan, Doyle and Reinger",
+    "city": "Ouidah",
+    "specialty": "Marlite Panels (FED)",
+    "logo": "http://dummyimage.com/164x100.png/ff4444/ffffff",
+    "specialties": ["Overhead Doors"]
+  },
+  {
+    "id": 125,
+    "company_name": "Frami Group",
+    "city": "Vilhena",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/184x100.png/cc0000/ffffff",
+    "specialties": [
+      "Landscaping & Irrigation",
+      "Granite Surfaces",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 126,
+    "company_name": "Marquardt, Altenwerth and Buckridge",
+    "city": "Unión",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/161x100.png/dddddd/000000",
+    "specialties": ["Site Furnishings", "Overhead Doors"]
+  },
+  {
+    "id": 127,
+    "company_name": "Bergnaum-Wolff",
+    "city": "Chepo",
+    "specialty": "Construction Clean and Final Clean",
+    "logo": "http://dummyimage.com/112x100.png/dddddd/000000",
+    "specialties": [
+      "Retaining Wall and Brick Pavers",
+      "Sitework & Site Utilities",
+      "Curb & Gutter"
+    ]
+  },
+  {
+    "id": 128,
+    "company_name": "Jenkins, Mante and Reilly",
+    "city": "Huilong",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/176x100.png/ff4444/ffffff",
+    "specialties": ["HVAC"]
+  },
+  {
+    "id": 129,
+    "company_name": "Ferry-Mayert",
+    "city": "Famatina",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/216x100.png/dddddd/000000",
+    "specialties": [
+      "Sitework & Site Utilities",
+      "Painting & Vinyl Wall Covering",
+      "Fire Sprinkler System"
+    ]
+  },
+  {
+    "id": 130,
+    "company_name": "Windler, Crooks and Rogahn",
+    "city": "Mingguang",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/144x100.png/ff4444/ffffff",
+    "specialties": [
+      "Casework",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Waterproofing & Caulking",
+      "Marlite Panels (FED)"
+    ]
+  },
+  {
+    "id": 131,
+    "company_name": "Wisoky and Sons",
+    "city": "Driyorejo",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/220x100.png/ff4444/ffffff",
+    "specialties": [
+      "Framing (Steel)",
+      "Epoxy Flooring",
+      "Glass & Glazing",
+      "Casework"
+    ]
+  },
+  {
+    "id": 132,
+    "company_name": "Marquardt-Dooley",
+    "city": "Angered",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/179x100.png/dddddd/000000",
+    "specialties": [
+      "Construction Clean and Final Clean",
+      "Ornamental Railings",
+      "Wall Protection"
+    ]
+  },
+  {
+    "id": 133,
+    "company_name": "Zulauf, Feeney and Huels",
+    "city": "Harrismith",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/144x100.png/cc0000/ffffff",
+    "specialties": ["Waterproofing & Caulking"]
+  },
+  {
+    "id": 134,
+    "company_name": "Zemlak, Wyman and Yost",
+    "city": "Wydminy",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/235x100.png/ff4444/ffffff",
+    "specialties": [
+      "Exterior Signage",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Curb & Gutter",
+      "Doors, Frames & Hardware"
+    ]
+  },
+  {
+    "id": 135,
+    "company_name": "Huel-Torphy",
+    "city": "Oued Laou",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/116x100.png/cc0000/ffffff",
+    "specialties": ["RF Shielding"]
+  },
+  {
+    "id": 136,
+    "company_name": "Hagenes LLC",
+    "city": "Manacsac",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/226x100.png/ff4444/ffffff",
+    "specialties": ["Framing (Steel)"]
+  },
+  {
+    "id": 137,
+    "company_name": "Mueller, Wyman and Kassulke",
+    "city": "Sabinópolis",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/212x100.png/cc0000/ffffff",
+    "specialties": ["Ornamental Railings"]
+  },
+  {
+    "id": 138,
+    "company_name": "Bailey, Volkman and Stokes",
+    "city": "Miches",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/111x100.png/ff4444/ffffff",
+    "specialties": ["Exterior Signage", "Drywall & Acoustical (MOB)", "HVAC"]
+  },
+  {
+    "id": 139,
+    "company_name": "Cartwright, Hane and Mayert",
+    "city": "Hněvotín",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/108x100.png/cc0000/ffffff",
+    "specialties": [
+      "Drywall & Acoustical (MOB)",
+      "Termite Control",
+      "Structural and Misc Steel (Fabrication)"
+    ]
+  },
+  {
+    "id": 140,
+    "company_name": "Bahringer, Runte and Runolfsdottir",
+    "city": "Ngrambitan",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/246x100.png/cc0000/ffffff",
+    "specialties": ["Granite Surfaces", "Epoxy Flooring", "Casework"]
+  },
+  {
+    "id": 141,
+    "company_name": "Jacobs LLC",
+    "city": "Mama",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/245x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Sitework & Site Utilities",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 142,
+    "company_name": "Brekke, Dare and Lemke",
+    "city": "Baki",
+    "specialty": "RF Shielding",
+    "logo": "http://dummyimage.com/198x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Masonry",
+      "Prefabricated Aluminum Metal Canopies",
+      "Structural & Misc Steel Erection",
+      "Rebar & Wire Mesh Install"
+    ]
+  },
+  {
+    "id": 143,
+    "company_name": "Quitzon, Murazik and Koepp",
+    "city": "Helsingborg",
+    "specialty": "Wall Protection",
+    "logo": "http://dummyimage.com/166x100.png/dddddd/000000",
+    "specialties": ["Roofing (Metal)", "Prefabricated Aluminum Metal Canopies"]
+  },
+  {
+    "id": 144,
+    "company_name": "Bauch-Luettgen",
+    "city": "Ŭiju",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/182x100.png/cc0000/ffffff",
+    "specialties": [
+      "Overhead Doors",
+      "Hard Tile & Stone",
+      "Painting & Vinyl Wall Covering",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 145,
+    "company_name": "Kohler-Carroll",
+    "city": "Karangbaru",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/158x100.png/dddddd/000000",
+    "specialties": [
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Exterior Signage"
+    ]
+  },
+  {
+    "id": 146,
+    "company_name": "Powlowski Group",
+    "city": "San Antonio",
+    "specialty": "Construction Clean and Final Clean",
+    "logo": "http://dummyimage.com/109x100.png/5fa2dd/ffffff",
+    "specialties": ["Overhead Doors", "Drywall & Acoustical (FED)"]
+  },
+  {
+    "id": 147,
+    "company_name": "Hyatt and Sons",
+    "city": "Huanggu",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/182x100.png/dddddd/000000",
+    "specialties": ["Epoxy Flooring", "EIFS", "Overhead Doors"]
+  },
+  {
+    "id": 148,
+    "company_name": "Howe-Abshire",
+    "city": "Jincheng",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/180x100.png/dddddd/000000",
+    "specialties": [
+      "Drywall & Acoustical (FED)",
+      "Structural and Misc Steel (Fabrication)",
+      "Site Furnishings",
+      "Drywall & Acoustical (MOB)"
+    ]
+  },
+  {
+    "id": 149,
+    "company_name": "Stiedemann Group",
+    "city": "Marialva",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/219x100.png/dddddd/000000",
+    "specialties": [
+      "Sitework & Site Utilities",
+      "Fire Protection",
+      "Marlite Panels (FED)"
+    ]
+  },
+  {
+    "id": 150,
+    "company_name": "Yost and Sons",
+    "city": "Skellefteå",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/237x100.png/ff4444/ffffff",
+    "specialties": ["Exterior Signage"]
+  },
+  {
+    "id": 151,
+    "company_name": "Thompson Inc",
+    "city": "San Francisco",
+    "specialty": "Granite Surfaces",
+    "logo": "http://dummyimage.com/234x100.png/cc0000/ffffff",
+    "specialties": [
+      "Hard Tile & Stone",
+      "Casework",
+      "Elevator",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 152,
+    "company_name": "Zboncak-Kilback",
+    "city": "Bosen",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/197x100.png/5fa2dd/ffffff",
+    "specialties": ["Fire Sprinkler System", "Retaining Wall and Brick Pavers"]
+  },
+  {
+    "id": 153,
+    "company_name": "Fahey-Green",
+    "city": "Nogueira",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/210x100.png/5fa2dd/ffffff",
+    "specialties": ["Prefabricated Aluminum Metal Canopies", "Drilled Shafts"]
+  },
+  {
+    "id": 154,
+    "company_name": "Padberg-Adams",
+    "city": "Omaha",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/102x100.png/dddddd/000000",
+    "specialties": [
+      "Prefabricated Aluminum Metal Canopies",
+      "Drilled Shafts",
+      "Structural & Misc Steel Erection"
+    ]
+  },
+  {
+    "id": 155,
+    "company_name": "Schuster Inc",
+    "city": "Kuiyong",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/235x100.png/ff4444/ffffff",
+    "specialties": [
+      "Waterproofing & Caulking",
+      "Plumbing & Medical Gas",
+      "Epoxy Flooring"
+    ]
+  },
+  {
+    "id": 156,
+    "company_name": "Weimann-MacGyver",
+    "city": "Fulu",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/177x100.png/dddddd/000000",
+    "specialties": [
+      "Exterior Signage",
+      "Retaining Wall and Brick Pavers",
+      "Structural & Misc Steel Erection"
+    ]
+  },
+  {
+    "id": 157,
+    "company_name": "Sanford-Trantow",
+    "city": "Wassa-Akropong",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/115x100.png/5fa2dd/ffffff",
+    "specialties": ["Masonry", "Drilled Shafts", "Epoxy Flooring"]
+  },
+  {
+    "id": 158,
+    "company_name": "Larson LLC",
+    "city": "Daping",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/128x100.png/dddddd/000000",
+    "specialties": [
+      "Hard Tile & Stone",
+      "Structural and Misc Steel (Fabrication)",
+      "Masonry & Precast",
+      "Framing (Steel)"
+    ]
+  },
+  {
+    "id": 159,
+    "company_name": "Hermann, Bartell and Beahan",
+    "city": "Qingzhou",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/196x100.png/cc0000/ffffff",
+    "specialties": ["Roofing (Metal)", "Masonry & Precast"]
+  },
+  {
+    "id": 160,
+    "company_name": "Satterfield Group",
+    "city": "Atakpamé",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/225x100.png/dddddd/000000",
+    "specialties": ["Hard Tile & Stone"]
+  },
+  {
+    "id": 161,
+    "company_name": "Bahringer-Kessler",
+    "city": "Melbourne",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/235x100.png/ff4444/ffffff",
+    "specialties": ["Drywall & Acoustical (FED)", "Casework"]
+  },
+  {
+    "id": 162,
+    "company_name": "Rice, Weimann and Feeney",
+    "city": "Malindi",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/105x100.png/ff4444/ffffff",
+    "specialties": ["Glass & Glazing"]
+  },
+  {
+    "id": 163,
+    "company_name": "Towne-Schultz",
+    "city": "Richky",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/104x100.png/ff4444/ffffff",
+    "specialties": [
+      "Masonry",
+      "Landscaping & Irrigation",
+      "Asphalt Paving",
+      "Glass & Glazing"
+    ]
+  },
+  {
+    "id": 164,
+    "company_name": "Hand-Leuschke",
+    "city": "Mosar",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/139x100.png/ff4444/ffffff",
+    "specialties": ["Asphalt Paving", "Glass & Glazing"]
+  },
+  {
+    "id": 165,
+    "company_name": "Spinka and Sons",
+    "city": "Cervantes",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/128x100.png/dddddd/000000",
+    "specialties": ["Casework", "Structural and Misc Steel (Fabrication)"]
+  },
+  {
+    "id": 166,
+    "company_name": "Deckow, Leuschke and Tremblay",
+    "city": "Mercedes",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/181x100.png/cc0000/ffffff",
+    "specialties": [
+      "Framing (Wood)",
+      "Landscaping & Irrigation",
+      "Fire Protection"
+    ]
+  },
+  {
+    "id": 167,
+    "company_name": "Bruen and Sons",
+    "city": "Saatlı",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/209x100.png/dddddd/000000",
+    "specialties": ["EIFS", "Marlite Panels (FED)", "Epoxy Flooring"]
+  },
+  {
+    "id": 168,
+    "company_name": "Hessel, McCullough and Kassulke",
+    "city": "Bergen",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+    "specialties": ["Asphalt Paving"]
+  },
+  {
+    "id": 169,
+    "company_name": "Howell LLC",
+    "city": "Penedo",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/157x100.png/dddddd/000000",
+    "specialties": [
+      "Soft Flooring and Base",
+      "Termite Control",
+      "Wall Protection"
+    ]
+  },
+  {
+    "id": 170,
+    "company_name": "Wiegand-White",
+    "city": "Krayen",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/198x100.png/dddddd/000000",
+    "specialties": ["Marlite Panels (FED)"]
+  },
+  {
+    "id": 171,
+    "company_name": "Bednar-O'Keefe",
+    "city": "Muchkapskiy",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/239x100.png/cc0000/ffffff",
+    "specialties": [
+      "Roofing (Metal)",
+      "Soft Flooring and Base",
+      "Hard Tile & Stone"
+    ]
+  },
+  {
+    "id": 172,
+    "company_name": "Bogisich and Sons",
+    "city": "Lagodekhi",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/145x100.png/ff4444/ffffff",
+    "specialties": [
+      "Drywall & Acoustical (FED)",
+      "Framing (Wood)",
+      "Roofing (Metal)",
+      "Structural & Misc Steel Erection"
+    ]
+  },
+  {
+    "id": 173,
+    "company_name": "Schuppe, Monahan and Rutherford",
+    "city": "Riangkroko",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/137x100.png/5fa2dd/ffffff",
+    "specialties": ["Construction Clean and Final Clean"]
+  },
+  {
+    "id": 174,
+    "company_name": "Greenfelder, Smitham and Dicki",
+    "city": "Wujingfu",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/142x100.png/dddddd/000000",
+    "specialties": [
+      "Site Furnishings",
+      "Rebar & Wire Mesh Install",
+      "Asphalt Paving"
+    ]
+  },
+  {
+    "id": 175,
+    "company_name": "Marks-Schiller",
+    "city": "Grajaú",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/125x100.png/cc0000/ffffff",
+    "specialties": ["Sitework & Site Utilities"]
+  },
+  {
+    "id": 176,
+    "company_name": "Will-Leuschke",
+    "city": "Paisha",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/202x100.png/dddddd/000000",
+    "specialties": ["Electrical", "Retaining Wall and Brick Pavers"]
+  },
+  {
+    "id": 177,
+    "company_name": "Bernhard, Grady and Littel",
+    "city": "Presidencia Roque Sáenz Peña",
+    "specialty": "Construction Clean and Final Clean",
+    "logo": "http://dummyimage.com/191x100.png/ff4444/ffffff",
+    "specialties": [
+      "Granite Surfaces",
+      "Fire Sprinkler System",
+      "Structural & Misc Steel Erection"
+    ]
+  },
+  {
+    "id": 178,
+    "company_name": "Streich LLC",
+    "city": "Uzdin",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/241x100.png/ff4444/ffffff",
+    "specialties": [
+      "Plumbing & Medical Gas",
+      "EIFS",
+      "Structural and Misc Steel (Fabrication)"
+    ]
+  },
+  {
+    "id": 179,
+    "company_name": "Witting, McKenzie and Schmitt",
+    "city": "Dallas",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/159x100.png/ff4444/ffffff",
+    "specialties": ["Fire Protection"]
+  },
+  {
+    "id": 180,
+    "company_name": "Koelpin LLC",
+    "city": "Värnamo",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/205x100.png/dddddd/000000",
+    "specialties": [
+      "Plumbing & Medical Gas",
+      "Waterproofing & Caulking",
+      "Temp Fencing, Decorative Fencing and Gates"
+    ]
+  },
+  {
+    "id": 181,
+    "company_name": "Pfannerstill-Schulist",
+    "city": "Hāgere Hiywet",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/119x100.png/cc0000/ffffff",
+    "specialties": [
+      "Temp Fencing, Decorative Fencing and Gates",
+      "EIFS",
+      "Overhead Doors",
+      "Structural & Misc Steel Erection"
+    ]
+  },
+  {
+    "id": 182,
+    "company_name": "Murazik, Runte and Cremin",
+    "city": "Buurhakaba",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/205x100.png/cc0000/ffffff",
+    "specialties": [
+      "Elevator",
+      "Painting & Vinyl Wall Covering",
+      "Electrical and Fire Alarm",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 183,
+    "company_name": "Witting-Lubowitz",
+    "city": "Mukhen",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/104x100.png/5fa2dd/ffffff",
+    "specialties": ["Framing (Steel)", "Masonry"]
+  },
+  {
+    "id": 184,
+    "company_name": "Deckow Group",
+    "city": "Otok",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/123x100.png/ff4444/ffffff",
+    "specialties": [
+      "Soft Flooring and Base",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Framing (Wood)",
+      "Drywall & Acoustical (FED)"
+    ]
+  },
+  {
+    "id": 185,
+    "company_name": "Mraz, Littel and Wehner",
+    "city": "Nkayi",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/114x100.png/ff4444/ffffff",
+    "specialties": [
+      "Drywall & Acoustical (FED)",
+      "EIFS",
+      "Glass & Glazing",
+      "HVAC"
+    ]
+  },
+  {
+    "id": 186,
+    "company_name": "Grady, Powlowski and Powlowski",
+    "city": "Solsona",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/102x100.png/dddddd/000000",
+    "specialties": ["HVAC"]
+  },
+  {
+    "id": 187,
+    "company_name": "Littel, Senger and Huels",
+    "city": "Spárti",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/107x100.png/cc0000/ffffff",
+    "specialties": ["Fire Protection", "HVAC"]
+  },
+  {
+    "id": 188,
+    "company_name": "Kris Inc",
+    "city": "Huyunxiang",
+    "specialty": "Wall Protection",
+    "logo": "http://dummyimage.com/248x100.png/5fa2dd/ffffff",
+    "specialties": ["Marlite Panels (FED)", "Fire Sprinkler System"]
+  },
+  {
+    "id": 189,
+    "company_name": "Crona-Marvin",
+    "city": "Bagé",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/107x100.png/ff4444/ffffff",
+    "specialties": ["Elevator"]
+  },
+  {
+    "id": 190,
+    "company_name": "Becker-Barrows",
+    "city": "Damatulan",
+    "specialty": "Wall Protection",
+    "logo": "http://dummyimage.com/224x100.png/dddddd/000000",
+    "specialties": ["Masonry", "Roofing (Asphalt)"]
+  },
+  {
+    "id": 191,
+    "company_name": "Lesch LLC",
+    "city": "Rancabelut",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/230x100.png/cc0000/ffffff",
+    "specialties": ["Glass & Glazing", "EIFS", "Landscaping & Irrigation"]
+  },
+  {
+    "id": 192,
+    "company_name": "Parker Group",
+    "city": "Yanping",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/129x100.png/ff4444/ffffff",
+    "specialties": ["RF Shielding", "Curb & Gutter", "Site Furnishings"]
+  },
+  {
+    "id": 193,
+    "company_name": "Ziemann, Lueilwitz and Labadie",
+    "city": "Chengbei",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/160x100.png/ff4444/ffffff",
+    "specialties": [
+      "Electrical",
+      "Exterior Signage",
+      "Waterproofing & Caulking",
+      "Structural and Misc Steel (Fabrication)"
+    ]
+  },
+  {
+    "id": 194,
+    "company_name": "Hauck Inc",
+    "city": "Nova Iguaçu",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/126x100.png/cc0000/ffffff",
+    "specialties": [
+      "Granite Surfaces",
+      "Asphalt Paving",
+      "Drywall & Acoustical (FED)",
+      "Drilled Shafts"
+    ]
+  },
+  {
+    "id": 195,
+    "company_name": "Prohaska-O'Conner",
+    "city": "Dante Delgado",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/245x100.png/5fa2dd/ffffff",
+    "specialties": ["EIFS"]
+  },
+  {
+    "id": 196,
+    "company_name": "Hansen-Schroeder",
+    "city": "Kota Kinabalu",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/147x100.png/ff4444/ffffff",
+    "specialties": [
+      "Ornamental Railings",
+      "Retaining Wall and Brick Pavers",
+      "Framing (Steel)"
+    ]
+  },
+  {
+    "id": 197,
+    "company_name": "Dibbert Inc",
+    "city": "Priargunsk",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/181x100.png/5fa2dd/ffffff",
+    "specialties": ["Asphalt Paving"]
+  },
+  {
+    "id": 198,
+    "company_name": "Williamson, Lockman and Bahringer",
+    "city": "Ajaccio",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/231x100.png/ff4444/ffffff",
+    "specialties": [
+      "Masonry",
+      "Waterproofing & Caulking",
+      "Retaining Wall and Brick Pavers",
+      "Framing (Wood)"
+    ]
+  },
+  {
+    "id": 199,
+    "company_name": "Terry, MacGyver and Collier",
+    "city": "Nong Muang",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/117x100.png/cc0000/ffffff",
+    "specialties": [
+      "RF Shielding",
+      "Doors, Frames & Hardware",
+      "Painting & Vinyl Wall Covering",
+      "Asphalt Paving"
+    ]
+  },
+  {
+    "id": 200,
+    "company_name": "Kutch and Sons",
+    "city": "Agago",
+    "specialty": "Exterior Signage",
+    "logo": "http://dummyimage.com/226x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "EIFS",
+      "Structural & Misc Steel Erection",
+      "Soft Flooring and Base"
+    ]
+  },
+  {
+    "id": 201,
+    "company_name": "Swift and Sons",
+    "city": "Hausjärvi",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/208x100.png/ff4444/ffffff",
+    "specialties": [
+      "Termite Control",
+      "Hard Tile & Stone",
+      "Ornamental Railings"
+    ]
+  },
+  {
+    "id": 202,
+    "company_name": "Satterfield, Roob and Blick",
+    "city": "Ivatsevichy",
+    "specialty": "Marlite Panels (FED)",
+    "logo": "http://dummyimage.com/151x100.png/5fa2dd/ffffff",
+    "specialties": ["Drilled Shafts", "Marlite Panels (FED)", "Roofing (Metal)"]
+  },
+  {
+    "id": 203,
+    "company_name": "Ernser, Huel and Witting",
+    "city": "Zhavoronki",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/149x100.png/dddddd/000000",
+    "specialties": [
+      "Fire Sprinkler System",
+      "Waterproofing & Caulking",
+      "Casework"
+    ]
+  },
+  {
+    "id": 204,
+    "company_name": "Schultz, Hettinger and Beahan",
+    "city": "Kīevka",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/102x100.png/dddddd/000000",
+    "specialties": [
+      "Marlite Panels (FED)",
+      "Asphalt Paving",
+      "Overhead Doors",
+      "Fire Protection"
+    ]
+  },
+  {
+    "id": 205,
+    "company_name": "Nikolaus and Sons",
+    "city": "Lirang",
+    "specialty": "Granite Surfaces",
+    "logo": "http://dummyimage.com/127x100.png/cc0000/ffffff",
+    "specialties": [
+      "Ornamental Railings",
+      "Fire Sprinkler System",
+      "Framing (Steel)"
+    ]
+  },
+  {
+    "id": 206,
+    "company_name": "DuBuque, Marvin and Conn",
+    "city": "Yujiawu",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/216x100.png/ff4444/ffffff",
+    "specialties": ["Electrical and Fire Alarm"]
+  },
+  {
+    "id": 207,
+    "company_name": "Abbott LLC",
+    "city": "Hrtkovci",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/250x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Rebar & Wire Mesh Install",
+      "Overhead Doors",
+      "Construction Clean and Final Clean",
+      "Landscaping & Irrigation"
+    ]
+  },
+  {
+    "id": 208,
+    "company_name": "Hansen, Conroy and Orn",
+    "city": "Jihlava",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/155x100.png/cc0000/ffffff",
+    "specialties": ["Doors, Frames & Hardware"]
+  },
+  {
+    "id": 209,
+    "company_name": "Hammes, Jakubowski and Altenwerth",
+    "city": "Limoeiro do Norte",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/165x100.png/5fa2dd/ffffff",
+    "specialties": ["Exterior Signage"]
+  },
+  {
+    "id": 210,
+    "company_name": "Deckow-Osinski",
+    "city": "Lelkowo",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/240x100.png/ff4444/ffffff",
+    "specialties": [
+      "Epoxy Flooring",
+      "Sitework & Site Utilities",
+      "Rebar & Wire Mesh Install"
+    ]
+  },
+  {
+    "id": 211,
+    "company_name": "Strosin-Gusikowski",
+    "city": "Gontar",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/199x100.png/dddddd/000000",
+    "specialties": [
+      "Exterior Signage",
+      "Rebar & Wire Mesh Install",
+      "Elevator",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 212,
+    "company_name": "Jerde Inc",
+    "city": "Munduk",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/237x100.png/dddddd/000000",
+    "specialties": [
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Drilled Shafts"
+    ]
+  },
+  {
+    "id": 213,
+    "company_name": "Mills-Leffler",
+    "city": "Fort Worth",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/166x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Masonry & Precast",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 214,
+    "company_name": "Legros-Sanford",
+    "city": "Campor",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/248x100.png/ff4444/ffffff",
+    "specialties": ["Wall Protection"]
+  },
+  {
+    "id": 215,
+    "company_name": "Hegmann Group",
+    "city": "Hengshitang",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/159x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Retaining Wall and Brick Pavers",
+      "EIFS",
+      "Overhead Doors",
+      "Masonry & Precast"
+    ]
+  },
+  {
+    "id": 216,
+    "company_name": "Corwin-Johnson",
+    "city": "Palma Soriano",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/160x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Prefabricated Aluminum Metal Canopies",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 217,
+    "company_name": "Little-Kihn",
+    "city": "Bến Tre",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/192x100.png/ff4444/ffffff",
+    "specialties": ["Exterior Signage", "Termite Control", "Overhead Doors"]
+  },
+  {
+    "id": 218,
+    "company_name": "Lind, Doyle and Kihn",
+    "city": "Virojoki",
+    "specialty": "Exterior Signage",
+    "logo": "http://dummyimage.com/117x100.png/cc0000/ffffff",
+    "specialties": ["Masonry", "Rebar & Wire Mesh Install"]
+  },
+  {
+    "id": 219,
+    "company_name": "Schaden Group",
+    "city": "Languan",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/155x100.png/ff4444/ffffff",
+    "specialties": ["Drywall & Acoustical (MOB)", "Epoxy Flooring"]
+  },
+  {
+    "id": 220,
+    "company_name": "Kuvalis LLC",
+    "city": "Irákleion",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/194x100.png/ff4444/ffffff",
+    "specialties": [
+      "Hard Tile & Stone",
+      "Doors, Frames & Hardware",
+      "Sitework & Site Utilities",
+      "Overhead Doors"
+    ]
+  },
+  {
+    "id": 221,
+    "company_name": "Friesen Group",
+    "city": "Calaya",
+    "specialty": "Marlite Panels (FED)",
+    "logo": "http://dummyimage.com/112x100.png/cc0000/ffffff",
+    "specialties": ["Overhead Doors", "Electrical"]
+  },
+  {
+    "id": 222,
+    "company_name": "Shields Inc",
+    "city": "Shalakusha",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/144x100.png/dddddd/000000",
+    "specialties": ["Framing (Wood)"]
+  },
+  {
+    "id": 223,
+    "company_name": "Schneider LLC",
+    "city": "Chai Nat",
+    "specialty": "Construction Clean and Final Clean",
+    "logo": "http://dummyimage.com/215x100.png/ff4444/ffffff",
+    "specialties": [
+      "Structural and Misc Steel (Fabrication)",
+      "Framing (Steel)",
+      "Drywall & Acoustical (FED)",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 224,
+    "company_name": "Tremblay-Christiansen",
+    "city": "Tanjungbalai",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/142x100.png/dddddd/000000",
+    "specialties": ["HVAC"]
+  },
+  {
+    "id": 225,
+    "company_name": "Doyle, Yundt and Roob",
+    "city": "Kharbathā Banī Ḩārith",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/108x100.png/cc0000/ffffff",
+    "specialties": ["HVAC"]
+  },
+  {
+    "id": 226,
+    "company_name": "Nolan-Shields",
+    "city": "Kuala Terengganu",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/169x100.png/5fa2dd/ffffff",
+    "specialties": ["Framing (Steel)", "Electrical"]
+  },
+  {
+    "id": 227,
+    "company_name": "Runolfsdottir, Hermiston and Jast",
+    "city": "Trélissac",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/103x100.png/5fa2dd/ffffff",
+    "specialties": ["Construction Clean and Final Clean", "HVAC"]
+  },
+  {
+    "id": 228,
+    "company_name": "Thiel, Murazik and Ullrich",
+    "city": "Maodian",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/219x100.png/ff4444/ffffff",
+    "specialties": ["Glass & Glazing"]
+  },
+  {
+    "id": 229,
+    "company_name": "Hamill-Kunde",
+    "city": "Vidče",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/174x100.png/cc0000/ffffff",
+    "specialties": [
+      "Framing (Wood)",
+      "Retaining Wall and Brick Pavers",
+      "Drywall & Acoustical (FED)",
+      "Fire Protection"
+    ]
+  },
+  {
+    "id": 230,
+    "company_name": "McClure-Carroll",
+    "city": "Voi",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/192x100.png/dddddd/000000",
+    "specialties": [
+      "Framing (Wood)",
+      "Sitework & Site Utilities",
+      "Epoxy Flooring",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 231,
+    "company_name": "Bergstrom-Bechtelar",
+    "city": "Quinuabamba",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/114x100.png/ff4444/ffffff",
+    "specialties": ["Hard Tile & Stone"]
+  },
+  {
+    "id": 232,
+    "company_name": "Kihn-Bogan",
+    "city": "Gagnoa",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/212x100.png/cc0000/ffffff",
+    "specialties": ["EIFS"]
+  },
+  {
+    "id": 233,
+    "company_name": "Waters LLC",
+    "city": "Xinzhai",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/143x100.png/dddddd/000000",
+    "specialties": [
+      "Electrical",
+      "Construction Clean and Final Clean",
+      "Rebar & Wire Mesh Install"
+    ]
+  },
+  {
+    "id": 234,
+    "company_name": "Torp, Bartell and Schaefer",
+    "city": "Mandangoa",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/202x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Construction Clean and Final Clean",
+      "RF Shielding",
+      "Doors, Frames & Hardware",
+      "Drywall & Acoustical (MOB)"
+    ]
+  },
+  {
+    "id": 235,
+    "company_name": "Carter-Turcotte",
+    "city": "Vol’no-Nadezhdinskoye",
+    "specialty": "Termite Control",
+    "logo": "http://dummyimage.com/196x100.png/cc0000/ffffff",
+    "specialties": [
+      "Granite Surfaces",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Painting & Vinyl Wall Covering"
+    ]
+  },
+  {
+    "id": 236,
+    "company_name": "Hauck Inc",
+    "city": "Sovetskaya",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/229x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Site Furnishings",
+      "Painting & Vinyl Wall Covering",
+      "Granite Surfaces"
+    ]
+  },
+  {
+    "id": 237,
+    "company_name": "Heller-Rutherford",
+    "city": "Florencia",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/223x100.png/ff4444/ffffff",
+    "specialties": [
+      "Construction Clean and Final Clean",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 238,
+    "company_name": "Yundt LLC",
+    "city": "Limbe",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/187x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Construction Clean and Final Clean",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 239,
+    "company_name": "Huel-Stoltenberg",
+    "city": "Guadalupe",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/114x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Curb & Gutter",
+      "Prefabricated Aluminum Metal Canopies",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 240,
+    "company_name": "Yost, Frami and Rau",
+    "city": "Layo",
+    "specialty": "RF Shielding",
+    "logo": "http://dummyimage.com/211x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Structural and Misc Steel (Fabrication)",
+      "Roofing (Metal)",
+      "Sitework & Site Utilities",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 241,
+    "company_name": "Gaylord-Hintz",
+    "city": "Dankunku",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/242x100.png/cc0000/ffffff",
+    "specialties": [
+      "Electrical and Fire Alarm",
+      "Epoxy Flooring",
+      "Sitework & Site Utilities",
+      "Asphalt Paving"
+    ]
+  },
+  {
+    "id": 242,
+    "company_name": "Dickinson-Nienow",
+    "city": "Kosikha",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/249x100.png/ff4444/ffffff",
+    "specialties": ["Elevator", "Soft Flooring and Base", "Ornamental Railings"]
+  },
+  {
+    "id": 243,
+    "company_name": "Mayer, Fahey and Littel",
+    "city": "Bo Phloi",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/134x100.png/ff4444/ffffff",
+    "specialties": [
+      "Glass & Glazing",
+      "HVAC",
+      "Drilled Shafts",
+      "Fire Sprinkler System"
+    ]
+  },
+  {
+    "id": 244,
+    "company_name": "Block-Cremin",
+    "city": "Barayong",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/121x100.png/5fa2dd/ffffff",
+    "specialties": ["Drywall & Acoustical (FED)"]
+  },
+  {
+    "id": 245,
+    "company_name": "O'Connell-Nader",
+    "city": "Lat Lum Kaeo",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/246x100.png/ff4444/ffffff",
+    "specialties": [
+      "Rebar & Wire Mesh Install",
+      "Marlite Panels (FED)",
+      "Masonry & Precast"
+    ]
+  },
+  {
+    "id": 246,
+    "company_name": "Pacocha, Lind and Schuppe",
+    "city": "Norrköping",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/179x100.png/ff4444/ffffff",
+    "specialties": [
+      "Masonry & Precast",
+      "Prefabricated Aluminum Metal Canopies",
+      "Drywall & Acoustical (MOB)",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 247,
+    "company_name": "Schuppe, Pfannerstill and Heidenreich",
+    "city": "Beaune",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/219x100.png/dddddd/000000",
+    "specialties": ["Rebar & Wire Mesh Install", "Roofing (Asphalt)"]
+  },
+  {
+    "id": 248,
+    "company_name": "Mann Inc",
+    "city": "Rovnoye",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/210x100.png/cc0000/ffffff",
+    "specialties": ["Rebar & Wire Mesh Install", "RF Shielding", "HVAC"]
+  },
+  {
+    "id": 249,
+    "company_name": "Bergnaum LLC",
+    "city": "Tuohua",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/218x100.png/dddddd/000000",
+    "specialties": [
+      "RF Shielding",
+      "Site Furnishings",
+      "Asphalt Paving",
+      "HVAC"
+    ]
+  },
+  {
+    "id": 250,
+    "company_name": "Quigley and Sons",
+    "city": "Xinquan",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/176x100.png/dddddd/000000",
+    "specialties": [
+      "Painting & Vinyl Wall Covering",
+      "Construction Clean and Final Clean",
+      "Sitework & Site Utilities"
+    ]
+  },
+  {
+    "id": 251,
+    "company_name": "Zboncak, Baumbach and Purdy",
+    "city": "Cañasgordas",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/129x100.png/cc0000/ffffff",
+    "specialties": ["Roofing (Metal)", "Soft Flooring and Base", "Casework"]
+  },
+  {
+    "id": 252,
+    "company_name": "Nicolas LLC",
+    "city": "Sukodono",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/116x100.png/5fa2dd/ffffff",
+    "specialties": ["Framing (Wood)", "Casework", "Masonry & Precast"]
+  },
+  {
+    "id": 253,
+    "company_name": "Kris-Steuber",
+    "city": "Cikarang",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/196x100.png/cc0000/ffffff",
+    "specialties": ["Glass & Glazing", "EIFS"]
+  },
+  {
+    "id": 254,
+    "company_name": "Olson-Sawayn",
+    "city": "San Miguel",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/103x100.png/ff4444/ffffff",
+    "specialties": ["Glass & Glazing"]
+  },
+  {
+    "id": 255,
+    "company_name": "Kovacek-Reichel",
+    "city": "Oslob",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/200x100.png/5fa2dd/ffffff",
+    "specialties": ["Roofing (Metal)", "RF Shielding", "Framing (Steel)"]
+  },
+  {
+    "id": 256,
+    "company_name": "Gerhold Group",
+    "city": "Berbérati",
+    "specialty": "Exterior Signage",
+    "logo": "http://dummyimage.com/196x100.png/ff4444/ffffff",
+    "specialties": [
+      "Prefabricated Aluminum Metal Canopies",
+      "Roofing (Metal)",
+      "Hard Tile & Stone"
+    ]
+  },
+  {
+    "id": 257,
+    "company_name": "Schroeder, Klocko and Mosciski",
+    "city": "Payaman",
+    "specialty": "Marlite Panels (FED)",
+    "logo": "http://dummyimage.com/212x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Rebar & Wire Mesh Install",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Curb & Gutter",
+      "Wall Protection"
+    ]
+  },
+  {
+    "id": 258,
+    "company_name": "Cummings, Crist and Bruen",
+    "city": "Pidvynohradiv",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/238x100.png/ff4444/ffffff",
+    "specialties": [
+      "Wall Protection",
+      "EIFS",
+      "Electrical and Fire Alarm",
+      "Curb & Gutter"
+    ]
+  },
+  {
+    "id": 259,
+    "company_name": "West, Vandervort and Schultz",
+    "city": "Jam",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/147x100.png/ff4444/ffffff",
+    "specialties": [
+      "Drywall & Acoustical (MOB)",
+      "Overhead Doors",
+      "Temp Fencing, Decorative Fencing and Gates"
+    ]
+  },
+  {
+    "id": 260,
+    "company_name": "Beer-Walker",
+    "city": "Muararupit",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/230x100.png/5fa2dd/ffffff",
+    "specialties": ["Overhead Doors"]
+  },
+  {
+    "id": 261,
+    "company_name": "Bechtelar-Roob",
+    "city": "Ylöjärvi",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/183x100.png/5fa2dd/ffffff",
+    "specialties": ["Doors, Frames & Hardware"]
+  },
+  {
+    "id": 262,
+    "company_name": "Bogan LLC",
+    "city": "Suzaka",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/248x100.png/dddddd/000000",
+    "specialties": [
+      "Soft Flooring and Base",
+      "Masonry",
+      "Granite Surfaces",
+      "Ornamental Railings"
+    ]
+  },
+  {
+    "id": 263,
+    "company_name": "Murphy, Smith and Kiehn",
+    "city": "Linköping",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/165x100.png/dddddd/000000",
+    "specialties": ["Glass & Glazing"]
+  },
+  {
+    "id": 264,
+    "company_name": "Spinka-Gleichner",
+    "city": "Ningdun",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/113x100.png/ff4444/ffffff",
+    "specialties": ["Wall Protection", "Masonry & Precast", "Hard Tile & Stone"]
+  },
+  {
+    "id": 265,
+    "company_name": "Kulas and Sons",
+    "city": "Quezaltepeque",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/137x100.png/dddddd/000000",
+    "specialties": ["Hard Tile & Stone", "Granite Surfaces"]
+  },
+  {
+    "id": 266,
+    "company_name": "Douglas, Lesch and Ondricka",
+    "city": "Bongandanga",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/130x100.png/5fa2dd/ffffff",
+    "specialties": ["Termite Control", "HVAC"]
+  },
+  {
+    "id": 267,
+    "company_name": "Turcotte, Daugherty and Durgan",
+    "city": "Guanyao",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/129x100.png/dddddd/000000",
+    "specialties": ["Electrical", "Soft Flooring and Base"]
+  },
+  {
+    "id": 268,
+    "company_name": "Turcotte Inc",
+    "city": "San Antonio",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/123x100.png/cc0000/ffffff",
+    "specialties": ["Glass & Glazing", "Casework", "Electrical"]
+  },
+  {
+    "id": 269,
+    "company_name": "McDermott Inc",
+    "city": "Lanyang",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/100x100.png/ff4444/ffffff",
+    "specialties": [
+      "Masonry",
+      "Asphalt Paving",
+      "Site Furnishings",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 270,
+    "company_name": "Cummings, Quitzon and Green",
+    "city": "Arboleda",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/250x100.png/5fa2dd/ffffff",
+    "specialties": ["Masonry & Precast"]
+  },
+  {
+    "id": 271,
+    "company_name": "Lebsack Inc",
+    "city": "Banjar Laing",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/212x100.png/ff4444/ffffff",
+    "specialties": [
+      "Structural and Misc Steel (Fabrication)",
+      "Ornamental Railings",
+      "Construction Clean and Final Clean",
+      "Rebar & Wire Mesh Install"
+    ]
+  },
+  {
+    "id": 272,
+    "company_name": "Johns-Greenholt",
+    "city": "Seredyna-Buda",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/233x100.png/dddddd/000000",
+    "specialties": ["Hard Tile & Stone"]
+  },
+  {
+    "id": 273,
+    "company_name": "Langosh-Ferry",
+    "city": "Itapecuru Mirim",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/131x100.png/ff4444/ffffff",
+    "specialties": ["Overhead Doors", "Framing (Wood)"]
+  },
+  {
+    "id": 274,
+    "company_name": "Schulist, Daugherty and Torp",
+    "city": "Andrushivka",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/243x100.png/ff4444/ffffff",
+    "specialties": [
+      "Waterproofing & Caulking",
+      "Construction Clean and Final Clean",
+      "RF Shielding"
+    ]
+  },
+  {
+    "id": 275,
+    "company_name": "Powlowski-Leannon",
+    "city": "Nafada",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/158x100.png/5fa2dd/ffffff",
+    "specialties": ["Overhead Doors"]
+  },
+  {
+    "id": 276,
+    "company_name": "Boyer-Armstrong",
+    "city": "Pulong Gubat",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/104x100.png/ff4444/ffffff",
+    "specialties": ["Fire Protection"]
+  },
+  {
+    "id": 277,
+    "company_name": "Fritsch-Fahey",
+    "city": "Virolahti",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/137x100.png/ff4444/ffffff",
+    "specialties": [
+      "Rebar & Wire Mesh Install",
+      "Marlite Panels (FED)",
+      "Hard Tile & Stone",
+      "Painting & Vinyl Wall Covering"
+    ]
+  },
+  {
+    "id": 278,
+    "company_name": "Medhurst Inc",
+    "city": "Greenville",
+    "specialty": "Retaining Wall and Brick Pavers",
+    "logo": "http://dummyimage.com/172x100.png/dddddd/000000",
+    "specialties": ["Fire Protection", "Electrical", "Ornamental Railings"]
+  },
+  {
+    "id": 279,
+    "company_name": "Kirlin Group",
+    "city": "Bingawan",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/109x100.png/5fa2dd/ffffff",
+    "specialties": ["Elevator", "Landscaping & Irrigation"]
+  },
+  {
+    "id": 280,
+    "company_name": "Ryan-Koss",
+    "city": "Anáfi",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/184x100.png/dddddd/000000",
+    "specialties": [
+      "Construction Clean and Final Clean",
+      "RF Shielding",
+      "Retaining Wall and Brick Pavers",
+      "Overhead Doors"
+    ]
+  },
+  {
+    "id": 281,
+    "company_name": "Gleason, Sawayn and Cremin",
+    "city": "Bauang",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/226x100.png/5fa2dd/ffffff",
+    "specialties": ["HVAC", "Hard Tile & Stone"]
+  },
+  {
+    "id": 282,
+    "company_name": "Thiel, Graham and Durgan",
+    "city": "Digne-les-Bains",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/229x100.png/dddddd/000000",
+    "specialties": [
+      "RF Shielding",
+      "Overhead Doors",
+      "Masonry & Precast",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 283,
+    "company_name": "Blick Inc",
+    "city": "Tierra y Libertad",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/153x100.png/ff4444/ffffff",
+    "specialties": [
+      "Wall Protection",
+      "Electrical",
+      "EIFS",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 284,
+    "company_name": "Harber-Mueller",
+    "city": "Caldas Novas",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/201x100.png/dddddd/000000",
+    "specialties": ["Epoxy Flooring", "RF Shielding", "Wall Protection"]
+  },
+  {
+    "id": 285,
+    "company_name": "Hodkiewicz LLC",
+    "city": "Nanyang",
+    "specialty": "Retaining Wall and Brick Pavers",
+    "logo": "http://dummyimage.com/177x100.png/ff4444/ffffff",
+    "specialties": [
+      "Doors, Frames & Hardware",
+      "Electrical and Fire Alarm",
+      "Asphalt Paving",
+      "Framing (Wood)"
+    ]
+  },
+  {
+    "id": 286,
+    "company_name": "Huel and Sons",
+    "city": "Huangtian",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/143x100.png/ff4444/ffffff",
+    "specialties": [
+      "Fire Protection",
+      "Drilled Shafts",
+      "Rebar & Wire Mesh Install",
+      "Termite Control"
+    ]
+  },
+  {
+    "id": 287,
+    "company_name": "Fahey, Kerluke and Tremblay",
+    "city": "Wuli",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/177x100.png/dddddd/000000",
+    "specialties": ["Electrical", "Hard Tile & Stone"]
+  },
+  {
+    "id": 288,
+    "company_name": "Hackett Inc",
+    "city": "Encrucijada",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/104x100.png/ff4444/ffffff",
+    "specialties": ["Casework", "Fire Protection"]
+  },
+  {
+    "id": 289,
+    "company_name": "Predovic-Greenholt",
+    "city": "Wuxia",
+    "specialty": "Granite Surfaces",
+    "logo": "http://dummyimage.com/191x100.png/cc0000/ffffff",
+    "specialties": ["Soft Flooring and Base"]
+  },
+  {
+    "id": 290,
+    "company_name": "Ryan, Schroeder and Kuhic",
+    "city": "Paraiso",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/230x100.png/ff4444/ffffff",
+    "specialties": [
+      "Structural & Misc Steel Erection",
+      "Retaining Wall and Brick Pavers",
+      "Marlite Panels (FED)",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 291,
+    "company_name": "Heaney LLC",
+    "city": "Wonokerto",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/139x100.png/5fa2dd/ffffff",
+    "specialties": ["Epoxy Flooring", "RF Shielding"]
+  },
+  {
+    "id": 292,
+    "company_name": "Klein Inc",
+    "city": "Chiang Khan",
+    "specialty": "Wall Protection",
+    "logo": "http://dummyimage.com/143x100.png/dddddd/000000",
+    "specialties": [
+      "HVAC",
+      "Electrical and Fire Alarm",
+      "Fire Sprinkler System",
+      "Epoxy Flooring"
+    ]
+  },
+  {
+    "id": 293,
+    "company_name": "Beier-Luettgen",
+    "city": "Aygepat",
+    "specialty": "Granite Surfaces",
+    "logo": "http://dummyimage.com/132x100.png/ff4444/ffffff",
+    "specialties": [
+      "RF Shielding",
+      "Glass & Glazing",
+      "Structural and Misc Steel (Fabrication)"
+    ]
+  },
+  {
+    "id": 294,
+    "company_name": "Schoen-Howell",
+    "city": "Shangma",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/133x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Prefabricated Aluminum Metal Canopies",
+      "Roofing (Asphalt)",
+      "Plumbing & Medical Gas",
+      "RF Shielding"
+    ]
+  },
+  {
+    "id": 295,
+    "company_name": "Hodkiewicz-Hagenes",
+    "city": "Düsseldorf",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/212x100.png/cc0000/ffffff",
+    "specialties": [
+      "Structural & Misc Steel Erection",
+      "Prefabricated Aluminum Metal Canopies",
+      "Drilled Shafts",
+      "HVAC"
+    ]
+  },
+  {
+    "id": 296,
+    "company_name": "Parker-Hansen",
+    "city": "Tunasbaru",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/135x100.png/ff4444/ffffff",
+    "specialties": [
+      "Landscaping & Irrigation",
+      "HVAC",
+      "Roofing (Metal)",
+      "Hard Tile & Stone"
+    ]
+  },
+  {
+    "id": 297,
+    "company_name": "Wisozk Group",
+    "city": "Los Cóndores",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+    "specialties": ["Fire Protection", "Masonry", "Landscaping & Irrigation"]
+  },
+  {
+    "id": 298,
+    "company_name": "Von Group",
+    "city": "Manisi",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/119x100.png/5fa2dd/ffffff",
+    "specialties": ["Landscaping & Irrigation", "Casework", "Termite Control"]
+  },
+  {
+    "id": 299,
+    "company_name": "Ritchie, O'Kon and O'Kon",
+    "city": "Calape",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/195x100.png/cc0000/ffffff",
+    "specialties": ["Drilled Shafts", "Ornamental Railings", "EIFS", "Casework"]
+  },
+  {
+    "id": 300,
+    "company_name": "Koss Inc",
+    "city": "Mataya",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/245x100.png/ff4444/ffffff",
+    "specialties": ["Rebar & Wire Mesh Install", "HVAC", "Masonry & Precast"]
+  },
+  {
+    "id": 301,
+    "company_name": "Wiza-Abbott",
+    "city": "San Jose",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/143x100.png/ff4444/ffffff",
+    "specialties": [
+      "Curb & Gutter",
+      "Doors, Frames & Hardware",
+      "Drywall & Acoustical (MOB)",
+      "Retaining Wall and Brick Pavers"
+    ]
+  },
+  {
+    "id": 302,
+    "company_name": "Carter-Klocko",
+    "city": "Vassouras",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/214x100.png/ff4444/ffffff",
+    "specialties": ["Prefabricated Aluminum Metal Canopies", "Casework"]
+  },
+  {
+    "id": 303,
+    "company_name": "Bogisich, Altenwerth and Berge",
+    "city": "Parumasan",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/243x100.png/dddddd/000000",
+    "specialties": [
+      "Wall Protection",
+      "Elevator",
+      "Hard Tile & Stone",
+      "Framing (Wood)"
+    ]
+  },
+  {
+    "id": 304,
+    "company_name": "Botsford-Hodkiewicz",
+    "city": "Galván",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/112x100.png/cc0000/ffffff",
+    "specialties": ["Fire Protection", "Termite Control"]
+  },
+  {
+    "id": 305,
+    "company_name": "Ledner and Sons",
+    "city": "Dongzaogang",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/219x100.png/5fa2dd/ffffff",
+    "specialties": ["Hard Tile & Stone"]
+  },
+  {
+    "id": 306,
+    "company_name": "Swaniawski, Borer and Johns",
+    "city": "Zhoupi",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/144x100.png/dddddd/000000",
+    "specialties": [
+      "Painting & Vinyl Wall Covering",
+      "Masonry & Precast",
+      "Construction Clean and Final Clean",
+      "Framing (Wood)"
+    ]
+  },
+  {
+    "id": 307,
+    "company_name": "Hoeger Inc",
+    "city": "Garanhuns",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/247x100.png/5fa2dd/ffffff",
+    "specialties": ["Fire Sprinkler System"]
+  },
+  {
+    "id": 308,
+    "company_name": "Simonis LLC",
+    "city": "Norton",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/189x100.png/ff4444/ffffff",
+    "specialties": [
+      "Framing (Wood)",
+      "Ornamental Railings",
+      "Roofing (Asphalt)",
+      "Plumbing & Medical Gas"
+    ]
+  },
+  {
+    "id": 309,
+    "company_name": "Ebert-Considine",
+    "city": "Godziszów Pierwszy",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/170x100.png/ff4444/ffffff",
+    "specialties": [
+      "Marlite Panels (FED)",
+      "Ornamental Railings",
+      "Structural and Misc Steel (Fabrication)"
+    ]
+  },
+  {
+    "id": 310,
+    "company_name": "Howe-Ryan",
+    "city": "Kutum",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/102x100.png/dddddd/000000",
+    "specialties": [
+      "Structural and Misc Steel (Fabrication)",
+      "Rebar & Wire Mesh Install",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 311,
+    "company_name": "Bahringer-Zulauf",
+    "city": "Casma",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/122x100.png/dddddd/000000",
+    "specialties": ["Painting & Vinyl Wall Covering"]
+  },
+  {
+    "id": 312,
+    "company_name": "Mills LLC",
+    "city": "Palilula",
+    "specialty": "Termite Control",
+    "logo": "http://dummyimage.com/151x100.png/dddddd/000000",
+    "specialties": ["Masonry", "Exterior Signage", "Overhead Doors"]
+  },
+  {
+    "id": 313,
+    "company_name": "Prohaska LLC",
+    "city": "Tarogong",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/185x100.png/ff4444/ffffff",
+    "specialties": ["Drywall & Acoustical (MOB)", "Masonry"]
+  },
+  {
+    "id": 314,
+    "company_name": "McDermott-Cummerata",
+    "city": "Oslo",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/125x100.png/dddddd/000000",
+    "specialties": ["Sitework & Site Utilities", "Plumbing & Medical Gas"]
+  },
+  {
+    "id": 315,
+    "company_name": "Kris-Lind",
+    "city": "Tataouine",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/209x100.png/ff4444/ffffff",
+    "specialties": [
+      "Waterproofing & Caulking",
+      "Soft Flooring and Base",
+      "Retaining Wall and Brick Pavers",
+      "Temp Fencing, Decorative Fencing and Gates"
+    ]
+  },
+  {
+    "id": 316,
+    "company_name": "Veum-Boehm",
+    "city": "An Nāşirīyah",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/211x100.png/ff4444/ffffff",
+    "specialties": ["Casework", "Plumbing & Medical Gas", "Roofing (Metal)"]
+  },
+  {
+    "id": 317,
+    "company_name": "Wolf, Morissette and Price",
+    "city": "Isakly",
+    "specialty": "Wall Protection",
+    "logo": "http://dummyimage.com/101x100.png/dddddd/000000",
+    "specialties": ["Waterproofing & Caulking"]
+  },
+  {
+    "id": 318,
+    "company_name": "Nikolaus-Rolfson",
+    "city": "Ağdam",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/182x100.png/cc0000/ffffff",
+    "specialties": ["Roofing (Asphalt)"]
+  },
+  {
+    "id": 319,
+    "company_name": "Hoppe, Armstrong and Franecki",
+    "city": "Zhulin",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/241x100.png/dddddd/000000",
+    "specialties": ["Sitework & Site Utilities", "Curb & Gutter"]
+  },
+  {
+    "id": 320,
+    "company_name": "Bauch Group",
+    "city": "Shanxi",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/170x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Structural & Misc Steel Erection",
+      "Rebar & Wire Mesh Install",
+      "Epoxy Flooring",
+      "Overhead Doors"
+    ]
+  },
+  {
+    "id": 321,
+    "company_name": "West, Tillman and Kozey",
+    "city": "Lazaro Cardenas",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/159x100.png/5fa2dd/ffffff",
+    "specialties": ["Curb & Gutter", "Epoxy Flooring", "Termite Control"]
+  },
+  {
+    "id": 322,
+    "company_name": "Rempel Inc",
+    "city": "Cibiru",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/119x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Electrical",
+      "Exterior Signage",
+      "Waterproofing & Caulking",
+      "Ornamental Railings"
+    ]
+  },
+  {
+    "id": 323,
+    "company_name": "Satterfield, Kulas and Braun",
+    "city": "Mizur",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/174x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Fire Sprinkler System",
+      "Drywall & Acoustical (MOB)",
+      "Drywall & Acoustical (FED)",
+      "Framing (Wood)"
+    ]
+  },
+  {
+    "id": 324,
+    "company_name": "Cremin-Wiegand",
+    "city": "Bago",
+    "specialty": "Granite Surfaces",
+    "logo": "http://dummyimage.com/121x100.png/dddddd/000000",
+    "specialties": [
+      "Landscaping & Irrigation",
+      "Drywall & Acoustical (MOB)",
+      "Drywall & Acoustical (FED)",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 325,
+    "company_name": "Gerlach LLC",
+    "city": "Rangpur",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/152x100.png/cc0000/ffffff",
+    "specialties": ["Roofing (Asphalt)"]
+  },
+  {
+    "id": 326,
+    "company_name": "Price, Zemlak and Ortiz",
+    "city": "Rio das Ostras",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/204x100.png/ff4444/ffffff",
+    "specialties": ["Sitework & Site Utilities", "Site Furnishings"]
+  },
+  {
+    "id": 327,
+    "company_name": "Brown-Gorczany",
+    "city": "Xilanqi",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/184x100.png/dddddd/000000",
+    "specialties": ["Waterproofing & Caulking", "Plumbing & Medical Gas"]
+  },
+  {
+    "id": 328,
+    "company_name": "Rohan, Stehr and Klein",
+    "city": "Guanzhuang",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/163x100.png/ff4444/ffffff",
+    "specialties": [
+      "Curb & Gutter",
+      "Waterproofing & Caulking",
+      "Landscaping & Irrigation",
+      "Masonry"
+    ]
+  },
+  {
+    "id": 329,
+    "company_name": "Walsh, Kassulke and Feil",
+    "city": "Tairan Camp",
+    "specialty": "Fire Sprinkler System",
+    "logo": "http://dummyimage.com/247x100.png/cc0000/ffffff",
+    "specialties": ["Sitework & Site Utilities", "Elevator"]
+  },
+  {
+    "id": 330,
+    "company_name": "Davis-Feest",
+    "city": "Hưng Yên",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/116x100.png/ff4444/ffffff",
+    "specialties": ["Electrical"]
+  },
+  {
+    "id": 331,
+    "company_name": "Kuhic Group",
+    "city": "Jingdang",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/202x100.png/5fa2dd/ffffff",
+    "specialties": ["Wall Protection"]
+  },
+  {
+    "id": 332,
+    "company_name": "Fahey, Hagenes and Quitzon",
+    "city": "Ljubovija",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/157x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Prefabricated Aluminum Metal Canopies",
+      "HVAC",
+      "Roofing (Metal)",
+      "Painting & Vinyl Wall Covering"
+    ]
+  },
+  {
+    "id": 333,
+    "company_name": "Champlin, Dibbert and Hettinger",
+    "city": "Kirovgrad",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/227x100.png/ff4444/ffffff",
+    "specialties": ["Framing (Wood)", "RF Shielding"]
+  },
+  {
+    "id": 334,
+    "company_name": "Spencer-Murray",
+    "city": "Kotabaru",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/249x100.png/ff4444/ffffff",
+    "specialties": ["Plumbing & Medical Gas", "Site Furnishings"]
+  },
+  {
+    "id": 335,
+    "company_name": "Goodwin, Koelpin and Bashirian",
+    "city": "Espargos",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/115x100.png/dddddd/000000",
+    "specialties": [
+      "Fire Sprinkler System",
+      "Painting & Vinyl Wall Covering",
+      "Framing (Wood)",
+      "Glass & Glazing"
+    ]
+  },
+  {
+    "id": 336,
+    "company_name": "Goodwin, Wilkinson and Stark",
+    "city": "Lyaskovets",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/165x100.png/5fa2dd/ffffff",
+    "specialties": ["Fire Protection"]
+  },
+  {
+    "id": 337,
+    "company_name": "Hegmann Group",
+    "city": "Danirai",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/164x100.png/ff4444/ffffff",
+    "specialties": [
+      "Granite Surfaces",
+      "Exterior Signage",
+      "Soft Flooring and Base"
+    ]
+  },
+  {
+    "id": 338,
+    "company_name": "Roob Inc",
+    "city": "Suphan Buri",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/228x100.png/5fa2dd/ffffff",
+    "specialties": ["Plumbing & Medical Gas"]
+  },
+  {
+    "id": 339,
+    "company_name": "Rosenbaum-Cronin",
+    "city": "Néa Karváli",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/183x100.png/cc0000/ffffff",
+    "specialties": [
+      "Ornamental Railings",
+      "Masonry & Precast",
+      "Termite Control",
+      "Framing (Steel)"
+    ]
+  },
+  {
+    "id": 340,
+    "company_name": "Quitzon, Boyer and Nitzsche",
+    "city": "Austin",
+    "specialty": "Construction Clean and Final Clean",
+    "logo": "http://dummyimage.com/236x100.png/cc0000/ffffff",
+    "specialties": [
+      "Wall Protection",
+      "HVAC",
+      "Prefabricated Aluminum Metal Canopies",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 341,
+    "company_name": "Barrows-Wyman",
+    "city": "Erandique",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/162x100.png/5fa2dd/ffffff",
+    "specialties": ["Masonry & Precast"]
+  },
+  {
+    "id": 342,
+    "company_name": "Harris Group",
+    "city": "Horta",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/128x100.png/dddddd/000000",
+    "specialties": [
+      "Rebar & Wire Mesh Install",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Casework",
+      "Roofing (Asphalt)"
+    ]
+  },
+  {
+    "id": 343,
+    "company_name": "Carroll-Sanford",
+    "city": "Lom Sak",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/158x100.png/cc0000/ffffff",
+    "specialties": ["Masonry & Precast"]
+  },
+  {
+    "id": 344,
+    "company_name": "McGlynn LLC",
+    "city": "Effium",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/176x100.png/cc0000/ffffff",
+    "specialties": ["Epoxy Flooring"]
+  },
+  {
+    "id": 345,
+    "company_name": "Bosco Inc",
+    "city": "Damao",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/103x100.png/dddddd/000000",
+    "specialties": ["Epoxy Flooring", "Roofing (Asphalt)", "Masonry & Precast"]
+  },
+  {
+    "id": 346,
+    "company_name": "Haag, D'Amore and Kassulke",
+    "city": "Riachão do Jacuípe",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/128x100.png/cc0000/ffffff",
+    "specialties": [
+      "EIFS",
+      "Retaining Wall and Brick Pavers",
+      "Fire Protection"
+    ]
+  },
+  {
+    "id": 347,
+    "company_name": "McClure-Keeling",
+    "city": "Tarakan",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/202x100.png/ff4444/ffffff",
+    "specialties": ["Temp Fencing, Decorative Fencing and Gates"]
+  },
+  {
+    "id": 348,
+    "company_name": "Beier-Schumm",
+    "city": "Sokol",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/106x100.png/dddddd/000000",
+    "specialties": ["Glass & Glazing", "Drilled Shafts", "Overhead Doors"]
+  },
+  {
+    "id": 349,
+    "company_name": "Kreiger Inc",
+    "city": "Yangliu",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/235x100.png/dddddd/000000",
+    "specialties": [
+      "Landscaping & Irrigation",
+      "Framing (Steel)",
+      "Drywall & Acoustical (MOB)"
+    ]
+  },
+  {
+    "id": 350,
+    "company_name": "Howell, Russel and Upton",
+    "city": "Severo-Zadonsk",
+    "specialty": "RF Shielding",
+    "logo": "http://dummyimage.com/222x100.png/ff4444/ffffff",
+    "specialties": ["Landscaping & Irrigation", "Framing (Steel)"]
+  },
+  {
+    "id": 351,
+    "company_name": "Streich LLC",
+    "city": "Fílla",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/141x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Framing (Steel)",
+      "Termite Control",
+      "Electrical and Fire Alarm",
+      "Rebar & Wire Mesh Install"
+    ]
+  },
+  {
+    "id": 352,
+    "company_name": "Erdman Group",
+    "city": "Petaling Jaya",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/118x100.png/cc0000/ffffff",
+    "specialties": ["Epoxy Flooring", "Electrical and Fire Alarm"]
+  },
+  {
+    "id": 353,
+    "company_name": "Wintheiser and Sons",
+    "city": "Seoul",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/137x100.png/dddddd/000000",
+    "specialties": [
+      "RF Shielding",
+      "Construction Clean and Final Clean",
+      "Landscaping & Irrigation",
+      "Granite Surfaces"
+    ]
+  },
+  {
+    "id": 354,
+    "company_name": "Ziemann, Becker and Considine",
+    "city": "Kohila",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/229x100.png/ff4444/ffffff",
+    "specialties": [
+      "RF Shielding",
+      "Construction Clean and Final Clean",
+      "Painting & Vinyl Wall Covering",
+      "Termite Control"
+    ]
+  },
+  {
+    "id": 355,
+    "company_name": "Reichert, Carter and Herzog",
+    "city": "Tawangsari",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/120x100.png/ff4444/ffffff",
+    "specialties": [
+      "Termite Control",
+      "Waterproofing & Caulking",
+      "Framing (Wood)"
+    ]
+  },
+  {
+    "id": 356,
+    "company_name": "Windler Group",
+    "city": "Lembanah",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/215x100.png/5fa2dd/ffffff",
+    "specialties": ["Glass & Glazing", "Framing (Steel)"]
+  },
+  {
+    "id": 357,
+    "company_name": "Dickinson-Corwin",
+    "city": "Hongshanzui",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/145x100.png/dddddd/000000",
+    "specialties": ["Asphalt Paving", "Exterior Signage", "Drilled Shafts"]
+  },
+  {
+    "id": 358,
+    "company_name": "Runolfsdottir Group",
+    "city": "Chase",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/105x100.png/cc0000/ffffff",
+    "specialties": [
+      "Retaining Wall and Brick Pavers",
+      "Overhead Doors",
+      "Waterproofing & Caulking",
+      "Marlite Panels (FED)"
+    ]
+  },
+  {
+    "id": 359,
+    "company_name": "Pagac, Koelpin and Gibson",
+    "city": "Cernay",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/213x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Structural & Misc Steel Erection",
+      "Drywall & Acoustical (FED)",
+      "Fire Sprinkler System"
+    ]
+  },
+  {
+    "id": 360,
+    "company_name": "Hahn Inc",
+    "city": "Dālbandīn",
+    "specialty": "Retaining Wall and Brick Pavers",
+    "logo": "http://dummyimage.com/249x100.png/ff4444/ffffff",
+    "specialties": [
+      "Fire Sprinkler System",
+      "Drilled Shafts",
+      "RF Shielding",
+      "Termite Control"
+    ]
+  },
+  {
+    "id": 361,
+    "company_name": "Bogisich-Koelpin",
+    "city": "Cogon",
+    "specialty": "Granite Surfaces",
+    "logo": "http://dummyimage.com/243x100.png/cc0000/ffffff",
+    "specialties": ["Soft Flooring and Base", "Fire Sprinkler System"]
+  },
+  {
+    "id": 362,
+    "company_name": "Wiegand, Cronin and Schiller",
+    "city": "Drochia",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/139x100.png/dddddd/000000",
+    "specialties": [
+      "Elevator",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Exterior Signage"
+    ]
+  },
+  {
+    "id": 363,
+    "company_name": "Wilderman, Langworth and Wyman",
+    "city": "Kwale",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/238x100.png/cc0000/ffffff",
+    "specialties": ["Exterior Signage", "Framing (Wood)"]
+  },
+  {
+    "id": 364,
+    "company_name": "Treutel-O'Reilly",
+    "city": "Louisville",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/239x100.png/cc0000/ffffff",
+    "specialties": [
+      "Epoxy Flooring",
+      "Painting & Vinyl Wall Covering",
+      "Landscaping & Irrigation",
+      "HVAC"
+    ]
+  },
+  {
+    "id": 365,
+    "company_name": "Gerlach, Sipes and Ward",
+    "city": "Santa Quitéria do Maranhão",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/132x100.png/cc0000/ffffff",
+    "specialties": ["Fire Protection", "EIFS"]
+  },
+  {
+    "id": 366,
+    "company_name": "Will-Gibson",
+    "city": "Fort Worth",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/207x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Asphalt Paving",
+      "Painting & Vinyl Wall Covering",
+      "Sitework & Site Utilities"
+    ]
+  },
+  {
+    "id": 367,
+    "company_name": "Swift-Von",
+    "city": "Cibinong",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/192x100.png/5fa2dd/ffffff",
+    "specialties": ["Masonry"]
+  },
+  {
+    "id": 368,
+    "company_name": "Feest-Sanford",
+    "city": "União da Vitória",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/198x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Framing (Wood)",
+      "Soft Flooring and Base",
+      "Sitework & Site Utilities"
+    ]
+  },
+  {
+    "id": 369,
+    "company_name": "Ward, Rosenbaum and Marvin",
+    "city": "Pierreville",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/190x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Overhead Doors",
+      "Masonry & Precast",
+      "Landscaping & Irrigation"
+    ]
+  },
+  {
+    "id": 370,
+    "company_name": "Gusikowski-Huel",
+    "city": "Soriano",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/151x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Roofing (Asphalt)",
+      "Fire Protection",
+      "Landscaping & Irrigation"
+    ]
+  },
+  {
+    "id": 371,
+    "company_name": "Bahringer Group",
+    "city": "Nguru",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/175x100.png/ff4444/ffffff",
+    "specialties": [
+      "Doors, Frames & Hardware",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Hard Tile & Stone",
+      "Marlite Panels (FED)"
+    ]
+  },
+  {
+    "id": 372,
+    "company_name": "Cummerata, Moore and Tremblay",
+    "city": "Tuanfeng",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/239x100.png/5fa2dd/ffffff",
+    "specialties": ["Masonry", "Drywall & Acoustical (FED)"]
+  },
+  {
+    "id": 373,
+    "company_name": "Jakubowski-Tremblay",
+    "city": "Moa",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/233x100.png/cc0000/ffffff",
+    "specialties": ["Epoxy Flooring", "Elevator"]
+  },
+  {
+    "id": 374,
+    "company_name": "Johnston-Carter",
+    "city": "Tongjing",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/162x100.png/5fa2dd/ffffff",
+    "specialties": ["Framing (Wood)"]
+  },
+  {
+    "id": 375,
+    "company_name": "Brakus and Sons",
+    "city": "Las Flores",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/105x100.png/cc0000/ffffff",
+    "specialties": ["RF Shielding"]
+  },
+  {
+    "id": 376,
+    "company_name": "Hayes-D'Amore",
+    "city": "Soufrière",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/153x100.png/cc0000/ffffff",
+    "specialties": [
+      "RF Shielding",
+      "Landscaping & Irrigation",
+      "Ornamental Railings"
+    ]
+  },
+  {
+    "id": 377,
+    "company_name": "Kuphal-Stehr",
+    "city": "Kishk-e Nakhūd",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/171x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Granite Surfaces",
+      "Painting & Vinyl Wall Covering",
+      "Plumbing & Medical Gas",
+      "Doors, Frames & Hardware"
+    ]
+  },
+  {
+    "id": 378,
+    "company_name": "Crooks, McCullough and Mann",
+    "city": "Yongfu",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/157x100.png/5fa2dd/ffffff",
+    "specialties": ["EIFS"]
+  },
+  {
+    "id": 379,
+    "company_name": "Nienow, Schmeler and Pacocha",
+    "city": "Huajialing",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/226x100.png/cc0000/ffffff",
+    "specialties": ["EIFS", "Plumbing & Medical Gas"]
+  },
+  {
+    "id": 380,
+    "company_name": "King-Lakin",
+    "city": "Port Loko",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/228x100.png/ff4444/ffffff",
+    "specialties": ["Asphalt Paving"]
+  },
+  {
+    "id": 381,
+    "company_name": "Kuhic, Koss and Kohler",
+    "city": "Ārān Bīdgol",
+    "specialty": "Exterior Signage",
+    "logo": "http://dummyimage.com/146x100.png/dddddd/000000",
+    "specialties": ["Exterior Signage"]
+  },
+  {
+    "id": 382,
+    "company_name": "Stanton Group",
+    "city": "Shangganshan",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/123x100.png/ff4444/ffffff",
+    "specialties": ["Rebar & Wire Mesh Install", "Ornamental Railings"]
+  },
+  {
+    "id": 383,
+    "company_name": "Franecki Group",
+    "city": "Tigarunggu",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/110x100.png/dddddd/000000",
+    "specialties": [
+      "Structural and Misc Steel (Fabrication)",
+      "Waterproofing & Caulking",
+      "Exterior Signage"
+    ]
+  },
+  {
+    "id": 384,
+    "company_name": "Grant-O'Conner",
+    "city": "Urrao",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/247x100.png/dddddd/000000",
+    "specialties": ["Glass & Glazing", "Exterior Signage"]
+  },
+  {
+    "id": 385,
+    "company_name": "Becker, Herman and Marquardt",
+    "city": "Campanário",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/208x100.png/ff4444/ffffff",
+    "specialties": ["Site Furnishings", "Granite Surfaces"]
+  },
+  {
+    "id": 386,
+    "company_name": "Buckridge-Harvey",
+    "city": "Chãos",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/196x100.png/5fa2dd/ffffff",
+    "specialties": ["Hard Tile & Stone"]
+  },
+  {
+    "id": 387,
+    "company_name": "Roberts-Haley",
+    "city": "Penza",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/158x100.png/5fa2dd/ffffff",
+    "specialties": ["Fire Protection", "Fire Sprinkler System"]
+  },
+  {
+    "id": 388,
+    "company_name": "Greenholt LLC",
+    "city": "Quintong",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/159x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Termite Control",
+      "Fire Protection",
+      "RF Shielding",
+      "Painting & Vinyl Wall Covering"
+    ]
+  },
+  {
+    "id": 389,
+    "company_name": "Ledner-Corkery",
+    "city": "Caldelas",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/164x100.png/cc0000/ffffff",
+    "specialties": ["Marlite Panels (FED)"]
+  },
+  {
+    "id": 390,
+    "company_name": "Hansen Inc",
+    "city": "Idah",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/221x100.png/ff4444/ffffff",
+    "specialties": ["Construction Clean and Final Clean"]
+  },
+  {
+    "id": 391,
+    "company_name": "Gleichner-Krajcik",
+    "city": "Itaúna",
+    "specialty": "Exterior Signage",
+    "logo": "http://dummyimage.com/134x100.png/5fa2dd/ffffff",
+    "specialties": ["Waterproofing & Caulking", "Framing (Steel)", "Casework"]
+  },
+  {
+    "id": 392,
+    "company_name": "Grant, Konopelski and O'Keefe",
+    "city": "Mertzig",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/118x100.png/dddddd/000000",
+    "specialties": [
+      "Overhead Doors",
+      "Asphalt Paving",
+      "Hard Tile & Stone",
+      "Drilled Shafts"
+    ]
+  },
+  {
+    "id": 393,
+    "company_name": "Kub, Kling and Jacobs",
+    "city": "Indianapolis",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/176x100.png/cc0000/ffffff",
+    "specialties": [
+      "Landscaping & Irrigation",
+      "Elevator",
+      "Site Furnishings",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 394,
+    "company_name": "Kulas LLC",
+    "city": "Tabia",
+    "specialty": "Framing (Steel)",
+    "logo": "http://dummyimage.com/148x100.png/dddddd/000000",
+    "specialties": ["HVAC", "Overhead Doors", "Granite Surfaces"]
+  },
+  {
+    "id": 395,
+    "company_name": "Bauch, Harris and Mueller",
+    "city": "Dąbrowa",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/154x100.png/dddddd/000000",
+    "specialties": ["Construction Clean and Final Clean"]
+  },
+  {
+    "id": 396,
+    "company_name": "Greenfelder-Kovacek",
+    "city": "Jönköping",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/152x100.png/cc0000/ffffff",
+    "specialties": ["Waterproofing & Caulking", "Roofing (Metal)"]
+  },
+  {
+    "id": 397,
+    "company_name": "Littel, Heaney and Volkman",
+    "city": "Yangce",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/204x100.png/cc0000/ffffff",
+    "specialties": ["Electrical and Fire Alarm"]
+  },
+  {
+    "id": 398,
+    "company_name": "Denesik-Weimann",
+    "city": "Baofeng",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/219x100.png/ff4444/ffffff",
+    "specialties": ["Framing (Wood)", "HVAC", "Masonry"]
+  },
+  {
+    "id": 399,
+    "company_name": "Franecki-Erdman",
+    "city": "Buurhakaba",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/218x100.png/dddddd/000000",
+    "specialties": ["Fire Protection"]
+  },
+  {
+    "id": 400,
+    "company_name": "Senger-Kuhic",
+    "city": "Bébédja",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/240x100.png/dddddd/000000",
+    "specialties": [
+      "Termite Control",
+      "Electrical",
+      "Glass & Glazing",
+      "Masonry"
+    ]
+  },
+  {
+    "id": 401,
+    "company_name": "Satterfield-Daugherty",
+    "city": "Oesapa",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/244x100.png/cc0000/ffffff",
+    "specialties": ["Hard Tile & Stone"]
+  },
+  {
+    "id": 402,
+    "company_name": "Bashirian Inc",
+    "city": "Durazno",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/200x100.png/cc0000/ffffff",
+    "specialties": ["Termite Control"]
+  },
+  {
+    "id": 403,
+    "company_name": "Hamill-Botsford",
+    "city": "Puerto Rico",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/211x100.png/cc0000/ffffff",
+    "specialties": [
+      "Framing (Wood)",
+      "Asphalt Paving",
+      "Ornamental Railings",
+      "EIFS"
+    ]
+  },
+  {
+    "id": 404,
+    "company_name": "Dickens, Corkery and Bergstrom",
+    "city": "Renliu",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/134x100.png/cc0000/ffffff",
+    "specialties": ["Fire Protection", "Hard Tile & Stone", "RF Shielding"]
+  },
+  {
+    "id": 405,
+    "company_name": "Kassulke, Powlowski and Cummings",
+    "city": "Seren",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/205x100.png/dddddd/000000",
+    "specialties": [
+      "Ornamental Railings",
+      "Site Furnishings",
+      "Granite Surfaces",
+      "Masonry & Precast"
+    ]
+  },
+  {
+    "id": 406,
+    "company_name": "Altenwerth-Daugherty",
+    "city": "Kuanfeu",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/110x100.png/dddddd/000000",
+    "specialties": [
+      "Electrical and Fire Alarm",
+      "Framing (Steel)",
+      "Soft Flooring and Base"
+    ]
+  },
+  {
+    "id": 407,
+    "company_name": "Jaskolski, Turcotte and Spencer",
+    "city": "Banxi",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/168x100.png/cc0000/ffffff",
+    "specialties": ["Electrical and Fire Alarm"]
+  },
+  {
+    "id": 408,
+    "company_name": "Stehr LLC",
+    "city": "Plato",
+    "specialty": "Masonry & Precast",
+    "logo": "http://dummyimage.com/163x100.png/dddddd/000000",
+    "specialties": ["Epoxy Flooring", "Painting & Vinyl Wall Covering"]
+  },
+  {
+    "id": 409,
+    "company_name": "Kilback, Satterfield and Collier",
+    "city": "Ipoh",
+    "specialty": "EIFS",
+    "logo": "http://dummyimage.com/157x100.png/cc0000/ffffff",
+    "specialties": ["Epoxy Flooring", "Masonry", "Electrical"]
+  },
+  {
+    "id": 410,
+    "company_name": "Carter-Ward",
+    "city": "Wan Yai",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/128x100.png/ff4444/ffffff",
+    "specialties": ["Ornamental Railings", "Rebar & Wire Mesh Install"]
+  },
+  {
+    "id": 411,
+    "company_name": "Schneider, Nader and Labadie",
+    "city": "Liufu",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/143x100.png/ff4444/ffffff",
+    "specialties": [
+      "Structural and Misc Steel (Fabrication)",
+      "Fire Sprinkler System",
+      "Roofing (Metal)"
+    ]
+  },
+  {
+    "id": 412,
+    "company_name": "Schultz-Okuneva",
+    "city": "Lemery",
+    "specialty": "Painting & Vinyl Wall Covering",
+    "logo": "http://dummyimage.com/216x100.png/ff4444/ffffff",
+    "specialties": ["Masonry", "EIFS", "Roofing (Metal)"]
+  },
+  {
+    "id": 413,
+    "company_name": "Murazik LLC",
+    "city": "Kotatengah",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/239x100.png/ff4444/ffffff",
+    "specialties": [
+      "Soft Flooring and Base",
+      "Fire Protection",
+      "Granite Surfaces",
+      "Glass & Glazing"
+    ]
+  },
+  {
+    "id": 414,
+    "company_name": "Ondricka, Hilll and Torp",
+    "city": "São Sebastião do Passé",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/214x100.png/dddddd/000000",
+    "specialties": ["Marlite Panels (FED)", "Granite Surfaces"]
+  },
+  {
+    "id": 415,
+    "company_name": "Greenholt-Koch",
+    "city": "Jaunpils",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/136x100.png/dddddd/000000",
+    "specialties": [
+      "Framing (Steel)",
+      "Site Furnishings",
+      "Fire Sprinkler System",
+      "Wall Protection"
+    ]
+  },
+  {
+    "id": 416,
+    "company_name": "Jacobson-Johns",
+    "city": "Paris 08",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/216x100.png/5fa2dd/ffffff",
+    "specialties": ["Framing (Steel)", "Glass & Glazing"]
+  },
+  {
+    "id": 417,
+    "company_name": "Ratke Group",
+    "city": "Payao",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/133x100.png/dddddd/000000",
+    "specialties": ["Framing (Steel)", "Roofing (Asphalt)"]
+  },
+  {
+    "id": 418,
+    "company_name": "Donnelly and Sons",
+    "city": "Delanggu",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/127x100.png/5fa2dd/ffffff",
+    "specialties": ["Prefabricated Aluminum Metal Canopies"]
+  },
+  {
+    "id": 419,
+    "company_name": "Kshlerin, Gleason and Heidenreich",
+    "city": "Burgaltay",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/135x100.png/dddddd/000000",
+    "specialties": ["EIFS"]
+  },
+  {
+    "id": 420,
+    "company_name": "Bernhard-Steuber",
+    "city": "Aozai",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/153x100.png/5fa2dd/ffffff",
+    "specialties": ["Drywall & Acoustical (FED)", "Landscaping & Irrigation"]
+  },
+  {
+    "id": 421,
+    "company_name": "Farrell, Breitenberg and Hegmann",
+    "city": "Linköping",
+    "specialty": "Doors, Frames & Hardware",
+    "logo": "http://dummyimage.com/186x100.png/cc0000/ffffff",
+    "specialties": [
+      "Electrical and Fire Alarm",
+      "Fire Protection",
+      "Asphalt Paving",
+      "Painting & Vinyl Wall Covering"
+    ]
+  },
+  {
+    "id": 422,
+    "company_name": "Jacobson, King and Schoen",
+    "city": "Stockholm",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/132x100.png/cc0000/ffffff",
+    "specialties": [
+      "Roofing (Asphalt)",
+      "Termite Control",
+      "Soft Flooring and Base"
+    ]
+  },
+  {
+    "id": 423,
+    "company_name": "Gorczany, Altenwerth and Stokes",
+    "city": "Penisihan",
+    "specialty": "Masonry",
+    "logo": "http://dummyimage.com/221x100.png/cc0000/ffffff",
+    "specialties": [
+      "Roofing (Asphalt)",
+      "Termite Control",
+      "Sitework & Site Utilities"
+    ]
+  },
+  {
+    "id": 424,
+    "company_name": "Casper-Wilkinson",
+    "city": "Yeroẖam",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/188x100.png/ff4444/ffffff",
+    "specialties": ["Exterior Signage", "Elevator", "Granite Surfaces"]
+  },
+  {
+    "id": 425,
+    "company_name": "Sporer-Bergstrom",
+    "city": "Cambuí",
+    "specialty": "Drywall & Acoustical (MOB)",
+    "logo": "http://dummyimage.com/115x100.png/cc0000/ffffff",
+    "specialties": ["RF Shielding", "Drywall & Acoustical (MOB)"]
+  },
+  {
+    "id": 426,
+    "company_name": "DuBuque, Gutmann and Gutmann",
+    "city": "Qiaozhen",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/181x100.png/cc0000/ffffff",
+    "specialties": [
+      "RF Shielding",
+      "Roofing (Metal)",
+      "Exterior Signage",
+      "Temp Fencing, Decorative Fencing and Gates"
+    ]
+  },
+  {
+    "id": 427,
+    "company_name": "Hintz LLC",
+    "city": "Attard",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/181x100.png/cc0000/ffffff",
+    "specialties": ["Structural and Misc Steel (Fabrication)", "RF Shielding"]
+  },
+  {
+    "id": 428,
+    "company_name": "Schowalter-Hyatt",
+    "city": "Haozhai",
+    "specialty": "Exterior Signage",
+    "logo": "http://dummyimage.com/167x100.png/dddddd/000000",
+    "specialties": ["Curb & Gutter", "Drywall & Acoustical (FED)"]
+  },
+  {
+    "id": 429,
+    "company_name": "Terry and Sons",
+    "city": "Beishidian",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/182x100.png/cc0000/ffffff",
+    "specialties": [
+      "Prefabricated Aluminum Metal Canopies",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 430,
+    "company_name": "Kiehn-Wintheiser",
+    "city": "Pingle",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/248x100.png/ff4444/ffffff",
+    "specialties": ["Casework", "Fire Sprinkler System", "Elevator"]
+  },
+  {
+    "id": 431,
+    "company_name": "Hayes LLC",
+    "city": "Pécs",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/220x100.png/5fa2dd/ffffff",
+    "specialties": ["Curb & Gutter", "Plumbing & Medical Gas"]
+  },
+  {
+    "id": 432,
+    "company_name": "Hauck Group",
+    "city": "Taunoa",
+    "specialty": "Roofing (Metal)",
+    "logo": "http://dummyimage.com/238x100.png/5fa2dd/ffffff",
+    "specialties": ["Structural & Misc Steel Erection", "Hard Tile & Stone"]
+  },
+  {
+    "id": 433,
+    "company_name": "Leffler-Kutch",
+    "city": "Siluman",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/159x100.png/dddddd/000000",
+    "specialties": ["Asphalt Paving", "Wall Protection"]
+  },
+  {
+    "id": 434,
+    "company_name": "Jacobson-Gottlieb",
+    "city": "Sukhinichi",
+    "specialty": "Prefabricated Aluminum Metal Canopies",
+    "logo": "http://dummyimage.com/236x100.png/dddddd/000000",
+    "specialties": [
+      "Structural and Misc Steel (Fabrication)",
+      "Elevator",
+      "Plumbing & Medical Gas"
+    ]
+  },
+  {
+    "id": 435,
+    "company_name": "Streich-Glover",
+    "city": "Īlām",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/129x100.png/5fa2dd/ffffff",
+    "specialties": ["Elevator", "Structural and Misc Steel (Fabrication)"]
+  },
+  {
+    "id": 436,
+    "company_name": "Jaskolski, Fay and Bartoletti",
+    "city": "Yuanzhou",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/177x100.png/5fa2dd/ffffff",
+    "specialties": ["Elevator", "Construction Clean and Final Clean"]
+  },
+  {
+    "id": 437,
+    "company_name": "Fritsch-Rath",
+    "city": "Sam Phran",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/244x100.png/ff4444/ffffff",
+    "specialties": [
+      "Roofing (Metal)",
+      "Exterior Signage",
+      "Drywall & Acoustical (MOB)"
+    ]
+  },
+  {
+    "id": 438,
+    "company_name": "Kassulke-Renner",
+    "city": "Ręczno",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/216x100.png/dddddd/000000",
+    "specialties": [
+      "Glass & Glazing",
+      "Retaining Wall and Brick Pavers",
+      "Fire Protection"
+    ]
+  },
+  {
+    "id": 439,
+    "company_name": "O'Conner, Koelpin and Welch",
+    "city": "Wołomin",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/110x100.png/dddddd/000000",
+    "specialties": ["Roofing (Metal)", "EIFS", "Waterproofing & Caulking"]
+  },
+  {
+    "id": 440,
+    "company_name": "Dibbert, Reichel and Hilpert",
+    "city": "Cucutilla",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/219x100.png/dddddd/000000",
+    "specialties": ["Retaining Wall and Brick Pavers", "Curb & Gutter"]
+  },
+  {
+    "id": 441,
+    "company_name": "Runte, Leuschke and Kautzer",
+    "city": "Montería",
+    "specialty": "Elevator",
+    "logo": "http://dummyimage.com/143x100.png/ff4444/ffffff",
+    "specialties": [
+      "Plumbing & Medical Gas",
+      "Granite Surfaces",
+      "Drywall & Acoustical (FED)"
+    ]
+  },
+  {
+    "id": 442,
+    "company_name": "Watsica Group",
+    "city": "Barakī Barak",
+    "specialty": "Hard Tile & Stone",
+    "logo": "http://dummyimage.com/117x100.png/5fa2dd/ffffff",
+    "specialties": ["Overhead Doors", "Elevator", "Termite Control"]
+  },
+  {
+    "id": 443,
+    "company_name": "Fritsch-Padberg",
+    "city": "Ostroróg",
+    "specialty": "Rebar & Wire Mesh Install",
+    "logo": "http://dummyimage.com/227x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Drywall & Acoustical (MOB)",
+      "Ornamental Railings",
+      "Curb & Gutter"
+    ]
+  },
+  {
+    "id": 444,
+    "company_name": "Murazik, Nikolaus and Donnelly",
+    "city": "Villiers",
+    "specialty": "Temp Fencing, Decorative Fencing and Gates",
+    "logo": "http://dummyimage.com/176x100.png/cc0000/ffffff",
+    "specialties": [
+      "Construction Clean and Final Clean",
+      "Termite Control",
+      "Rebar & Wire Mesh Install",
+      "Framing (Steel)"
+    ]
+  },
+  {
+    "id": 445,
+    "company_name": "Daniel, Morar and Kreiger",
+    "city": "Dvin",
+    "specialty": "Termite Control",
+    "logo": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+    "specialties": ["Glass & Glazing", "Rebar & Wire Mesh Install"]
+  },
+  {
+    "id": 446,
+    "company_name": "Reichert-Heidenreich",
+    "city": "Santos Evos",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/242x100.png/ff4444/ffffff",
+    "specialties": ["Structural and Misc Steel (Fabrication)"]
+  },
+  {
+    "id": 447,
+    "company_name": "Volkman-Schmitt",
+    "city": "Jiangyi",
+    "specialty": "Structural & Misc Steel Erection",
+    "logo": "http://dummyimage.com/188x100.png/dddddd/000000",
+    "specialties": [
+      "Fire Sprinkler System",
+      "Drywall & Acoustical (MOB)",
+      "Epoxy Flooring",
+      "Electrical"
+    ]
+  },
+  {
+    "id": 448,
+    "company_name": "Boyle-Hahn",
+    "city": "Palaiochóri",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/137x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Fire Sprinkler System",
+      "Ornamental Railings",
+      "Rebar & Wire Mesh Install",
+      "Temp Fencing, Decorative Fencing and Gates"
+    ]
+  },
+  {
+    "id": 449,
+    "company_name": "Lemke-Cormier",
+    "city": "Dogondoutchi",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/162x100.png/5fa2dd/ffffff",
+    "specialties": ["Electrical and Fire Alarm", "Asphalt Paving"]
+  },
+  {
+    "id": 450,
+    "company_name": "Wolf-Macejkovic",
+    "city": "Kuandian",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/172x100.png/5fa2dd/ffffff",
+    "specialties": ["Wall Protection"]
+  },
+  {
+    "id": 451,
+    "company_name": "Hintz, Nikolaus and Heidenreich",
+    "city": "Oslo",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/250x100.png/dddddd/000000",
+    "specialties": [
+      "Structural & Misc Steel Erection",
+      "Fire Protection",
+      "Temp Fencing, Decorative Fencing and Gates"
+    ]
+  },
+  {
+    "id": 452,
+    "company_name": "Wyman, Will and Beatty",
+    "city": "Sobral",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/236x100.png/cc0000/ffffff",
+    "specialties": ["EIFS", "Temp Fencing, Decorative Fencing and Gates"]
+  },
+  {
+    "id": 453,
+    "company_name": "King-Pollich",
+    "city": "Janów",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/230x100.png/ff4444/ffffff",
+    "specialties": [
+      "Prefabricated Aluminum Metal Canopies",
+      "Overhead Doors",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Rebar & Wire Mesh Install"
+    ]
+  },
+  {
+    "id": 454,
+    "company_name": "Murray Group",
+    "city": "Torre de Moncorvo",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+    "specialties": ["Overhead Doors", "Structural and Misc Steel (Fabrication)"]
+  },
+  {
+    "id": 455,
+    "company_name": "Conn Group",
+    "city": "Zamora",
+    "specialty": "Granite Surfaces",
+    "logo": "http://dummyimage.com/132x100.png/dddddd/000000",
+    "specialties": ["Overhead Doors"]
+  },
+  {
+    "id": 456,
+    "company_name": "Kuphal-Funk",
+    "city": "Cacheu",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/173x100.png/ff4444/ffffff",
+    "specialties": ["Ornamental Railings"]
+  },
+  {
+    "id": 457,
+    "company_name": "Schultz, Hudson and Welch",
+    "city": "Francisco Sarabia",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/113x100.png/5fa2dd/ffffff",
+    "specialties": ["Ornamental Railings"]
+  },
+  {
+    "id": 458,
+    "company_name": "Heller-Robel",
+    "city": "Jiahu",
+    "specialty": "Marlite Panels (FED)",
+    "logo": "http://dummyimage.com/115x100.png/dddddd/000000",
+    "specialties": [
+      "Wall Protection",
+      "Structural & Misc Steel Erection",
+      "Plumbing & Medical Gas"
+    ]
+  },
+  {
+    "id": 459,
+    "company_name": "Wiza-Hyatt",
+    "city": "Penambangan",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/200x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Wall Protection",
+      "Roofing (Asphalt)",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 460,
+    "company_name": "Turner Group",
+    "city": "Fankeng",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/250x100.png/ff4444/ffffff",
+    "specialties": [
+      "Masonry",
+      "Electrical",
+      "Termite Control",
+      "Wall Protection"
+    ]
+  },
+  {
+    "id": 461,
+    "company_name": "Simonis Group",
+    "city": "Cikembar",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/248x100.png/dddddd/000000",
+    "specialties": ["HVAC"]
+  },
+  {
+    "id": 462,
+    "company_name": "Maggio-Keeling",
+    "city": "Tucuran",
+    "specialty": "Granite Surfaces",
+    "logo": "http://dummyimage.com/103x100.png/dddddd/000000",
+    "specialties": ["Marlite Panels (FED)", "Epoxy Flooring"]
+  },
+  {
+    "id": 463,
+    "company_name": "Hyatt-Stark",
+    "city": "Niugan",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/126x100.png/ff4444/ffffff",
+    "specialties": ["Exterior Signage", "Marlite Panels (FED)"]
+  },
+  {
+    "id": 464,
+    "company_name": "Reichel and Sons",
+    "city": "Le Mans",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/115x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Roofing (Asphalt)",
+      "RF Shielding",
+      "Landscaping & Irrigation"
+    ]
+  },
+  {
+    "id": 465,
+    "company_name": "McDermott, Heidenreich and Rath",
+    "city": "Mozdok",
+    "specialty": "Electrical and Fire Alarm",
+    "logo": "http://dummyimage.com/141x100.png/5fa2dd/ffffff",
+    "specialties": ["Framing (Wood)"]
+  },
+  {
+    "id": 466,
+    "company_name": "Hudson LLC",
+    "city": "Fenlu",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/116x100.png/dddddd/000000",
+    "specialties": ["Painting & Vinyl Wall Covering", "Roofing (Asphalt)"]
+  },
+  {
+    "id": 467,
+    "company_name": "Kshlerin, Carter and Durgan",
+    "city": "Parelhas",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/204x100.png/cc0000/ffffff",
+    "specialties": [
+      "Painting & Vinyl Wall Covering",
+      "Electrical and Fire Alarm"
+    ]
+  },
+  {
+    "id": 468,
+    "company_name": "Wuckert, Lehner and Klocko",
+    "city": "Lianhua",
+    "specialty": "Sitework & Site Utilities",
+    "logo": "http://dummyimage.com/141x100.png/5fa2dd/ffffff",
+    "specialties": ["Painting & Vinyl Wall Covering", "Curb & Gutter"]
+  },
+  {
+    "id": 469,
+    "company_name": "Maggio, Grant and Satterfield",
+    "city": "Altay sumu",
+    "specialty": "Framing (Wood)",
+    "logo": "http://dummyimage.com/120x100.png/ff4444/ffffff",
+    "specialties": [
+      "Roofing (Metal)",
+      "Electrical and Fire Alarm",
+      "Electrical"
+    ]
+  },
+  {
+    "id": 470,
+    "company_name": "Lemke and Sons",
+    "city": "Yidian",
+    "specialty": "RF Shielding",
+    "logo": "http://dummyimage.com/198x100.png/ff4444/ffffff",
+    "specialties": [
+      "Asphalt Paving",
+      "Retaining Wall and Brick Pavers",
+      "Overhead Doors"
+    ]
+  },
+  {
+    "id": 471,
+    "company_name": "Thiel, Kulas and Will",
+    "city": "Maomiaoji",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/106x100.png/dddddd/000000",
+    "specialties": [
+      "Plumbing & Medical Gas",
+      "Marlite Panels (FED)",
+      "Electrical and Fire Alarm",
+      "Framing (Steel)"
+    ]
+  },
+  {
+    "id": 472,
+    "company_name": "Doyle, Satterfield and Krajcik",
+    "city": "Maicao",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/139x100.png/dddddd/000000",
+    "specialties": ["Exterior Signage"]
+  },
+  {
+    "id": 473,
+    "company_name": "Kiehn LLC",
+    "city": "Bukomansimbi",
+    "specialty": "Epoxy Flooring",
+    "logo": "http://dummyimage.com/124x100.png/5fa2dd/ffffff",
+    "specialties": ["RF Shielding", "Fire Sprinkler System"]
+  },
+  {
+    "id": 474,
+    "company_name": "Leffler-DuBuque",
+    "city": "Nanjing",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/176x100.png/dddddd/000000",
+    "specialties": [
+      "Termite Control",
+      "Wall Protection",
+      "Soft Flooring and Base",
+      "RF Shielding"
+    ]
+  },
+  {
+    "id": 475,
+    "company_name": "Marks-Harvey",
+    "city": "Göteborg",
+    "specialty": "HVAC",
+    "logo": "http://dummyimage.com/106x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "Doors, Frames & Hardware",
+      "Construction Clean and Final Clean"
+    ]
+  },
+  {
+    "id": 476,
+    "company_name": "Stark-Kertzmann",
+    "city": "Xinminxiang",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/131x100.png/dddddd/000000",
+    "specialties": ["Epoxy Flooring", "Elevator"]
+  },
+  {
+    "id": 477,
+    "company_name": "Purdy Inc",
+    "city": "Zhusha",
+    "specialty": "Asphalt Paving",
+    "logo": "http://dummyimage.com/166x100.png/cc0000/ffffff",
+    "specialties": [
+      "Exterior Signage",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "EIFS",
+      "Fire Sprinkler System"
+    ]
+  },
+  {
+    "id": 478,
+    "company_name": "Gutkowski-Bailey",
+    "city": "Massaranduba",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/226x100.png/5fa2dd/ffffff",
+    "specialties": ["Wall Protection"]
+  },
+  {
+    "id": 479,
+    "company_name": "Berge-Leannon",
+    "city": "Chuantang",
+    "specialty": "Waterproofing & Caulking",
+    "logo": "http://dummyimage.com/238x100.png/dddddd/000000",
+    "specialties": ["Termite Control"]
+  },
+  {
+    "id": 480,
+    "company_name": "Crist, Abshire and Dietrich",
+    "city": "München",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/171x100.png/cc0000/ffffff",
+    "specialties": ["Soft Flooring and Base"]
+  },
+  {
+    "id": 481,
+    "company_name": "Auer, Pacocha and Harber",
+    "city": "Tambobamba",
+    "specialty": "Electrical",
+    "logo": "http://dummyimage.com/174x100.png/ff4444/ffffff",
+    "specialties": [
+      "Retaining Wall and Brick Pavers",
+      "Casework",
+      "Structural & Misc Steel Erection"
+    ]
+  },
+  {
+    "id": 482,
+    "company_name": "Kuhlman, Olson and Hintz",
+    "city": "Ternopil’",
+    "specialty": "Termite Control",
+    "logo": "http://dummyimage.com/234x100.png/ff4444/ffffff",
+    "specialties": ["Retaining Wall and Brick Pavers", "Framing (Wood)"]
+  },
+  {
+    "id": 483,
+    "company_name": "Bins-Streich",
+    "city": "Caringin",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/156x100.png/ff4444/ffffff",
+    "specialties": ["Elevator", "Plumbing & Medical Gas", "Masonry & Precast"]
+  },
+  {
+    "id": 484,
+    "company_name": "Nitzsche LLC",
+    "city": "Malaga",
+    "specialty": "Plumbing & Medical Gas",
+    "logo": "http://dummyimage.com/108x100.png/cc0000/ffffff",
+    "specialties": ["Casework", "Framing (Wood)"]
+  },
+  {
+    "id": 485,
+    "company_name": "Oberbrunner-Hettinger",
+    "city": "San Juan Nepomuceno",
+    "specialty": "Fire Protection",
+    "logo": "http://dummyimage.com/164x100.png/cc0000/ffffff",
+    "specialties": [
+      "Masonry",
+      "Waterproofing & Caulking",
+      "Structural and Misc Steel (Fabrication)",
+      "Landscaping & Irrigation"
+    ]
+  },
+  {
+    "id": 486,
+    "company_name": "Jones, Koepp and Marvin",
+    "city": "Krajanpagowan",
+    "specialty": "Roofing (Asphalt)",
+    "logo": "http://dummyimage.com/248x100.png/5fa2dd/ffffff",
+    "specialties": [
+      "HVAC",
+      "Elevator",
+      "Framing (Wood)",
+      "Drywall & Acoustical (MOB)"
+    ]
+  },
+  {
+    "id": 487,
+    "company_name": "Bergnaum-Hilpert",
+    "city": "Bibrka",
+    "specialty": "Soft Flooring and Base",
+    "logo": "http://dummyimage.com/118x100.png/5fa2dd/ffffff",
+    "specialties": ["Termite Control", "Site Furnishings"]
+  },
+  {
+    "id": 488,
+    "company_name": "Bernhard, Johnson and Schroeder",
+    "city": "Shuishi",
+    "specialty": "Curb & Gutter",
+    "logo": "http://dummyimage.com/168x100.png/dddddd/000000",
+    "specialties": [
+      "Waterproofing & Caulking",
+      "Soft Flooring and Base",
+      "Masonry & Precast"
+    ]
+  },
+  {
+    "id": 489,
+    "company_name": "Deckow and Sons",
+    "city": "Ghayl Bā Wazīr",
+    "specialty": "Termite Control",
+    "logo": "http://dummyimage.com/190x100.png/cc0000/ffffff",
+    "specialties": ["Roofing (Metal)"]
+  },
+  {
+    "id": 490,
+    "company_name": "Sipes, Reichel and Grady",
+    "city": "Kalaxilike",
+    "specialty": "Drilled Shafts",
+    "logo": "http://dummyimage.com/112x100.png/dddddd/000000",
+    "specialties": ["Retaining Wall and Brick Pavers"]
+  },
+  {
+    "id": 491,
+    "company_name": "Glover-Hintz",
+    "city": "Shunling",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/145x100.png/dddddd/000000",
+    "specialties": [
+      "Retaining Wall and Brick Pavers",
+      "Waterproofing & Caulking"
+    ]
+  },
+  {
+    "id": 492,
+    "company_name": "Howe and Sons",
+    "city": "Tambo Grande",
+    "specialty": "Ornamental Railings",
+    "logo": "http://dummyimage.com/222x100.png/dddddd/000000",
+    "specialties": ["Retaining Wall and Brick Pavers"]
+  },
+  {
+    "id": 493,
+    "company_name": "Quitzon and Sons",
+    "city": "Xian’an",
+    "specialty": "Structural and Misc Steel (Fabrication)",
+    "logo": "http://dummyimage.com/206x100.png/dddddd/000000",
+    "specialties": [
+      "Marlite Panels (FED)",
+      "Fire Sprinkler System",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Electrical"
+    ]
+  },
+  {
+    "id": 494,
+    "company_name": "Wilderman-Murphy",
+    "city": "Nanjie",
+    "specialty": "Casework",
+    "logo": "http://dummyimage.com/137x100.png/dddddd/000000",
+    "specialties": ["Fire Protection"]
+  },
+  {
+    "id": 495,
+    "company_name": "Steuber, Considine and Mertz",
+    "city": "Ciudad Nueva",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/189x100.png/ff4444/ffffff",
+    "specialties": ["Doors, Frames & Hardware"]
+  },
+  {
+    "id": 496,
+    "company_name": "Gutmann, Sanford and Wiegand",
+    "city": "Rožďalovice",
+    "specialty": "Landscaping & Irrigation",
+    "logo": "http://dummyimage.com/100x100.png/dddddd/000000",
+    "specialties": [
+      "Soft Flooring and Base",
+      "Glass & Glazing",
+      "Temp Fencing, Decorative Fencing and Gates",
+      "Elevator"
+    ]
+  },
+  {
+    "id": 497,
+    "company_name": "Will Inc",
+    "city": "Krajan Puger Wetan",
+    "specialty": "Glass & Glazing",
+    "logo": "http://dummyimage.com/164x100.png/ff4444/ffffff",
+    "specialties": [
+      "Termite Control",
+      "Structural and Misc Steel (Fabrication)"
+    ]
+  },
+  {
+    "id": 498,
+    "company_name": "Mraz Inc",
+    "city": "Lian’an",
+    "specialty": "Drywall & Acoustical (FED)",
+    "logo": "http://dummyimage.com/250x100.png/5fa2dd/ffffff",
+    "specialties": ["Site Furnishings"]
+  },
+  {
+    "id": 499,
+    "company_name": "Klein and Sons",
+    "city": "Gandapura",
+    "specialty": "Site Furnishings",
+    "logo": "http://dummyimage.com/171x100.png/ff4444/ffffff",
+    "specialties": ["Elevator", "Roofing (Asphalt)"]
+  },
+  {
+    "id": 500,
+    "company_name": "Heathcote-Smith",
+    "city": "Liulimiao",
+    "specialty": "Overhead Doors",
+    "logo": "http://dummyimage.com/124x100.png/ff4444/ffffff",
+    "specialties": [
+      "Landscaping & Irrigation",
+      "Site Furnishings",
+      "Temp Fencing, Decorative Fencing and Gates"
+    ]
+  }
+]

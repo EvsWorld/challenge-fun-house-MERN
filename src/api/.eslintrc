@@ -1,16 +1,14 @@
 {
-  "extends": [ "plugin:prettier/recommended"],
-  "rules":{
-    "prettier/prettier": ["error", { "singleQuote": true }]
-  },
+  "extends": ["plugin:prettier/recommended"],
+  "rules": {},
   "parserOptions": {
-        "sourceType": "module",
-        "ecmaVersion": 8,
-        "ecmaFeatures": {
-          "experimentalObjectRestSpread": true
-        }
-    },
-    "env": {
-        "es6": true
+    "sourceType": "module",
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
     }
+  },
+  "env": {
+    "es6": true
+  }
 }
