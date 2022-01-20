@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import ClipLoader from 'react-spinners/ClipLoader';
 
+import api from '../utils/axiosConfig';
 import { CenterSmallLayout } from '../components/Layouts';
-import { Character } from './Character';
-import {
-  fetchCharacters,
-  selectAllCharacters,
-} from '../redux/reducers/charactersSlice';
-import { updateUser } from '../redux/reducers/userSlice';
+import { Company } from './Company';
 
 const CharactersContainer = styled.div`
   display: flex;
@@ -20,60 +15,24 @@ const CharactersContainer = styled.div`
 `;
 
 export function CharactersNoRedux() {
-  const dispatch = useDispatch();
-  const characters = useSelector(selectAllCharacters);
-  const characterStatus = useSelector((state) => state.characters.status);
-  const error = useSelector((state) => state.characters.error);
-  const user = useSelector((state) => state.user.user);
-  const favoriteCharactersFromRedux = user.favoriteCharacters;
+  const [companies, setCompanies] = useState(undefined);
 
   useEffect(() => {
-    if (characterStatus === 'idle') {
-      dispatch(fetchCharacters());
-    }
-  }, [characterStatus, dispatch]);
-
-  const handleToggleFavorite = (characterId) => {
-    var newFavoriteCharacters = [...favoriteCharactersFromRedux];
-    var indexItem = newFavoriteCharacters.indexOf(characterId);
-    if (indexItem === -1) {
-      newFavoriteCharacters.push(characterId);
-    } else {
-      newFavoriteCharacters.splice(indexItem, 1);
-    }
-
-    dispatch(
-      updateUser({
-        user: { ...user, favoriteCharacters: newFavoriteCharacters },
-      })
-    );
-  };
-
-  // funciton for Character component to know if should render heart
-  const isFavorite = (characterId) => {
-    const result = favoriteCharactersFromRedux.includes(characterId);
-    return result;
-  };
+    (async () => {
+      try {
+        const submissions = await api.get('/api/company');
+        console.log('submissions.data :>> ', submissions.data);
+        setCompanies(submissions.data);
+      } catch (ex) {
+        console.error(ex);
+      }
+    })();
+  }, []);
 
   let content;
 
-  if (characterStatus === 'loading') {
-    content = (
-      <CenterSmallLayout>
-        <ClipLoader size={150} color={'#123abc'} loading={true} />
-      </CenterSmallLayout>
-    );
-  } else if (characterStatus === 'succeeded') {
-    content = characters.map((character) => (
-      <Character
-        isFavorite={() => isFavorite(character._id)}
-        onToggleFavorite={() => handleToggleFavorite(character._id)}
-        {...character}
-        key={character._id}
-      />
-    ));
-  } else if (characterStatus === 'failed') {
-    content = <div>{error}</div>;
-  }
+  content =
+    companies &&
+    companies.map((company) => <Company {...company} key={company.id} />);
   return <CharactersContainer>{content}</CharactersContainer>;
 }
