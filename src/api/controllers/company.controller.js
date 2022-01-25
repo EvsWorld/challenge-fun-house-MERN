@@ -2,7 +2,7 @@ import fs from "fs";
 
 export const findAll = (req, res) => {
   const jsonData = fs.readFileSync(
-    __dirname + "/../companiesWithArrays.json",
+    __dirname + "/../mockdb/companiesWithArrays.json",
     "utf-8"
   );
   const companies = JSON.parse(jsonData);

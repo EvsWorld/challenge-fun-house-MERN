@@ -1,7 +1,7 @@
 import fs from "fs";
 
 const jsonData = fs.readFileSync(
-  __dirname + "/../db/companyDataFromMockeroo.json",
+  __dirname + "/../mockdb/companyDataFromMockeroo.json",
   "utf-8"
 );
 const companiesData = JSON.parse(jsonData);
@@ -41,7 +41,7 @@ function makeArrays(companies) {
   console.log("companiesWithArrays :>> ", companiesWithArrays);
 
   let data = JSON.stringify(companiesWithArrays);
-  fs.writeFileSync(__dirname + "/../db/companiesWithArrays.json", data);
+  fs.writeFileSync(__dirname + "/../mockdb/companiesWithArrays.json", data);
 }
 
 makeArrays(companiesData);
