@@ -14,6 +14,7 @@ const CompaniesContainer = styled.div`
   transition: 1s all ease-in;
 `;
 const Header = styled.div`
+  background-color: white;
   min-height: 40px;
   display: flex;
   flex-direction: column;
@@ -27,15 +28,19 @@ export function Companies() {
   const [filteredCompanies, setFilteredCompanies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [specialties, setSpecialties] = useState([]);
+  const [specialtiesFilter, setSpecialtiesFilter] = useState([]);
 
   // strip out all specialties and put in state
+  // TODO: memoize
   const composeAllSpecialties = (companiesData) => {
+    const specialtiesAccum = [];
     companiesData.forEach((company) => {
       company.specialties.forEach((specialty) => {
-        if (!specialties.includes(specialty)) {
-          setSpecialties((specialties) => [...specialties, specialty]);
+        if (!specialtiesAccum.includes(specialty)) {
+          specialtiesAccum.push(specialty);
         }
       });
+      setSpecialties(specialtiesAccum);
     });
   };
   // TODO: add checkboxs for all specialties
@@ -86,6 +91,23 @@ export function Companies() {
     <>
       <Header>
         <input type="text" placeholder="Search..." onChange={handleFilter} />
+        {specialties &&
+          specialties.map((specialty) => (
+            <label>
+              <input
+                type="checkbox"
+                checked={specialtiesFilter.includes(specialty)}
+                onChange={(e) => {
+                  const checked = specialtiesFilter.includes(specialty);
+                  setSpecialtiesFilter((prev) =>
+                    checked
+                      ? prev.filter((sc) => sc !== specialty)
+                      : [...prev, specialty]
+                  );
+                }}
+              />
+            </label>
+          ))}
       </Header>
       <CompaniesContainer>{content}</CompaniesContainer>
     </>
