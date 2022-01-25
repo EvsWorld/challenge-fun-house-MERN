@@ -3,15 +3,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Card = styled.div`
+  display: flex;
   background: #fff;
-  width: 15em;
+  width: 750px;
   border-radius: 0.6em;
   margin: 1em;
   overflow: hidden;
-  cursor: pointer;
   box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
     0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
-
   &:hover {
     transform: scale(1.03);
     box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12),
@@ -28,8 +27,7 @@ const Image = styled.div`
   display: flex;
   justify-content: flex-end;
   background: url(${(props) => props.iconImage});
-  min-height: 18em;
-  background-size: 'cover';
+  min-width: 12em;
 `;
 
 const Name = styled.h2`
@@ -40,18 +38,18 @@ const Name = styled.h2`
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 `;
+const City = styled.h4``;
 
 export function Company({ specialties, city, company_name, logo }) {
-  const renderDetails = () =>
-    specialties.filter((detail) => detail !== 'unknown').join(',  ');
+  const renderDetails = () => specialties.join(',  ');
 
   return (
     <>
       <Card>
-        <Image iconImage={logo} alt="character"></Image>
+        <Image iconImage={logo} alt="company"></Image>
         <CardBody>
           <Name>{company_name}</Name>
-          <Name>{city}</Name>
+          <City>{city}</City>
           <p>{renderDetails()}</p>
         </CardBody>
       </Card>

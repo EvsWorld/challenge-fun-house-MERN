@@ -78,6 +78,11 @@ const RightNav = ({ open, setOpen }) => {
   return (
     <Ul open={open}>
       <li>
+        <StyledLink onClick={handleCloseMenu} to="/companies">
+          Companies
+        </StyledLink>
+      </li>
+      <li>
         <StyledLink onClick={handleCloseMenu} to="/">
           Home
         </StyledLink>

@@ -1,5 +1,5 @@
 import { Characters } from './components/Characters';
-import { CharactersNoRedux } from './components/CharactersNoRedux';
+import { Companies } from './components/Companies';
 import { Switch, Route } from 'react-router-dom';
 import { UserProfile } from './components/UserProfile';
 import { Character } from './components/Character';
@@ -58,11 +58,7 @@ function App() {
           layout={CenterSmallLayout}
         />
         <Route exact path="/characters" component={Characters} />
-        <Route
-          exact
-          path="/characters-no-redux"
-          component={CharactersNoRedux}
-        />
+        <Route exact path="/companies" component={Companies} />
         <RouteWrapper
           exact
           path="/login-and-signup"

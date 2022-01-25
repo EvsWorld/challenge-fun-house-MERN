@@ -3,18 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import api from '../utils/axiosConfig';
-import { CenterSmallLayout } from '../components/Layouts';
+import { CenterSmallLayout } from './Layouts';
 import { Company } from './Company';
 
-const CharactersContainer = styled.div`
+const CompaniesContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   transition: 1s all ease-in;
-  max-width: 1200px;
 `;
 
-export function CharactersNoRedux() {
+export function Companies() {
   const [companies, setCompanies] = useState(undefined);
 
   useEffect(() => {
@@ -34,5 +34,5 @@ export function CharactersNoRedux() {
   content =
     companies &&
     companies.map((company) => <Company {...company} key={company.id} />);
-  return <CharactersContainer>{content}</CharactersContainer>;
+  return <CompaniesContainer>{content}</CompaniesContainer>;
 }
