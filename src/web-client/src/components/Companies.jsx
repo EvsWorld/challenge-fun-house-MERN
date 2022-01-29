@@ -55,7 +55,8 @@ export function Companies() {
         if (response.data) {
           setCompanies(response.data);
           composeAllSpecialties(response.data);
-          searchWord === '' && setFilteredCompanies(response.data);
+          // searchWord === '' && setFilteredCompanies(response.data);
+          setFilteredCompanies(response.data);
         }
 
         setIsLoading(false);
@@ -68,23 +69,43 @@ export function Companies() {
   const handleFilter = (event) => {
     console.log('event.target.value :>> ', event.target.value);
     setSearchWord(event.target.value);
-    const newFilter = companies.filter((company) => {
+    const newFilter = filteredCompanies.filter((company) => {
       return company.company_name
         .toLowerCase()
         .includes(searchWord.toLowerCase());
     });
-    searchWord === '' && setFilteredCompanies(companies);
     console.log('newFilter :>> ', newFilter);
-    setFilteredCompanies(newFilter);
+    searchWord === ''
+      ? setFilteredCompanies(filteredCompanies)
+      : setFilteredCompanies(newFilter);
   };
 
+  // const companyHasSpecialty = prevFilteredCompanies.specialties.some(specialty => specialtiesFilter.includes(specialty) );
+
+  // TODO: filter companies for only ones in specialtiesFilter array,
+  // then set in state with setFilteredCompanies()
+  // setFilteredCompanies((prevFilteredCompanies) => {
+  //   console.log('prevFilteredCompanies :>> ', prevFilteredCompanies);
+  //   return !checked ? prevFilteredCompanies.filter((company) =>
+  //     company.specialties.some((specialty) =>
+  //       specialtiesFilter.includes(specialty)
+  //     )                     );
   const content = isLoading ? (
     // TODO: format loader
     <div>Loading...</div>
   ) : (
-    filteredCompanies.map((company) => (
-      <Company {...company} key={company.id} />
-    ))
+    filteredCompanies
+      .filter((company) => {
+        return specialtiesFilter.every((specialty) =>
+          company.specialties.includes(specialty)
+        );
+      })
+      // .filter((company) => {
+      //   return company.company_name
+      //     .toLowerCase()
+      //     .includes(searchWord.toLowerCase());
+      // })
+      .map((company) => <Company {...company} key={company.id} />)
   );
 
   return (

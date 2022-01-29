@@ -10,9 +10,9 @@ function makeRandomSubset(arr) {
   if (!arr || arr.length === 0) {
     return;
   }
-  const n = 5;
+  const n = 9;
   const shuffled = arr.sort(function () {
-    return 0.5 - Math.random();
+    return 0.85 - Math.random();
   });
   const randomArrayLength = Math.random() * (n - 1) + 1;
 
