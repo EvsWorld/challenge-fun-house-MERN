@@ -32,24 +32,21 @@ export function Companies() {
     searchWord: '',
   });
   const [initialCompanies, setInitialCompanies] = useState([]);
-  const [searchWord, setSearchWord] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const [specialties, setSpecialties] = useState([]);
-  const [specialtiesFilter, setSpecialtiesFilter] = useState([]);
 
-  // strip out all specialties and put in state
+  // strip out all specialties to display checkbox options
   // TODO: memoize
-  const composeAllSpecialties = (companiesData) => {
+  const allSpecialties = useMemo(() => {
     const specialtiesAccum = [];
-    companiesData.forEach((company) => {
+    initialCompanies.forEach((company) => {
       company.specialties.forEach((specialty) => {
         if (!specialtiesAccum.includes(specialty)) {
           specialtiesAccum.push(specialty);
         }
       });
-      setSpecialties(specialtiesAccum);
     });
-  };
+    return specialtiesAccum;
+  }, [initialCompanies]);
   // TODO: add checkboxs for all specialties
 
   // TODO: add filter function to checkboxes
@@ -61,8 +58,6 @@ export function Companies() {
         console.log('response.data :>> ', response.data);
         if (response.data) {
           setInitialCompanies(response.data);
-          composeAllSpecialties(response.data);
-          // searchWord === '' && setFilteredCompanies(response.data);
         }
 
         setIsLoading(false);
@@ -72,21 +67,9 @@ export function Companies() {
     })();
   }, []);
 
-  const handleFilter = (event) => {
+  const handleSearch = (event) => {
     console.log('event.target.value :>> ', event.target.value);
-    // setSearchWord(event.target.value);
-
     setFilter({ ...filter, searchWord: event.target.value });
-
-    // const newFilter = filteredCompanies.filter((company) => {
-    //   return company.company_name
-    //     .toLowerCase()
-    //     .includes(searchWord.toLowerCase());
-    // });
-    // console.log('newFilter :>> ', newFilter);
-    // searchWord === ''
-    //   ? setFilteredCompanies(filteredCompanies)
-    //   : setFilteredCompanies(newFilter);
   };
 
   const filteredCompanies = useMemo(() => {
@@ -107,9 +90,9 @@ export function Companies() {
   return (
     <>
       <Header>
-        <input type="text" placeholder="Search..." onChange={handleFilter} />
-        {specialties &&
-          specialties.map((specialty) => (
+        <input type="text" placeholder="Search..." onChange={handleSearch} />
+        {allSpecialties &&
+          allSpecialties.map((specialty) => (
             <label>
               <input
                 type="checkbox"
