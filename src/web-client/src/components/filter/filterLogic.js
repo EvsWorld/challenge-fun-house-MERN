@@ -55,9 +55,9 @@ export const filterBySpecialty = (filter, company) => {
   );
 };
 export const filterBySearchWord = (filter, company) => {
-  if (filter.searchWord === '') {
-    return true;
-  }
+  // if (filter.searchWord === '') {
+  //   return true;
+  // }
   return company.company_name
     .toLowerCase()
     .includes(filter.searchWord.toLowerCase());
@@ -71,7 +71,7 @@ export const filterCompanies = (initialCompanies, filter) => {
     initialCompanies
       // .filter((company) => filterByTypeOfAsset(filter, company))
       // .filter((company) => filterByTechnology(filter, company))
-      // .filter((company) => filterBySearchWord(filter, company))
+      .filter((company) => filterBySearchWord(filter, company))
       .filter((company) => filterBySpecialty(filter, company))
   );
 };

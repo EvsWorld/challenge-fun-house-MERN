@@ -17,6 +17,7 @@ const CompaniesContainer = styled.div`
 const Header = styled.div`
   background-color: white;
   min-height: 40px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
