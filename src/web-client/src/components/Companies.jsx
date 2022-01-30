@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import api from '../utils/axiosConfig';
-import { CenterSmallLayout } from './Layouts';
 import { Company } from './Company';
 import { createFilterState, filterCompanies } from './filter/filterLogic';
 
@@ -11,7 +10,7 @@ const CompaniesContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1 0 auto;
 `;
 const Header = styled.div`
@@ -25,13 +24,16 @@ const Header = styled.div`
 `;
 const Page = styled.div`
   display: flex;
+  width: 100%;
 `;
 const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100px;
+  align-items: flex-start;
+  width: 300px;
   background: red;
   padding: 10px;
+  font-size: 11px;
 `;
 
 export function Companies() {
@@ -101,26 +103,34 @@ export function Companies() {
         <input type="text" placeholder="Search..." onChange={handleSearch} />
       </Header>
       <Page>
-        <Sidebar>
-          {allSpecialties &&
-            allSpecialties.map((specialty) => (
-              <label>
-                <input
-                  type="checkbox"
-                  checked={filter.specialties.includes(specialty)}
-                  onChange={(e) => {
-                    const checked = filter.specialties.includes(specialty);
-                    setFilter((prev) => ({
-                      ...prev,
-                      specialties: checked
-                        ? prev.specialties.filter((sc) => sc !== specialty)
-                        : [...prev.specialties, specialty],
-                    }));
-                  }}
-                />
-              </label>
-            ))}
-        </Sidebar>
+        {!isLoading && (
+          <Sidebar>
+            {allSpecialties &&
+              allSpecialties.map((specialty) => (
+                <>
+                  {/* <p>{specialty}</p> */}
+                  <label key={specialty} htmlFor={specialty}>
+                    <input
+                      id={specialty}
+                      name={specialty}
+                      type="checkbox"
+                      checked={filter.specialties.includes(specialty)}
+                      onChange={(e) => {
+                        const checked = filter.specialties.includes(specialty);
+                        setFilter((prev) => ({
+                          ...prev,
+                          specialties: checked
+                            ? prev.specialties.filter((sc) => sc !== specialty)
+                            : [...prev.specialties, specialty],
+                        }));
+                      }}
+                    />
+                    {specialty}
+                  </label>
+                </>
+              ))}
+          </Sidebar>
+        )}
         <CompaniesContainer>{content}</CompaniesContainer>
       </Page>
     </>
