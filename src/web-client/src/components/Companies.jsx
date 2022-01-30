@@ -47,9 +47,8 @@ export function Companies() {
     });
     return specialtiesAccum;
   }, [initialCompanies]);
-  // TODO: add checkboxs for all specialties
 
-  // TODO: add filter function to checkboxes
+  // TODO: add checkboxs for all specialties
 
   useEffect(() => {
     (async () => {
@@ -73,7 +72,6 @@ export function Companies() {
   };
 
   const filteredCompanies = useMemo(() => {
-    // const selectedRegion = regionDict[filter.regionName]
     return filterCompanies(initialCompanies, filter);
   }, [filter, initialCompanies]);
 
