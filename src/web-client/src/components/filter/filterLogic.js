@@ -63,12 +63,12 @@ export const filterBySearchWord = (filter, company) => {
     .includes(filter.searchWord.toLowerCase());
 };
 
-export const filterCompanies = (initialCompanies, filter) => {
-  // if (initialCompanies === undefined || initialCompanies.length === 0) {
+export const filterCompanies = (companies, filter) => {
+  // if (companies === undefined || companies.length === 0) {
   //   return [];
   // }
   return (
-    initialCompanies
+    companies
       // .filter((company) => filterByTypeOfAsset(filter, company))
       // .filter((company) => filterByTechnology(filter, company))
       .filter((company) => filterBySearchWord(filter, company))

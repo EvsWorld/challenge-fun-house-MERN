@@ -6,6 +6,7 @@ const jsonData = fs.readFileSync(
 );
 const companiesData = JSON.parse(jsonData);
 
+// TODO: make so no null values
 function makeRandomSubset(arr) {
   if (!arr || arr.length === 0) {
     return;
@@ -15,16 +16,17 @@ function makeRandomSubset(arr) {
     return 0.5 - Math.random();
   });
   const randomArrayLength = Math.random() * (n - 1) + 1;
-
   const selected = shuffled.slice(0, randomArrayLength);
-  console.log("selected :>> ", selected);
   return selected;
 }
 
 export const allSpecialties = (companies) => {
   const specialties = [];
   companies.forEach((company) => {
-    if (!specialties.includes(company.specialty)) {
+    if (
+      !specialties.includes(company.specialty) &&
+      company.specialty !== undefined
+    ) {
       specialties.push(company.specialty);
     }
   });
@@ -38,7 +40,7 @@ function makeArrays(companies) {
     delete company.specialty;
     return { ...company, specialties };
   });
-  console.log("companiesWithArrays :>> ", companiesWithArrays);
+  // console.log("companiesWithArrays :>> ", companiesWithArrays);
 
   let data = JSON.stringify(companiesWithArrays);
   fs.writeFileSync(__dirname + "/../mockdb/companiesWithArrays.json", data);

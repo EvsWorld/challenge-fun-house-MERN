@@ -68,7 +68,7 @@ export function Companies() {
 
   const handleSearch = (event) => {
     console.log('event.target.value :>> ', event.target.value);
-    setFilter({ ...filter, searchWord: event.target.value });
+    setFilter((prev) => ({ ...prev, searchWord: event.target.value }));
   };
 
   const filteredCompanies = useMemo(() => {
