@@ -4,30 +4,6 @@ export const between = (x: number, min: number, max: number) => {
   return x >= min && x <= max;
 };
 
-// export type FilterValue = CheckboxValueType[] | string[] | TypeOfAsset[] | Technology[] |  [number, number] | number | boolean | string | moment.Moment | null
-// export type RegionName = "worldwide" | "northAmerica" | "southAmerica" | "europe" | "asia" | "africa" | "middleEast"
-// interface Region {
-//   value: string
-//   defaultZoom: number
-//   defaultCenter: {
-//     lat: number
-//     lng: number
-//   }
-//   countries: string[]
-// }
-
-// export interface FilterParameters {
-//   expectedProductionRange: [number, number] | undefined
-//   projectCapacityRange: [number, number] | undefined
-//   contractMinimumTenorRange: [number, number] | undefined
-//   availableForOfftakeRange: [number, number] | undefined
-//   regionName: RegionName
-//   CODBefore: moment.Moment | null
-//   showFavourites: boolean
-//   typeOfAsset: TypeOfAsset[]
-//   technologies: Technology[]
-// }
-
 export const filterByRegion = (region, project) => {
   if (region.value === 'worldwide') {
     return true;

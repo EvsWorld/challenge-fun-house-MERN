@@ -12,16 +12,26 @@ const CompaniesContainer = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  transition: 1s all ease-in;
+  flex: 1 0 auto;
 `;
 const Header = styled.div`
   background-color: white;
-  min-height: 40px;
+  height: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+const Page = styled.div`
+  display: flex;
+`;
+const Sidebar = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  background: red;
+  padding: 10px;
 `;
 
 export function Companies() {
@@ -89,26 +99,30 @@ export function Companies() {
     <>
       <Header>
         <input type="text" placeholder="Search..." onChange={handleSearch} />
-        {allSpecialties &&
-          allSpecialties.map((specialty) => (
-            <label>
-              <input
-                type="checkbox"
-                checked={filter.specialties.includes(specialty)}
-                onChange={(e) => {
-                  const checked = filter.specialties.includes(specialty);
-                  setFilter((prev) => ({
-                    ...prev,
-                    specialties: checked
-                      ? prev.specialties.filter((sc) => sc !== specialty)
-                      : [...prev.specialties, specialty],
-                  }));
-                }}
-              />
-            </label>
-          ))}
       </Header>
-      <CompaniesContainer>{content}</CompaniesContainer>
+      <Page>
+        <Sidebar>
+          {allSpecialties &&
+            allSpecialties.map((specialty) => (
+              <label>
+                <input
+                  type="checkbox"
+                  checked={filter.specialties.includes(specialty)}
+                  onChange={(e) => {
+                    const checked = filter.specialties.includes(specialty);
+                    setFilter((prev) => ({
+                      ...prev,
+                      specialties: checked
+                        ? prev.specialties.filter((sc) => sc !== specialty)
+                        : [...prev.specialties, specialty],
+                    }));
+                  }}
+                />
+              </label>
+            ))}
+        </Sidebar>
+        <CompaniesContainer>{content}</CompaniesContainer>
+      </Page>
     </>
   );
 }
