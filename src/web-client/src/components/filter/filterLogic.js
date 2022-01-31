@@ -31,9 +31,6 @@ export const filterBySpecialty = (filter, company) => {
   );
 };
 export const filterBySearchWord = (filter, company) => {
-  // if (filter.searchWord === '') {
-  //   return true;
-  // }
   return company.company_name
     .toLowerCase()
     .includes(filter.searchWord.toLowerCase());

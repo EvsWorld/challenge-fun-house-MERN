@@ -1,13 +1,13 @@
-  body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Titilillium Web';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: #c2edf2;
-  }
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Titilillium Web';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #c2edf2;
+}
 
-*{
+* {
   -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {

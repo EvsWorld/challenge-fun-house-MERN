@@ -6,7 +6,6 @@ const jsonData = fs.readFileSync(
 );
 const companiesData = JSON.parse(jsonData);
 
-// TODO: make so no null values
 function makeRandomSubset(arr) {
   if (!arr || arr.length === 0) {
     return;
@@ -42,7 +41,7 @@ function makeArrays(companies) {
   });
   // console.log("companiesWithArrays :>> ", companiesWithArrays);
 
-  let data = JSON.stringify(companiesWithArrays);
+  let data = JSON.stringify(companiesWithArrays.splice(0, 150));
   fs.writeFileSync(__dirname + "/../mockdb/companiesWithArrays.json", data);
 }
 

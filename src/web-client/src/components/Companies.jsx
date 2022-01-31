@@ -47,7 +47,6 @@ export function Companies() {
   const [isLoading, setIsLoading] = useState(true);
 
   // strip out all specialties to display checkbox options
-  // TODO: memoize
   const allSpecialties = useMemo(() => {
     const specialtiesAccum = [];
     initialCompanies.forEach((company) => {
@@ -108,7 +107,6 @@ export function Companies() {
             {allSpecialties &&
               allSpecialties.map((specialty) => (
                 <>
-                  {/* <p>{specialty}</p> */}
                   <label key={specialty} htmlFor={specialty}>
                     <input
                       id={specialty}
