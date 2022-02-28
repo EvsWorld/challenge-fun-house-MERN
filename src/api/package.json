@@ -4,8 +4,8 @@
   "description": "Express API",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npx babel-node index.js",
-    "nodemon": "nodemon --exec  babel-node index.js",
+    "start": "nodemon --exec  babel-node index.js",
+    "start2": "npx babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
