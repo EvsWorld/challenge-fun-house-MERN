@@ -21,12 +21,32 @@ export const update = async (req, res) => {
     .updateMany({ path: new RegExp(`,${targetParent},`) }, [
       {
         $set: {
+          // do something here to replace the parent of the target node w/ newParent
+          // match on name === name AND then doing the replace on the path
+        },
+      },
+      {
+        $set: {
           path: {
-            $replaceOne: {
-              input: "$path",
-              find: `,${targetParent},`,
-              replacement: `,${newParent},`,
-            },
+            $cond: [
+              { $eq: ["$name", name] }, // if name === target
+              {
+                // replace parent with new one
+                $replaceOne: {
+                  input: "$path",
+                  find: `,${targetParent},`,
+                  replacement: `,${newParent},`,
+                },
+              },
+              {
+                // if its not the target, then just cut out the target name from the path
+                $replaceOne: {
+                  input: "$path",
+                  find: `,${name},`,
+                  replacement: `,`,
+                },
+              },
+            ],
           },
         },
       },
