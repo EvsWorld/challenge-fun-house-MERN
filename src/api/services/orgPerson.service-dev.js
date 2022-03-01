@@ -1,4 +1,4 @@
-export function makeTree(entities) {
+function makeTree(entities) {
   const result = [];
   let unDone = [],
     source = entities;
@@ -17,13 +17,13 @@ export function makeTree(entities) {
   function setResult(arrayIn, nb_rej) {
     let orphans = [];
     for (let elData of arrayIn) {
-      let newEl = { ...elData._doc, children: null };
-      // console.log("newEl :>> ", newEl);
-      // console.log("elData :>> ", elData._doc);
-      // console.log("elData.path :>> ", elData._doc.path);
-      // console.log("elData.id :>> ", elData._doc._id);
-      let parAr = getParentKey(elData._doc.path);
-      // console.log("parAr :>> ", parAr);
+      let newEl = { ...elData, children: null };
+      console.log("newEl :>> ", newEl);
+      // console.log("elData :>> ", elData);
+      console.log("elData.path :>> ", elData.path);
+      console.log("elData.id :>> ", elData._id);
+      let parAr = getParentKey(elData.path);
+      console.log("parAr :>> ", parAr);
 
       if (parAr.length === 0) {
         result.push(newEl);
@@ -32,7 +32,7 @@ export function makeTree(entities) {
         do {
           let rech = parAr.pop(),
             fPar = resParent.find((treeElm) => {
-              // console.log("treeElm :>> ", treeElm);
+              console.log("treeElm :>> ", treeElm);
               return treeElm.name === rech.name && treeElm.path === rech.path;
             });
           if (fPar) {
@@ -55,6 +55,7 @@ export function makeTree(entities) {
   }
   function getParentKey(path) {
     console.log("path :>> ", path);
+    const targetLevel = getLevelFromPath(",root,3,3-3,");
     // return array of parent element
     let rep = [],
       par = path,
@@ -64,15 +65,54 @@ export function makeTree(entities) {
       idK;
     do {
       bKey = par.substring(0, par.lastIndexOf(",")); // remove last ','
+      console.log("bKey :>> ", bKey);
       lev = bKey.match(/,/g).length - 1;
-      if (lev > 0) {
+      console.log("lev :>> ", lev);
+      if (lev > targetLevel) {
         xCom = bKey.lastIndexOf(",");
         par = bKey.substring(0, xCom) + ",";
         idK = bKey.substring(++xCom);
         rep.push({ path: par, name: idK });
+        console.log("rep after push :>> ", rep);
       }
-    } while (lev > 0);
-    console.log("array of parent element :>> ", rep);
+    } while (lev > targetLevel);
+    console.log("array of parent element :>> ", { rep });
     return rep;
   }
 }
+
+// returns level of target elem
+function getLevelFromPath(targetPath) {
+  const bKey = targetPath.substring(0, targetPath.lastIndexOf(",")); // remove last ','
+  console.log("bKey :>> ", bKey);
+  const lev = bKey.match(/,/g).length - 1;
+  return lev;
+}
+
+console.log("getLevelFromPath = ", getLevelFromPath(",root,"));
+console.log("getLevelFromPath = ", getLevelFromPath(",root,3,"));
+console.log("getLevelFromPath = ", getLevelFromPath(",root,3,3-3,"));
+console.log("getLevelFromPath = ", getLevelFromPath(",root,3,3-3,3-3-3,"));
+
+const persons = [
+  // {
+  //   path: ",root,",
+  //   name: "same name",
+  // },
+  // {
+  //   path: ",root,",
+  //   name: "2",
+  // },
+  // { path: ",root,2,", name: "2-2" },
+  // { path: ",root,", name: "3" },
+  { path: ",root,3,", name: "3-3" },
+  {
+    path: ",root,3,3-3,",
+    name: "3-3-3",
+  },
+  {
+    path: ",root,3,3-3,3-3-3,",
+    name: "3-3-3-3",
+  },
+];
+makeTree(persons);

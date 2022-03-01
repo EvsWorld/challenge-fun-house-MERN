@@ -33,18 +33,21 @@ export const info = (req, res) => {
   const { name } = req.params;
 
   console.log("name query string :>> ", name);
-  OrgPerson.find({ path: new RegExp(name) }).exec((err, persons) => {
-    console.log("persons :>> ", persons);
+  OrgPerson.find({ $or: [{ path: new RegExp(name) }, { name }] }).exec(
+    (err, persons) => {
+      // OrgPerson.find({ path: new RegExp(name) }).exec((err, persons) => {
+      console.log("persons :>> ", persons);
 
-    if (err) {
-      res.status(500).send({ message: err });
-      return;
+      if (err) {
+        res.status(500).send({ message: err });
+        return;
+      }
+
+      if (!persons) {
+        return res.status(404).send({ message: "User Not found." });
+      }
+
+      res.status(200).send(makeTree(persons));
     }
-
-    if (!persons) {
-      return res.status(404).send({ message: "User Not found." });
-    }
-
-    res.status(200).send(makeTree(persons));
-  });
+  );
 };

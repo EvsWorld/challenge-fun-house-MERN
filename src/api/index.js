@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ extended: true }));
 
 app.use(
-  morgan(":method :url  :req[header]  |   :response-time  |  :date[web]")
+  morgan("\n:method :url  :req[header]  |   :response-time  |  :date[web]")
 );
 
 app.use("/ping", (req, res) => {
