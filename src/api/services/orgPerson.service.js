@@ -1,5 +1,5 @@
-export function makeTree(entities, target) {
-  console.log("makeTree: target :>> ", target);
+export function makeTree(entities, targetPath) {
+  console.log("makeTree: target :>> ", targetPath);
   const result = [];
   let unDone = [],
     source = entities;
@@ -56,6 +56,7 @@ export function makeTree(entities, target) {
   }
   function getParentKey(path) {
     console.log("path :>> ", path);
+    const targetLevel = getLevelFromPath(targetPath) + 1;
     // return array of parent element
     let rep = [],
       par = path,
@@ -66,14 +67,22 @@ export function makeTree(entities, target) {
     do {
       bKey = par.substring(0, par.lastIndexOf(",")); // remove last ','
       lev = bKey.match(/,/g).length - 1;
-      if (lev > 0) {
+      if (lev > targetLevel) {
         xCom = bKey.lastIndexOf(",");
         par = bKey.substring(0, xCom) + ",";
         idK = bKey.substring(++xCom);
         rep.push({ path: par, name: idK });
       }
-    } while (lev > 0);
+    } while (lev > targetLevel);
     console.log("array of parent element :>> ", rep);
     return rep;
   }
+}
+
+// returns level of target elem
+function getLevelFromPath(targetPath) {
+  const bKey = targetPath.substring(0, targetPath.lastIndexOf(",")); // remove last ','
+  console.log("bKey :>> ", bKey);
+  const lev = bKey.match(/,/g).length - 1;
+  return lev;
 }
