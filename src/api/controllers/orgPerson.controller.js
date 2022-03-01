@@ -2,35 +2,46 @@ import { OrgPerson } from "../models/orgPerson.model";
 import { makeTree } from "../services/orgPerson.service";
 
 export const update = (req, res) => {
-  // const id = req.params.id
-  const id = req.user.user["_id"];
+  console.log("hit update!");
   const { name, newParent } = req.body;
+  const nameRegex = `${name}`;
 
-  OrgPerson.findByIdAndUpdate(id, req.body, {
-    useFindAndModify: false,
-    new: true,
-  })
+  OrgPerson.collection
+    .updateMany({ path: { $regex: /helloWorldt/ } }, [
+      {
+        $set: {
+          path: {
+            $replaceOne: {
+              input: "$path",
+              find: "helloWorldt",
+              replacement: "helloWorld",
+            },
+          },
+        },
+      },
+    ])
     .then((data) => {
       if (!data) {
         res.status(404).send({
-          message: `Cannot update User with id=${id}. Maybe User was not found!`,
+          message: `Cannot update person with name=${name}. Maybe person was not found!`,
         });
       } else
         res.send({
-          message: "User was updated successfully.",
-          path: {
+          message: "person was updated successfully.",
+          updatedUser: {
             path: data.path,
+            name: data.name,
           },
         });
     })
     .catch((err) => {
       res.status(500).send({
-        message: "Error updating User with id=" + id,
+        message: "Error updating person with name=" + name,
       });
     });
 };
 
-export const info = async (req, res) => {
+export const info = (req, res) => {
   const { name } = req.params;
 
   console.log("name query string :>> ", name);
