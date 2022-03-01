@@ -4,6 +4,7 @@ import { makeTree } from "../services/orgPerson.service";
 export const update = (req, res) => {
   // const id = req.params.id
   const id = req.user.user["_id"];
+  const { name, newParent } = req.body;
 
   OrgPerson.findByIdAndUpdate(id, req.body, {
     useFindAndModify: false,
