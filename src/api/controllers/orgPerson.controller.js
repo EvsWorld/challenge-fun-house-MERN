@@ -17,39 +17,39 @@ export const update = async (req, res) => {
   const targetParent = pathArray[pathArray.length - 2];
   console.log("targetParent :>> ", typeof targetParent);
 
-  // OrgPerson.collection
-  //   .updateMany({ path: new RegExp(name) }, [
-  //     {
-  //       $set: {
-  //         path: {
-  //           $replaceOne: {
-  //             input: "$path",
-  //             find: name,
-  //             replacement: newParent,
-  //           },
-  //         },
-  //       },
-  //     },
-  //   ])
-  //   .then((data) => {
-  //     if (!data) {
-  //       res.status(404).send({
-  //         message: `Cannot update person with name=${name}. Maybe person was not found!`,
-  //       });
-  //     } else
-  //       res.send({
-  //         message: "person was updated successfully.",
-  //         updatedUser: {
-  //           path: data.path,
-  //           name: data.name,
-  //         },
-  //       });
-  //   })
-  //   .catch((err) => {
-  //     res.status(500).send({
-  //       message: "Error updating person with name=" + name,
-  //     });
-  //   });
+  OrgPerson.collection
+    .updateMany({ path: new RegExp(`,${targetParent},`) }, [
+      {
+        $set: {
+          path: {
+            $replaceOne: {
+              input: "$path",
+              find: `,${targetParent},`,
+              replacement: `,${newParent},`,
+            },
+          },
+        },
+      },
+    ])
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot update person with name=${name}. Maybe person was not found!`,
+        });
+      } else
+        res.send({
+          message: "person was updated successfully.",
+          updatedUser: {
+            path: data.path,
+            name: data.name,
+          },
+        });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Error updating person with name=" + name,
+      });
+    });
 };
 
 export const info = (req, res) => {
