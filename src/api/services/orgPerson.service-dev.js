@@ -1,4 +1,8 @@
-function makeTree(entities, targetPath) {
+function makeTree(entities) {
+  const firstEntity = entities[0];
+  console.log("firstEntity :>> ", firstEntity);
+  const targetPath = firstEntity.path;
+  console.log("targetPath :>> ", targetPath);
   const result = [];
   let unDone = [],
     source = entities;
@@ -118,4 +122,4 @@ const persons = [
 
 // const t = { path: ',root,3,', _id: 621d3439a2e81b536d5c0771, name: '3-3' }
 
-makeTree(persons, ",root,3");
+makeTree(persons);
