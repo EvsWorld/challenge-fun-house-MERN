@@ -1,10 +1,67 @@
 import { OrgPerson } from "../models/orgPerson.model";
 import { makeTree } from "../services/orgPerson.service";
 
-export const update = async (req, res) => {
+export const updateParentBringChildren = async (req, res) => {
   console.log("hit update!");
   const { name, newParent } = req.query;
   console.log("{name, newParent} :>> ", { name, newParent });
+
+  // TODO: find person by name and get their parent.
+  // Get path, cut off next to last path var. Then that is their parent.
+  // TODO: move to a service
+  const target = await OrgPerson.findOne({ name }).exec();
+  console.log("target :>> ", target);
+  const { path } = target;
+  console.log("path :>> ", path);
+
+  const pathArray = path.split(",");
+  const targetParent = pathArray[pathArray.length - 2];
+  console.log("targetParent :>> ", targetParent);
+
+  OrgPerson.collection
+    .updateMany({ path: new RegExp(`,${targetParent},`) }, [
+      {
+        $set: {
+          path: {
+            $replaceOne: {
+              input: "$path",
+              find: `,${targetParent},`,
+              replacement: `,${newParent},`,
+            },
+          },
+        },
+      },
+    ])
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot update person with name=${name}. Maybe person was not found!`,
+        });
+      } else
+        res.send({
+          message: "person was updated successfully.",
+          updatedUser: {
+            path: data.path,
+            name: data.name,
+          },
+        });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Error updating person with name=" + name,
+      });
+    });
+};
+
+export const updateParentConnectChildren = async (req, res) => {
+  console.log("hit update!");
+  const { name, newParent } = req.query;
+  console.log("{name, newParent} :>> ", { name, newParent });
+
+  let effReplace = "";
+  let effTarget = "";
+  const parent = await OrgPerson.findOne({ name: newParent }).exec();
+  console.log("parent :>> ", parent);
 
   // TODO: find person by name and get their parent.
   // Get path, cut off next to last path var. Then that is their parent.
@@ -15,16 +72,20 @@ export const update = async (req, res) => {
 
   const pathArray = path.split(",");
   const targetParent = pathArray[pathArray.length - 2];
-  console.log("targetParent :>> ", typeof targetParent);
-
+  const firstOfPathArr = pathArray.splice(0, pathArray.length - 1);
+  console.log("firstOfPathArr :>> ", firstOfPathArr);
+  console.log("targetParent :>> ", targetParent);
+  if (target.path === parent.path) {
+    effTarget = target.path;
+    effReplace = target.path + newParent + ",";
+  } else {
+    effTarget = "," + targetParent + ",";
+    effReplace = "," + newParent + ",";
+  }
+  console.log("effTarget :>> ", effTarget);
+  console.log("effReplace :>> ", effReplace);
   OrgPerson.collection
     .updateMany({ path: new RegExp(`,${targetParent},`) }, [
-      {
-        $set: {
-          // do something here to replace the parent of the target node w/ newParent
-          // match on name === name AND then doing the replace on the path
-        },
-      },
       {
         $set: {
           path: {
@@ -34,8 +95,8 @@ export const update = async (req, res) => {
                 // replace parent with new one
                 $replaceOne: {
                   input: "$path",
-                  find: `,${targetParent},`,
-                  replacement: `,${newParent},`,
+                  find: effTarget,
+                  replacement: effReplace,
                 },
               },
               {
