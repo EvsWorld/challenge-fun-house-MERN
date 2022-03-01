@@ -1,4 +1,4 @@
-function makeTree(entities) {
+function makeTree(entities, targetPath) {
   const result = [];
   let unDone = [],
     source = entities;
@@ -55,7 +55,7 @@ function makeTree(entities) {
   }
   function getParentKey(path) {
     console.log("path :>> ", path);
-    const targetLevel = getLevelFromPath(",root,3,3-3,");
+    const targetLevel = getLevelFromPath(targetPath) + 1;
     // return array of parent element
     let rep = [],
       par = path,
@@ -115,4 +115,7 @@ const persons = [
     name: "3-3-3-3",
   },
 ];
-makeTree(persons);
+
+// const t = { path: ',root,3,', _id: 621d3439a2e81b536d5c0771, name: '3-3' }
+
+makeTree(persons, ",root,3");

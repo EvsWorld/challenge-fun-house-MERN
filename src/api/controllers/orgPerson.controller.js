@@ -29,11 +29,15 @@ export const update = (req, res) => {
     });
 };
 
-export const info = (req, res) => {
+export const info = async (req, res) => {
   const { name } = req.params;
 
   console.log("name query string :>> ", name);
-  OrgPerson.find({ $or: [{ path: new RegExp(name) }, { name }] }).exec(
+  const target = await OrgPerson.findOne({ name });
+  const path = target.path;
+  console.log("path :>> ", path);
+
+  await OrgPerson.find({ $or: [{ path: new RegExp(name) }, { name }] }).exec(
     (err, persons) => {
       // OrgPerson.find({ path: new RegExp(name) }).exec((err, persons) => {
       console.log("persons :>> ", persons);
@@ -47,7 +51,7 @@ export const info = (req, res) => {
         return res.status(404).send({ message: "User Not found." });
       }
 
-      res.status(200).send(makeTree(persons));
+      res.status(200).send(makeTree(persons, path));
     }
   );
 };
