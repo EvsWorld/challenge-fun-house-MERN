@@ -75,7 +75,7 @@ export const OrgChart = () => {
   return (
     <>
       <div className="header">
-        React Employee Hierarchy Chart
+        Org Chart
         <span className="follow">
           <div>input boxes</div>
           <div>input boxes</div>

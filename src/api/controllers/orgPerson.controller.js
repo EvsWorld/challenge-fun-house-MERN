@@ -75,13 +75,9 @@ export const updateParentConnectChildren = async (req, res) => {
   const firstOfPathArr = pathArray.splice(0, pathArray.length - 1);
   console.log("firstOfPathArr :>> ", firstOfPathArr);
   console.log("targetParent :>> ", targetParent);
-  if (target.path === parent.path) {
-    effTarget = target.path;
-    effReplace = target.path + newParent + ",";
-  } else {
-    effTarget = "," + targetParent + ",";
-    effReplace = "," + newParent + ",";
-  }
+  effTarget = target.path;
+  effReplace = parent.path + newParent + ",";
+
   console.log("effTarget :>> ", effTarget);
   console.log("effReplace :>> ", effReplace);
   OrgPerson.collection
