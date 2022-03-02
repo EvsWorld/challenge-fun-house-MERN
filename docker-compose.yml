@@ -1,0 +1,49 @@
+version: "3"
+services:
+  react-app:
+    image: react-app-dev
+    build: ./src/web-client/
+    stdin_open: true
+    ports:
+      - "3002:3002"
+    networks:
+      - mern-app
+    volumes:
+      - ./src/web-client/:/usr/src/app
+      - /usr/src/app/node_modules
+  api-server:
+    image: api-server
+    env_file: ./src/api/config/dev.env
+    ports:
+      - "5000:5000"
+    networks:
+      - mern-app
+    volumes:
+      - ./src/api/:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - mongo_db
+  mongo_db:
+    restart: always
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-app
+    environment:
+      # MONGO_INITDB_ROOT_USERNAME: "root"
+      # MONGO_INITDB_ROOT_PASSWORD: "password"
+      MONGO_INITDB_DATABASE: root-db
+    volumes:
+      # - mongo-data:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+  # mongo-seed:
+  #   build: ./mongo-seed
+  #   depends_on:
+  #     - mongodb
+networks:
+  mern-app:
+    driver: bridge
+# volumes:
+#   mongo-data:
+#     driver: local
