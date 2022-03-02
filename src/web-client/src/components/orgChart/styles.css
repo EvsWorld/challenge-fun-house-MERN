@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  height: 45px;
+  line-height: 45px;
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  display: block;
+  margin: 0;
+  width: 100%;
+  min-width: 1024px;
+  height: 48px;
+  max-height: 44px;
+  background: rgba(221, 221, 221, 0.92);
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 60px;
+}
+.follow {
+  float: right;
+  margin-right: 79px;
+  display: flex;
+  flex-direction: row;
+}
+.follow img {
+  width: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body {
+  font-family: 'Sen', sans-serif;
+  background: #f9f9fa;
+}
+
+.container {
+  width: 90%;
+  margin: 7% auto;
+}
+
+.follow a {
+  color: #131313;
+  text-decoration: none;
+}
+
+.org-tree ul {
+  padding-top: 20px;
+  position: relative;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.org-tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.org-tree li::before,
+.org-tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+.org-tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.org-tree li:only-child::after,
+.org-tree li:only-child::before {
+  display: none;
+}
+
+.org-tree li:only-child {
+  padding-top: 0;
+}
+
+.org-tree li:first-child::before,
+.org-tree li:last-child::after {
+  border: 0 none;
+}
+
+.org-tree li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.org-tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+.org-tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.org-tree li a {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.org-tree li a:hover,
+.org-tree li a:hover + ul li a {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4;
+}
+
+.org-tree li a:hover + ul li::after,
+.org-tree li a:hover + ul li::before,
+.org-tree li a:hover + ul::before,
+.org-tree li a:hover + ul ul::before {
+  border-color: #94a0b4;
+}
+
+.card {
+  position: relative;
+  padding-top: 50px;
+  /* width: 300px; */
+}
+
+.card .image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+  z-index: 100;
+}
+.card .image img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 13px solid #96f6b7;
+}
+.card .card-body {
+  background: #fff;
+  height: 56px;
+  text-align: center;
+  width: 300px;
+  padding-top: 60px;
+  border-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card .card-body h2 {
+  font-weight: 600;
+  line-height: 20px;
+}
+.card .card-body p {
+  line-height: 20px;
+  font-size: medium;
+}
+.card .card-footer {
+  padding: 3px;
+  background: #96f6b7;
+  text-align: center;
+  bottom: 0;
+  position: relative;
+  width: 295px;
+  border-radius: 16px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card .card-footer img {
+  width: 25px;
+  margin: 5px;
+}

@@ -1,6 +1,6 @@
 import { Characters } from './components/Characters';
 import { Companies } from './components/Companies';
-import { OrgChart } from './components/OrgChart';
+import { OrgChart } from './components/orgChart/OrgChart';
 import { Switch, Route } from 'react-router-dom';
 import { UserProfile } from './components/UserProfile';
 import { Character } from './components/Character';
