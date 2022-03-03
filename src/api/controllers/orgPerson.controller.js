@@ -4,30 +4,16 @@ import { makeTree } from "../services/orgPerson.service";
 export const updateParentConnectChildren = async (req, res) => {
   console.log("hit update!");
   const { name, newParent } = req.query;
-  console.log("{name, newParent} :>> ", { name, newParent });
-
-  let effReplace = "";
-  let effTarget = "";
   const parent = await OrgPerson.findOne({ name: newParent }).exec();
-  console.log("parent :>> ", parent);
 
-  // TODO: find person by name and get their parent.
+  // find person by name and get their parent.
   // Get path, cut off next to last path var. Then that is their parent.
   const target = await OrgPerson.findOne({ name }).exec();
-  console.log("target :>> ", target);
-  const { path } = target;
-  console.log("path :>> ", path);
-
-  const pathArray = path.split(",");
+  const pathArray = target.path.split(",");
   const targetParent = pathArray[pathArray.length - 2];
-  const firstOfPathArr = pathArray.splice(0, pathArray.length - 1);
-  console.log("firstOfPathArr :>> ", firstOfPathArr);
-  console.log("targetParent :>> ", targetParent);
-  effTarget = target.path;
-  effReplace = parent.path + newParent + ",";
+  const effTarget = target.path;
+  const effReplace = parent.path + newParent + ",";
 
-  console.log("effTarget :>> ", effTarget);
-  console.log("effReplace :>> ", effReplace);
   OrgPerson.collection
     .updateMany({ path: new RegExp(`,${targetParent},`) }, [
       {
@@ -59,11 +45,11 @@ export const updateParentConnectChildren = async (req, res) => {
     .then((data) => {
       if (!data) {
         res.status(404).send({
-          message: `Cannot update person with name=${name}. Maybe person was not found!`,
+          message: `Cannot update paths for name=${name}.`,
         });
       } else
         res.send({
-          message: "person was updated successfully.",
+          message: "tree update successfully",
           updatedUser: {
             path: data.path,
             name: data.name,

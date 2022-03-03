@@ -3,9 +3,6 @@ import './styles.css';
 import styled from 'styled-components';
 import randomcolor from 'randomcolor';
 import faker from 'faker';
-import call from './icons8-call-50.png';
-import video from './icons8-video-24.png';
-import chat from './icons8-chat-50.png';
 import api from '../../utils/axiosConfig';
 
 function randomIntFromInterval(min, max) {
@@ -32,7 +29,6 @@ const Card = ({ persons }) => {
     setLevelColor(randomcolor());
     setFace(randomIntFromInterval(1, 9));
   }, []);
-  // const content = isLoading ? ()
   return (
     <ul>
       {persons.length &&
@@ -71,7 +67,7 @@ export const OrgChart = () => {
   const [persons, setPersons] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [nodes, setNodes] = useState({
-    search: 'root',
+    search: '',
     user: '',
     parent: '',
   });
@@ -94,19 +90,37 @@ export const OrgChart = () => {
       `/api/org-persons/update-parent-connect-children/?name=${nodes.user}&newParent=${nodes.parent}`
     );
     console.log('response.data :>> ', response.data);
-    const r = await api.get('/api/org-persons/root');
-    console.log('response.data :>> ', r.data);
-    if (r.data) {
-      setPersons(r.data);
+    const tree = await api.get('/api/org-persons/root');
+    console.log('tree.data :>> ', tree.data);
+    if (tree.data) {
+      setPersons(tree.data);
     }
     setIsLoading(false);
     setNodes({ user: '', parent: '' });
   };
 
+  const handleFetchDescendents = async (e) => {
+    e.preventDefault();
+    console.log('handleFetchDescendents called :>> ');
+    const search = nodes.search === '' ? 'root' : nodes.search;
+    try {
+      const response = await api.get(`/api/org-persons/${search}`);
+      console.log('response.data :>> ', response.data);
+      if (response.data) {
+        setPersons(response.data);
+      }
+
+      setIsLoading(false);
+    } catch (ex) {
+      console.error(ex);
+    }
+  };
+
   useEffect(() => {
     (async () => {
+      const search = nodes.search === '' ? 'root' : nodes.search;
       try {
-        const response = await api.get('/api/org-persons/root');
+        const response = await api.get(`/api/org-persons/${search}`);
         console.log('response.data :>> ', response.data);
         if (response.data) {
           setPersons(response.data);
@@ -118,24 +132,6 @@ export const OrgChart = () => {
       }
     })();
   }, []);
-
-  // useEffect(() => {
-  //   (async () => {
-  //     try {
-  //       const response = await api.put(
-  //         `/api/org-persons/update-parent-connect-children/?name=${nodes.user}&newParent=${nodes.parent}`
-  //       );
-  //       console.log('response.data :>> ', response.data);
-  //       if (response.data) {
-  //         setPersons(response.data);
-  //       }
-
-  //       setIsLoading(false);
-  //     } catch (ex) {
-  //       console.error(ex);
-  //     }
-  //   })();
-  // }, [nodes]);
 
   return (
     <>
@@ -157,7 +153,19 @@ export const OrgChart = () => {
               onChange={handleInput}
               value={nodes.parent}
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Change parent node</button>
+          </form>
+        </span>
+        <span className="follow">
+          <form onSubmit={handleFetchDescendents}>
+            <input
+              name="search"
+              type="text"
+              placeholder="person"
+              onChange={handleInput}
+              // value={nodes.search}
+            />
+            <button type="submit">Fetch descendents</button>
           </form>
         </span>
       </div>
@@ -165,46 +173,3 @@ export const OrgChart = () => {
     </>
   );
 };
-
-// function UseForm() {
-//   function handleChange(e) {
-//     const { name, value } = e.target;
-//     setInputValue((previousValue) => {
-//       if (name === 'search') {
-//         return {
-//           search: value,
-//           contactName: previousValue.contactName,
-//           contact: previousValue.contact,
-//         };
-//       }
-//     });
-//   }
-
-//   function onFormSubmit(event) {
-//     let updatedInputVal = setInputValue(inputValue.search);
-//     event.preventDefault();
-//     return updatedInputVal; //Want to fetch this value and use it in the ApiData.js component
-//   }
-
-//   return (
-//     <div className="form-container">
-//       <div className="input-div">
-//         <form onSubmit={onFormSubmit}>
-//           <input
-//             className="form-input"
-//             onChange={handleChange}
-//             type="text"
-//             name="search"
-//             value={inputValue.search}
-//             placeholder="Search TV Shows"
-//           />
-//         </form>
-//       </div>
-//       <div className="btn-div">
-//         <button type="submit" className="btn">
-//           Submit
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
