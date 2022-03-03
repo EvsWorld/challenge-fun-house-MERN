@@ -99,10 +99,9 @@ export const OrgChart = () => {
     setNodes({ user: '', parent: '' });
   };
 
-  const handleFetchDescendents = async (e) => {
-    e.preventDefault();
-    console.log('handleFetchDescendents called :>> ');
-    const search = nodes.search === '' ? 'root' : nodes.search;
+  const getDescendents = async (rootOption) => {
+    console.log('getDescendents called with: ', rootOption);
+    const search = rootOption ? rootOption : 'root';
     try {
       const response = await api.get(`/api/org-persons/${search}`);
       console.log('response.data :>> ', response.data);
@@ -116,17 +115,19 @@ export const OrgChart = () => {
     }
   };
 
+  const handleFetchDescendents = async (e) => {
+    e.preventDefault();
+    try {
+      await getDescendents(nodes.search);
+    } catch (ex) {
+      console.error(ex);
+    }
+  };
+
   useEffect(() => {
     (async () => {
-      const search = nodes.search === '' ? 'root' : nodes.search;
       try {
-        const response = await api.get(`/api/org-persons/${search}`);
-        console.log('response.data :>> ', response.data);
-        if (response.data) {
-          setPersons(response.data);
-        }
-
-        setIsLoading(false);
+        await getDescendents('root');
       } catch (ex) {
         console.error(ex);
       }
