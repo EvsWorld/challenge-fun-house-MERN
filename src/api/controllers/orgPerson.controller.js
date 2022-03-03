@@ -74,10 +74,12 @@ export const updateParentConnectChildren = async (req, res) => {
     });
 };
 
-export const info = (req, res) => {
+export const tree = (req, res) => {
   const { name } = req.params;
   console.log("name query string :>> ", name);
-  OrgPerson.find({ path: new RegExp(name) }).exec((err, persons) => {
+  const regex = `,${name},`;
+  // NOTE: right now this only works for unique single letter names.
+  OrgPerson.find({ path: new RegExp(regex) }).exec((err, persons) => {
     if (err) {
       console.error(err);
       res.status(500).send({ message: err });
@@ -87,6 +89,7 @@ export const info = (req, res) => {
     if (!persons) {
       return res.status(404).send({ message: "User Not found.", data: [] });
     }
+    console.log("persons :>> ", persons);
     const response = persons?.length ? makeTree(persons) : [];
     res.status(200).send(response);
   });

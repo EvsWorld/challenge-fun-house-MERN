@@ -7,8 +7,23 @@
  * Instead of copying files from the local filesystem to the container, it would be possible instead to map/mount a
  * local directory directly to the container directory.
  */
-
 const personsData = [
+  { path: ",aboveRoot,", name: "root" },
+  { path: ",aboveRoot,root,", name: "a" },
+  { path: ",aboveRoot,root,", name: "b" },
+  { path: ",aboveRoot,root,j,", name: "c" },
+  { path: ",aboveRoot,root,e,", name: "d" },
+  { path: ",aboveRoot,root,", name: "e" },
+  { path: ",aboveRoot,root,a,k,", name: "f" },
+  { path: ",aboveRoot,root,e,", name: "g" },
+  { path: ",aboveRoot,root,a,k,", name: "h" },
+  { path: ",aboveRoot,root,e,", name: "i" },
+  { path: ",aboveRoot,root,", name: "j" },
+  { path: ",aboveRoot,root,a,", name: "k" },
+  { path: ",aboveRoot,root,j,", name: "l" },
+];
+
+const personsData1 = [
   {
     name: "root",
     path: ",",
