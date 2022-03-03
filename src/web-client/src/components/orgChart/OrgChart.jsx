@@ -21,6 +21,10 @@ function alphabetPosition(text) {
 function manOrWoman(letter) {
   return alphabetPosition(letter) % 2 === 0 ? 'men' : 'women';
 }
+function numberFromString(astring) {
+  const letter = astring[0];
+  return alphabetPosition(letter);
+}
 
 const Card = ({ persons }) => {
   const [levelColor, setLevelColor] = useState('');
@@ -40,7 +44,7 @@ const Card = ({ persons }) => {
                   <img
                     src={`https://randomuser.me/api/portraits/${manOrWoman(
                       item.name
-                    )}/${alphabetPosition(item.name)}.jpg`}
+                    )}/${numberFromString(item.name)}.jpg`}
                     alt="Profile"
                     style={{ borderColor: levelColor }}
                   />
@@ -94,7 +98,7 @@ export const OrgChart = () => {
 
   const getDescendents = async (rootOption) => {
     console.log('getDescendents called with: ', rootOption);
-    const search = rootOption ? rootOption : 'root';
+    const search = rootOption ? rootOption : 'x';
     try {
       const response = await api.get(`/api/org-persons/${search}`);
       console.log('response.data :>> ', response.data);
@@ -126,7 +130,7 @@ export const OrgChart = () => {
             <input
               name="user"
               type="text"
-              placeholder="User to move"
+              placeholder="Person to move"
               onChange={handleInput}
               value={nodes.user}
             />
@@ -145,7 +149,7 @@ export const OrgChart = () => {
             <input
               name="search"
               type="text"
-              placeholder="person"
+              placeholder="Person"
               onChange={handleInput}
             />
             <button type="submit">Fetch descendents</button>
