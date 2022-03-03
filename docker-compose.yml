@@ -33,7 +33,7 @@ services:
     environment:
       MONGO_INITDB_DATABASE: root-db
     volumes:
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./mongo-seed/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 networks:
   mern-app:
     driver: bridge

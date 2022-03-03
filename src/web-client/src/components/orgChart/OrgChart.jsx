@@ -81,14 +81,14 @@ export const OrgChart = () => {
     setNodes((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-    api.put(
+    await api.put(
       `/api/org-persons/update-parent-connect-children/?name=${nodes.user}&newParent=${nodes.parent}`
     );
-    getDescendents();
+    await getDescendents();
     setNodes({ user: '', parent: '' });
   };
 
