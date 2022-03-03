@@ -10,10 +10,19 @@ export const updateParentConnectChildren = async (req, res) => {
       .send({ message: "not possible to assign a user's parent as themself" });
   }
   const parent = await OrgPerson.findOne({ name: newParent }).exec();
-
+  if (!parent) {
+    res.status(404).send({
+      message: `Cannot find user= ${newParent}.`,
+    });
+  }
   // find person by name and get their parent.
   // Get path, cut off next to last path var. Then that is their parent.
   const target = await OrgPerson.findOne({ name }).exec();
+  if (!target) {
+    res.status(404).send({
+      message: `Cannot find user= ${name}.`,
+    });
+  }
   const pathArray = target.path.split(",");
   const targetParent = pathArray[pathArray.length - 2];
   const effTarget = target.path;
