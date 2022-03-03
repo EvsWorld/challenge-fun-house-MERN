@@ -12,8 +12,31 @@ function randomIntFromInterval(min, max) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+function alphabetPosition(text) {
+  var result = '';
+  for (var i = 0; i < text.length; i++) {
+    var code = text.toUpperCase().charCodeAt(i);
+    if (code > 64 && code < 91) result += code - 64 + ' ';
+  }
+
+  return result.slice(0, result.length - 1);
+}
+function manOrWoman(letter) {
+  const number = alphabetPosition(letter);
+  console.log('number :>> ', number);
+  const r = number % 2 === 0 ? 'men' : 'women';
+  console.log('r :>> ', r);
+  return r;
+}
+console.log('manOrWoman: ', manOrWoman('b'));
+
 const Card = (props) => {
-  const levelColor = randomcolor();
+  const [levelColor, setLevelColor] = useState('');
+  const [face, setFace] = useState(1);
+  useEffect(() => {
+    setLevelColor(randomcolor());
+    setFace(randomIntFromInterval(1, 9));
+  }, []);
 
   return (
     <ul>
@@ -23,11 +46,9 @@ const Card = (props) => {
             <div className="card">
               <div className="image">
                 <img
-                  src={
-                    'https://randomuser.me/api/portraits/lego/' +
-                    randomIntFromInterval(1, 9) +
-                    '.jpg'
-                  }
+                  src={`https://randomuser.me/api/portraits/${manOrWoman(
+                    item.name
+                  )}/${alphabetPosition(item.name)}.jpg`}
                   alt="Profile"
                   style={{ borderColor: levelColor }}
                 />
@@ -54,15 +75,27 @@ const Card = (props) => {
 };
 
 export const OrgChart = () => {
-  const [data, setData] = useState([]);
+  const [persons, setPersons] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [nodes, setNodes] = useState({
+    user: '',
+    parent: '',
+  });
+
+  const handleInput = (event) => {
+    event.preventDefault();
+    console.log('event.target.value :>> ', event.target.value);
+    console.log('event.target.name :>> ', event.target.name);
+    setNodes((prev) => ({ ...prev, [event.target.name]: event.target.value }));
+  };
+
   useEffect(() => {
     (async () => {
       try {
         const response = await api.get('/api/org-persons/root');
         console.log('response.data :>> ', response.data);
         if (response.data) {
-          setData(response.data);
+          setPersons(response.data);
         }
 
         setIsLoading(false);
@@ -77,12 +110,22 @@ export const OrgChart = () => {
       <div className="header">
         Org Chart
         <span className="follow">
-          <div>input boxes</div>
-          <div>input boxes</div>
+          <input
+            name="user"
+            type="text"
+            placeholder="User to move"
+            onChange={handleInput}
+          />
+          <input
+            name="parent"
+            type="text"
+            placeholder="New parent"
+            onChange={handleInput}
+          />
         </span>
       </div>
       <div className="org-tree">
-        <Card data={data} />
+        <Card data={persons} />
       </div>
     </>
   );

@@ -31,19 +31,9 @@ services:
     networks:
       - mern-app
     environment:
-      # MONGO_INITDB_ROOT_USERNAME: "root"
-      # MONGO_INITDB_ROOT_PASSWORD: "password"
       MONGO_INITDB_DATABASE: root-db
     volumes:
-      # - mongo-data:/data/db
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-  # mongo-seed:
-  #   build: ./mongo-seed
-  #   depends_on:
-  #     - mongodb
 networks:
   mern-app:
     driver: bridge
-# volumes:
-#   mongo-data:
-#     driver: local

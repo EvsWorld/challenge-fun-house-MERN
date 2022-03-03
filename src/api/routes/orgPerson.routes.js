@@ -8,9 +8,5 @@ router.put(
   "/update-parent-connect-children",
   orgPersonController.updateParentConnectChildren
 );
-router.put(
-  "/update-parent-bring-children",
-  orgPersonController.updateParentBringChildren
-);
 
 export default router;
