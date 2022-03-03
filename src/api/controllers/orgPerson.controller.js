@@ -4,6 +4,11 @@ import { makeTree } from "../services/orgPerson.service";
 export const updateParentConnectChildren = async (req, res) => {
   console.log("hit update!");
   const { name, newParent } = req.query;
+  if (name === newParent) {
+    res
+      .status(400)
+      .send({ message: "not possible to assign a user's parent as themself" });
+  }
   const parent = await OrgPerson.findOne({ name: newParent }).exec();
 
   // find person by name and get their parent.
@@ -50,13 +55,10 @@ export const updateParentConnectChildren = async (req, res) => {
       } else
         res.send({
           message: "tree update successfully",
-          updatedUser: {
-            path: data.path,
-            name: data.name,
-          },
         });
     })
     .catch((err) => {
+      console.error(err);
       res.status(500).send({
         message: "Error updating person with name=" + name,
       });
@@ -65,29 +67,18 @@ export const updateParentConnectChildren = async (req, res) => {
 
 export const info = (req, res) => {
   const { name } = req.params;
-
   console.log("name query string :>> ", name);
-  // const target = await OrgPerson.findOne({ name });
-  // const path = target.path;
-  // console.log("target :>> ", target);
-  // console.log("path :>> ", path);
-
-  // TODO: sort by path so it returns the target at top, then in makeTrees,
-  // build the path from the first one
-  // await OrgPerson.find({ $or: [{ path: new RegExp(name) }, { name }] }).exec(
-  //   (err, persons) => {
   OrgPerson.find({ path: new RegExp(name) }).exec((err, persons) => {
-    console.log("persons :>> ", persons);
-
     if (err) {
+      console.error(err);
       res.status(500).send({ message: err });
       return;
     }
 
     if (!persons) {
-      return res.status(404).send({ message: "User Not found." });
+      return res.status(404).send({ message: "User Not found.", data: [] });
     }
-
-    res.status(200).send(makeTree(persons));
+    const response = persons?.length ? makeTree(persons) : [];
+    res.status(200).send(response);
   });
 };

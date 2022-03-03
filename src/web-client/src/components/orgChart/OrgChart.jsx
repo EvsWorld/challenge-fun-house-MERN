@@ -31,7 +31,7 @@ const Card = ({ persons }) => {
   }, []);
   return (
     <ul>
-      {persons.length &&
+      {persons.length > 0 ? (
         persons.map((item, index) => (
           <Fragment key={item.name}>
             <li>
@@ -58,7 +58,10 @@ const Card = ({ persons }) => {
               {item.children?.length && <Card persons={item.children} />}
             </li>
           </Fragment>
-        ))}
+        ))
+      ) : (
+        <h2>No Descendents for this person</h2>
+      )}
     </ul>
   );
 };
@@ -75,27 +78,17 @@ export const OrgChart = () => {
   const handleInput = (e) => {
     const { name, value } = e.target;
     e.preventDefault();
-    console.log('value :>> ', value);
-    console.log('name :>> ', name);
     setNodes((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log('onFormSubmit e :>> ', e.target);
-    console.log('{nodes} :>> ', { nodes });
 
-    const response = await api.put(
+    api.put(
       `/api/org-persons/update-parent-connect-children/?name=${nodes.user}&newParent=${nodes.parent}`
     );
-    console.log('response.data :>> ', response.data);
-    const tree = await api.get('/api/org-persons/root');
-    console.log('tree.data :>> ', tree.data);
-    if (tree.data) {
-      setPersons(tree.data);
-    }
-    setIsLoading(false);
+    getDescendents();
     setNodes({ user: '', parent: '' });
   };
 
@@ -117,21 +110,11 @@ export const OrgChart = () => {
 
   const handleFetchDescendents = async (e) => {
     e.preventDefault();
-    try {
-      await getDescendents(nodes.search);
-    } catch (ex) {
-      console.error(ex);
-    }
+    getDescendents(nodes.search);
   };
 
   useEffect(() => {
-    (async () => {
-      try {
-        await getDescendents('root');
-      } catch (ex) {
-        console.error(ex);
-      }
-    })();
+    getDescendents();
   }, []);
 
   return (
@@ -164,13 +147,14 @@ export const OrgChart = () => {
               type="text"
               placeholder="person"
               onChange={handleInput}
-              // value={nodes.search}
             />
             <button type="submit">Fetch descendents</button>
           </form>
         </span>
       </div>
-      <div className="org-tree">{!isLoading && <Card persons={persons} />}</div>
+      <div className="org-tree">
+        {isLoading ? <h2>Loading....</h2> : <Card persons={persons} />}
+      </div>
     </>
   );
 };
