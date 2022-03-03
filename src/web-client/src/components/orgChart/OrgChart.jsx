@@ -97,11 +97,9 @@ export const OrgChart = () => {
   };
 
   const getDescendents = async (rootOption) => {
-    console.log('getDescendents called with: ', rootOption);
     const search = rootOption ? rootOption : 'aboveRoot';
     try {
       const response = await api.get(`/api/org-persons/${search}`);
-      console.log('response.data :>> ', response.data);
       if (response.data) {
         setPersons(response.data);
       }

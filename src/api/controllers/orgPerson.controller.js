@@ -2,7 +2,6 @@ import { OrgPerson } from "../models/orgPerson.model";
 import { makeTree } from "../services/orgPerson.service";
 
 export const updateParentConnectChildren = async (req, res) => {
-  console.log("hit update!");
   const { name, newParent } = req.query;
   if (name === newParent) {
     res
@@ -76,9 +75,7 @@ export const updateParentConnectChildren = async (req, res) => {
 
 export const tree = (req, res) => {
   const { name } = req.params;
-  console.log("name query string :>> ", name);
   const regex = `,${name},`;
-  // NOTE: right now this only works for unique single letter names.
   OrgPerson.find({ path: new RegExp(regex) }).exec((err, persons) => {
     if (err) {
       console.error(err);
@@ -89,7 +86,6 @@ export const tree = (req, res) => {
     if (!persons) {
       return res.status(404).send({ message: "User Not found.", data: [] });
     }
-    console.log("persons :>> ", persons);
     const response = persons?.length ? makeTree(persons) : [];
     res.status(200).send(response);
   });
