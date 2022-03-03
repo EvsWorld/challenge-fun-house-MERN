@@ -18,58 +18,51 @@ function alphabetPosition(text) {
     var code = text.toUpperCase().charCodeAt(i);
     if (code > 64 && code < 91) result += code - 64 + ' ';
   }
-
   return result.slice(0, result.length - 1);
 }
-function manOrWoman(letter) {
-  const number = alphabetPosition(letter);
-  console.log('number :>> ', number);
-  const r = number % 2 === 0 ? 'men' : 'women';
-  console.log('r :>> ', r);
-  return r;
-}
-console.log('manOrWoman: ', manOrWoman('b'));
 
-const Card = (props) => {
+function manOrWoman(letter) {
+  return alphabetPosition(letter) % 2 === 0 ? 'men' : 'women';
+}
+
+const Card = ({ persons }) => {
   const [levelColor, setLevelColor] = useState('');
   const [face, setFace] = useState(1);
   useEffect(() => {
     setLevelColor(randomcolor());
     setFace(randomIntFromInterval(1, 9));
   }, []);
-
+  // const content = isLoading ? ()
   return (
     <ul>
-      {props.data.map((item, index) => (
-        <Fragment key={item.name}>
-          <li>
-            <div className="card">
-              <div className="image">
-                <img
-                  src={`https://randomuser.me/api/portraits/${manOrWoman(
-                    item.name
-                  )}/${alphabetPosition(item.name)}.jpg`}
-                  alt="Profile"
-                  style={{ borderColor: levelColor }}
-                />
+      {persons.length &&
+        persons.map((item, index) => (
+          <Fragment key={item.name}>
+            <li>
+              <div className="card">
+                <div className="image">
+                  <img
+                    src={`https://randomuser.me/api/portraits/${manOrWoman(
+                      item.name
+                    )}/${alphabetPosition(item.name)}.jpg`}
+                    alt="Profile"
+                    style={{ borderColor: levelColor }}
+                  />
+                </div>
+                <div className="card-body">
+                  <h4>{item.name}</h4>
+                  <p>{item.path}</p>
+                </div>
+                <div
+                  className="card-footer"
+                  style={{ background: levelColor }}
+                ></div>
+                <div></div>
               </div>
-              <div className="card-body">
-                {/* <h4>{faker.name.findName()}</h4> */}
-                <h4>{item.name}</h4>
-                {/* <p>{faker.name.jobTitle()}</p> */}
-                <p>{item.path}</p>
-              </div>
-              <div className="card-footer" style={{ background: levelColor }}>
-                {/* <img src={chat} alt="Chat" />
-                <img src={call} alt="Call" />
-                <img src={video} alt="Video" /> */}
-              </div>
-              <div></div>
-            </div>
-            {item.children?.length && <Card data={item.children} />}
-          </li>
-        </Fragment>
-      ))}
+              {item.children?.length && <Card persons={item.children} />}
+            </li>
+          </Fragment>
+        ))}
     </ul>
   );
 };
@@ -78,15 +71,36 @@ export const OrgChart = () => {
   const [persons, setPersons] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [nodes, setNodes] = useState({
+    search: 'root',
     user: '',
     parent: '',
   });
 
-  const handleInput = (event) => {
-    event.preventDefault();
-    console.log('event.target.value :>> ', event.target.value);
-    console.log('event.target.name :>> ', event.target.name);
-    setNodes((prev) => ({ ...prev, [event.target.name]: event.target.value }));
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    e.preventDefault();
+    console.log('value :>> ', value);
+    console.log('name :>> ', name);
+    setNodes((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    console.log('onFormSubmit e :>> ', e.target);
+    console.log('{nodes} :>> ', { nodes });
+
+    const response = await api.put(
+      `/api/org-persons/update-parent-connect-children/?name=${nodes.user}&newParent=${nodes.parent}`
+    );
+    console.log('response.data :>> ', response.data);
+    const r = await api.get('/api/org-persons/root');
+    console.log('response.data :>> ', r.data);
+    if (r.data) {
+      setPersons(r.data);
+    }
+    setIsLoading(false);
+    setNodes({ user: '', parent: '' });
   };
 
   useEffect(() => {
@@ -105,28 +119,92 @@ export const OrgChart = () => {
     })();
   }, []);
 
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const response = await api.put(
+  //         `/api/org-persons/update-parent-connect-children/?name=${nodes.user}&newParent=${nodes.parent}`
+  //       );
+  //       console.log('response.data :>> ', response.data);
+  //       if (response.data) {
+  //         setPersons(response.data);
+  //       }
+
+  //       setIsLoading(false);
+  //     } catch (ex) {
+  //       console.error(ex);
+  //     }
+  //   })();
+  // }, [nodes]);
+
   return (
     <>
       <div className="header">
         Org Chart
         <span className="follow">
-          <input
-            name="user"
-            type="text"
-            placeholder="User to move"
-            onChange={handleInput}
-          />
-          <input
-            name="parent"
-            type="text"
-            placeholder="New parent"
-            onChange={handleInput}
-          />
+          <form onSubmit={handleFormSubmit}>
+            <input
+              name="user"
+              type="text"
+              placeholder="User to move"
+              onChange={handleInput}
+              value={nodes.user}
+            />
+            <input
+              name="parent"
+              type="text"
+              placeholder="New parent"
+              onChange={handleInput}
+              value={nodes.parent}
+            />
+            <button type="submit">Submit</button>
+          </form>
         </span>
       </div>
-      <div className="org-tree">
-        <Card data={persons} />
-      </div>
+      <div className="org-tree">{!isLoading && <Card persons={persons} />}</div>
     </>
   );
 };
+
+// function UseForm() {
+//   function handleChange(e) {
+//     const { name, value } = e.target;
+//     setInputValue((previousValue) => {
+//       if (name === 'search') {
+//         return {
+//           search: value,
+//           contactName: previousValue.contactName,
+//           contact: previousValue.contact,
+//         };
+//       }
+//     });
+//   }
+
+//   function onFormSubmit(event) {
+//     let updatedInputVal = setInputValue(inputValue.search);
+//     event.preventDefault();
+//     return updatedInputVal; //Want to fetch this value and use it in the ApiData.js component
+//   }
+
+//   return (
+//     <div className="form-container">
+//       <div className="input-div">
+//         <form onSubmit={onFormSubmit}>
+//           <input
+//             className="form-input"
+//             onChange={handleChange}
+//             type="text"
+//             name="search"
+//             value={inputValue.search}
+//             placeholder="Search TV Shows"
+//           />
+//         </form>
+//       </div>
+//       <div className="btn-div">
+//         <button type="submit" className="btn">
+//           Submit
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
