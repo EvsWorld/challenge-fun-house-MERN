@@ -12,6 +12,10 @@ export function makeTree(entities) {
       throw "mince! something is rotten in the state of Denmark...";
   } while (unDone.length > 0);
 
+  /* --------------------------------------------------------*/
+  console.log("\n makeTree result===", JSON.stringify(result, 0, 2));
+  /* --------------------------------------------------------*
+   **/
   return result;
 
   function setResult(arrayIn, nb_rej) {
