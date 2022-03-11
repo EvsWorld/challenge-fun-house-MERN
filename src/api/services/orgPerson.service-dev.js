@@ -1,48 +1,121 @@
+const persons = [
+  { path: ",aboveRoot,", name: "root" },
+  {
+    path: ",aboveRoot,root,",
+    name: "a",
+  },
+  {
+    path: ",aboveRoot,root,",
+    name: "b",
+  },
+  {
+    path: ",aboveRoot,root,j,",
+    name: "c",
+  },
+  {
+    path: ",aboveRoot,root,e,",
+    name: "d",
+  },
+  {
+    path: ",aboveRoot,root,",
+    name: "e",
+  },
+  {
+    path: ",aboveRoot,root,e,g,",
+    name: "f",
+  },
+  {
+    path: ",aboveRoot,root,e,",
+    name: "g",
+  },
+  {
+    path: ",aboveRoot,root,e,g,",
+    name: "h",
+  },
+  {
+    path: ",aboveRoot,root,e,d,",
+    name: "q",
+  },
+  {
+    path: ",aboveRoot,root,e,",
+    name: "i",
+  },
+  {
+    path: ",aboveRoot,root,",
+    name: "j",
+  },
+  {
+    path: ",aboveRoot,root,a,",
+    name: "k",
+  },
+  {
+    path: ",aboveRoot,root,a,",
+    name: "p",
+  },
+  {
+    path: ",aboveRoot,root,j,",
+    name: "l",
+  },
+  {
+    path: ",aboveRoot,root,j,l,",
+    name: "m",
+  },
+  {
+    path: ",aboveRoot,root,j,l,",
+    name: "n",
+  },
+  {
+    path: ",aboveRoot,root,j,l,",
+    name: "o",
+  },
+];
+
 function makeTree(entities) {
+  console.log("entities :>> ", entities);
   const firstEntity = entities[0];
-  console.log("firstEntity :>> ", firstEntity);
   const targetPath = firstEntity.path;
-  console.log("targetPath :>> ", targetPath);
   const result = [];
   let unDone = [],
     source = entities;
   let cpt = 0; // just for stoping infinite loop on error
   do {
+    // assign remaining unDones (orphans from setResult)
     unDone = setResult(source, unDone.length);
+    // assign remaining source for next do loop input to setResult
     source = unDone;
     if (++cpt > 10)
       throw "mince! something is rotten in the state of Denmark...";
   } while (unDone.length > 0);
+
   /* --------------------------------------------------------*/
-  console.log("result===", JSON.stringify(result, 0, 2));
-  /* --------------------------------------------------------*/
+  console.log("\n makeTree result===", JSON.stringify(result, 0, 2));
+  /* --------------------------------------------------------*
+   **/
   return result;
 
+  // sets results and returns orphans
   function setResult(arrayIn, nb_rej) {
     let orphans = [];
     for (let elData of arrayIn) {
+      // give current element children
       let newEl = { ...elData, children: null };
-      console.log("newEl :>> ", newEl);
-      // console.log("elData :>> ", elData);
-      console.log("elData.path :>> ", elData.path);
-      console.log("elData.id :>> ", elData._id);
+      // get parent
       let parAr = getParentKey(elData.path);
-      console.log("parAr :>> ", parAr);
 
+      // If has no parents then push current elem to result array
       if (parAr.length === 0) {
         result.push(newEl);
+        // if has parents,
       } else {
         let resParent = result;
         do {
           let rech = parAr.pop(),
             fPar = resParent.find((treeElm) => {
-              console.log("treeElm :>> ", treeElm);
               return treeElm.name === rech.name && treeElm.path === rech.path;
             });
           if (fPar) {
             if (fPar.children === null) fPar.children = [];
             resParent = fPar.children;
-            // throw `parent element not found : id:'${rech.id}', path:'${rech.path}'`;
           } else {
             orphans.push({ ...elData });
             resParent = null;
@@ -57,9 +130,9 @@ function makeTree(entities) {
 
     return orphans;
   }
+
   function getParentKey(path) {
-    console.log("path :>> ", path);
-    const targetLevel = getLevelFromPath(targetPath) + 1;
+    const targetLevel = getLevelFromPath(targetPath);
     // return array of parent element
     let rep = [],
       par = path,
@@ -69,57 +142,65 @@ function makeTree(entities) {
       idK;
     do {
       bKey = par.substring(0, par.lastIndexOf(",")); // remove last ','
-      console.log("bKey :>> ", bKey);
+      // get level by counting commas
       lev = bKey.match(/,/g).length - 1;
-      console.log("lev :>> ", lev);
       if (lev > targetLevel) {
         xCom = bKey.lastIndexOf(",");
         par = bKey.substring(0, xCom) + ",";
         idK = bKey.substring(++xCom);
         rep.push({ path: par, name: idK });
-        console.log("rep after push :>> ", rep);
       }
     } while (lev > targetLevel);
-    console.log("array of parent element :>> ", { rep });
     return rep;
+  }
+
+  // returns level of target elem
+  function getLevelFromPath(targetPath) {
+    const bKey = targetPath.substring(0, targetPath.lastIndexOf(",")); // remove last ','
+    console.log("bKey :>> ", bKey);
+    const lev = bKey.match(/,/g).length - 1;
+    return lev;
   }
 }
 
-// returns level of target elem
-function getLevelFromPath(targetPath) {
-  const bKey = targetPath.substring(0, targetPath.lastIndexOf(",")); // remove last ','
-  console.log("bKey :>> ", bKey);
-  const lev = bKey.match(/,/g).length - 1;
-  return lev;
+// Alternate
+function makeTree1(entities) {
+  console.log("makeTree entities :>> ", entities);
+  // const input = entities.map((e) => {
+  //   return e.path;
+  // });
+  var input = [",Fred,Jim,Bob,", ",Fred,Jim,", ",Fred,Thomas,Rob,", ",Fred,"];
+  console.log("input :>> ", input);
+  var output = [];
+  for (var i = 0; i < input.length; i++) {
+    const descendentsString = input[i];
+    const descendentsStringCommasRemoved = descendentsString.replace(
+      /^,|,$/g,
+      ""
+    );
+    var chain = descendentsStringCommasRemoved.split(",");
+    var currentNode = output;
+    for (var j = 0; j < chain.length; j++) {
+      var wantedNode = chain[j];
+      var lastNode = currentNode;
+      for (var k = 0; k < currentNode.length; k++) {
+        if (currentNode[k].name == wantedNode) {
+          currentNode = currentNode[k].children;
+          break;
+        }
+      }
+      // If we couldn't find an item in this list of children
+      // that has the right name, create one:
+      if (lastNode == currentNode) {
+        var newNode = (currentNode[k] = { name: wantedNode, children: [] });
+        currentNode = newNode.children;
+      }
+    }
+  }
+  console.log("output :>> ", JSON.stringify(output, 0, 2));
+  return output;
 }
 
-console.log("getLevelFromPath = ", getLevelFromPath(",root,"));
-console.log("getLevelFromPath = ", getLevelFromPath(",root,3,"));
-console.log("getLevelFromPath = ", getLevelFromPath(",root,3,3-3,"));
-console.log("getLevelFromPath = ", getLevelFromPath(",root,3,3-3,3-3-3,"));
-
-const persons = [
-  // {
-  //   path: ",root,",
-  //   name: "same name",
-  // },
-  // {
-  //   path: ",root,",
-  //   name: "2",
-  // },
-  // { path: ",root,2,", name: "2-2" },
-  // { path: ",root,", name: "3" },
-  { path: ",root,3,", name: "3-3" },
-  {
-    path: ",root,3,3-3,",
-    name: "3-3-3",
-  },
-  {
-    path: ",root,3,3-3,3-3-3,",
-    name: "3-3-3-3",
-  },
-];
-
-// const t = { path: ',root,3,', _id: 621d3439a2e81b536d5c0771, name: '3-3' }
+// makeTree1(persons);
 
 makeTree(persons);

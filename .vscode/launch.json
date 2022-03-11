@@ -6,7 +6,33 @@
       "request": "launch",
       "name": "Launch Current file with node",
       "program": "${file}",
-      "skipFiles": ["<node_internals>/**"]
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "/Users/evanhendrix1/.nvm/versions/node/v14.17.0/bin/node"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "babel node",
+      "program": "${file}",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
+      "runtimeArgs": ["--nolazy"]
+    },
+    {
+      "name": "Launch",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceRoot}/src/api",
+      "preLaunchTask": "build",
+      "runtimeExecutable": null,
+      "runtimeArgs": ["--nolazy"],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "sourceMaps": true,
+      "outFiles": ["${workspaceRoot}/dist"]
     }
   ]
 }
