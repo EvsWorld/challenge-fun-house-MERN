@@ -4,7 +4,7 @@ body {
   font-family: 'Titilillium Web';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #c2edf2;
+  /* background: #c2edf2; */
 }
 
 * {

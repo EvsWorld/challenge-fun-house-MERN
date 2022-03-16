@@ -34,6 +34,7 @@ app.use("/api/company", routes.company);
 app.use("/api/characters", routes.character);
 app.use("/api/org-persons", routes.orgPerson);
 app.use("/api/users", routes.user);
+app.use("/api/schedule", routes.game);
 app.use("/api/auth", routes.auth);
 
 app.get("*", function (req, res, next) {

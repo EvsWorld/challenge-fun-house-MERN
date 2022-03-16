@@ -1,6 +1,7 @@
 import { Characters } from './components/Characters';
 import { Companies } from './components/Companies';
 import { OrgChart } from './components/orgChart/OrgChart';
+import { GameSchedule } from './components/gameSchedule/GameSchedule';
 import { Switch, Route } from 'react-router-dom';
 import { UserProfile } from './components/UserProfile';
 import { Character } from './components/Character';
@@ -61,6 +62,7 @@ function App() {
         <Route exact path="/characters" component={Characters} />
         <Route exact path="/companies" component={Companies} />
         <Route exact path="/org-chart" component={OrgChart} />
+        <Route exact path="/game-schedule" component={GameSchedule} />
         <RouteWrapper
           exact
           path="/login-and-signup"
