@@ -14,7 +14,7 @@ const MonthHeading = styled.div`
 const MonthContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 700px;
   overflow: hidden;
 `;
 
@@ -69,31 +69,64 @@ const Date = styled.div`
 
 const TimeContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   min-width: 6em;
   overflow: hidden;
   color: #7f8f9a;
   font-weight: 600;
-  padding: 1em;
+  padding: 0.6em;
 `;
+
+const getMonthName = (monthIndex) => {
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  return months[monthIndex - 1];
+};
+
+// TODO: order the games in the aggregation script
 export function Month({ month }) {
+  const atOrVs = (gm) => {
+    return gm.home_away === 'home' ? 'vs' : '@';
+  };
+  function compare(a, b) {
+    if (a.start.datetime < b.start.datetime) {
+      return -1;
+    }
+    if (a.start.datetime > b.start.datetime) {
+      return 1;
+    }
+    return 0;
+  }
+
   const gameContent =
     month.games.length > 0 ? (
-      month.games.map((game) => {
+      month.games.sort(compare).map((game) => {
         return (
           <Game key={game.start.datetime}>
             <GameLeft>
               <DateContainer>
-                {/* // TODO: day and date function */}
                 <Day>
                   {moment(game.start.datetime).format('ddd').toUpperCase()}
                 </Day>
                 <Date>{moment(game.start.datetime).format('D')}</Date>
               </DateContainer>
               <CardBody>
-                {/* // TODO: @ or vs function */}
-                <Opponent>vs. {game.opponent_name}</Opponent>
+                <Opponent>
+                  {atOrVs(game)} {game.opponent_name}
+                </Opponent>
                 <Location>at {game.location}</Location>
                 {/* <pre> {JSON.stringify(game, null, 2)}</pre> */}
               </CardBody>
@@ -112,9 +145,8 @@ export function Month({ month }) {
   return (
     <MonthContainer>
       <MonthHeading>
-        {/* // TODO: month and year function */}
         <h3>
-          {month._id.month} {month._id.year}
+          {getMonthName(month._id.month)} {month._id.year}
         </h3>
       </MonthHeading>
       <GameListContainer>{gameContent}</GameListContainer>
