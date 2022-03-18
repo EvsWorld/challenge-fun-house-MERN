@@ -33,14 +33,13 @@ export const allSpecialties = (companies) => {
 };
 
 function makeArrays(companies) {
-  // const allSpecialtiesA = allSpecialties(companies);
   const companiesWithArrays = companies.map((company) => {
     const specialties = makeRandomSubset(allSpecialties(companies));
     delete company.specialty;
     return { ...company, specialties };
   });
 
-  let data = JSON.stringify(companiesWithArrays.splice(0, 150));
+  let data = JSON.stringify(companiesWithArrays);
   fs.writeFileSync(__dirname + "/../mockdb/companiesWithArrays.json", data);
 }
 
