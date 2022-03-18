@@ -389,6 +389,14 @@ const gamesData = [
     location: "Bayview Park",
   },
 ];
+const usersData = [
+  {
+    favoriteCharacters: [],
+    username: "1",
+    email: "1@1.com",
+    password: "$2a$08$xgnd0xLd5GRtOt58T2utzeSGsdESJRg3IWitsXlOhQKt1026/uwEe",
+  },
+];
 
 print(
   "Start #################################################################"
@@ -402,7 +410,9 @@ db.createUser({
 });
 db.createCollection("orgPersons");
 db.createCollection("games");
+db.createCollection("users");
 db.orgPersons.insertMany(personsData);
 db.games.insertMany(gamesData);
+db.users.insertMany(usersData);
 
 print("END #################################################################");

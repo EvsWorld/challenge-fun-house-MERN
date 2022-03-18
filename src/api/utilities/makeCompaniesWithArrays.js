@@ -39,7 +39,6 @@ function makeArrays(companies) {
     delete company.specialty;
     return { ...company, specialties };
   });
-  // console.log("companiesWithArrays :>> ", companiesWithArrays);
 
   let data = JSON.stringify(companiesWithArrays.splice(0, 150));
   fs.writeFileSync(__dirname + "/../mockdb/companiesWithArrays.json", data);

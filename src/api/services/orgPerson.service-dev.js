@@ -71,7 +71,6 @@ const persons = [
 ];
 
 function makeTree(entities) {
-  console.log("entities :>> ", entities);
   const firstEntity = entities[0];
   const targetPath = firstEntity.path;
   const result = [];
@@ -87,10 +86,6 @@ function makeTree(entities) {
       throw "mince! something is rotten in the state of Denmark...";
   } while (unDone.length > 0);
 
-  /* --------------------------------------------------------*/
-  console.log("\n makeTree result===", JSON.stringify(result, 0, 2));
-  /* --------------------------------------------------------*
-   **/
   return result;
 
   // sets results and returns orphans
@@ -157,7 +152,6 @@ function makeTree(entities) {
   // returns level of target elem
   function getLevelFromPath(targetPath) {
     const bKey = targetPath.substring(0, targetPath.lastIndexOf(",")); // remove last ','
-    console.log("bKey :>> ", bKey);
     const lev = bKey.match(/,/g).length - 1;
     return lev;
   }
@@ -165,12 +159,10 @@ function makeTree(entities) {
 
 // Alternate
 function makeTree1(entities) {
-  console.log("makeTree entities :>> ", entities);
   // const input = entities.map((e) => {
   //   return e.path;
   // });
   var input = [",Fred,Jim,Bob,", ",Fred,Jim,", ",Fred,Thomas,Rob,", ",Fred,"];
-  console.log("input :>> ", input);
   var output = [];
   for (var i = 0; i < input.length; i++) {
     const descendentsString = input[i];
@@ -197,7 +189,6 @@ function makeTree1(entities) {
       }
     }
   }
-  console.log("output :>> ", JSON.stringify(output, 0, 2));
   return output;
 }
 

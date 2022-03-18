@@ -65,7 +65,6 @@ export function Companies() {
     (async () => {
       try {
         const response = await api.get('/api/company');
-        console.log('response.data :>> ', response.data);
         if (response.data) {
           setInitialCompanies(response.data);
         }
@@ -78,7 +77,6 @@ export function Companies() {
   }, []);
 
   const handleSearch = (event) => {
-    console.log('event.target.value :>> ', event.target.value);
     setFilter((prev) => ({ ...prev, searchWord: event.target.value }));
   };
 

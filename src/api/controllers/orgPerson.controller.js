@@ -86,7 +86,6 @@ export const tree = (req, res) => {
     if (!persons) {
       return res.status(404).send({ message: "User Not found.", data: [] });
     }
-    // console.log("tree route: persons :>> ", persons);
     const response = persons?.length ? makeTree(persons) : [];
     res.status(200).send(response);
   });

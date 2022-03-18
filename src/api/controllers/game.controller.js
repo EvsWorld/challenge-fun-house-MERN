@@ -43,7 +43,6 @@ export const findByMonth = (req, res) => {
     },
   ])
     .then((data) => {
-      console.log("from find: games :>> ", data);
       res.send(data);
     })
     .catch((err) => {

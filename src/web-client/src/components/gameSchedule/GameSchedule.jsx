@@ -40,7 +40,6 @@ export const GameSchedule = () => {
     })();
   }, []);
 
-  console.log('games :>> ', games);
   return (
     <>
       {isLoading && games?.length === 0 ? (
