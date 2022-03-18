@@ -47,6 +47,10 @@ My approach was to use a 'materialized paths' strategy in mongodb. Each node has
 Model.find({ path: new RegExp('Bob') }
 ```
 
+#### My notes after finishing
+
+There's one requirement I didn't explicitly address, and that is the part about the data to be stored in the node entities themselves. My solution has that information but it is not explicit. I used mongodb and what I believe is called 'materialized paths' pattern. So in each node is the path which includes the node's parent, the root, and if you were to count the paths then you'd of course have the level. I could have put those fields on the schema to have them be calculated on save and exist in the db, but I've always thought that it's best to not have duplicated/derived data in the db.
+
 ---
 
 ### Characters
