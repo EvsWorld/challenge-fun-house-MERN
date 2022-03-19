@@ -25,5 +25,6 @@ docker-compose up
 ## Documentation of other challenges contained in app
 
 - [Game Schedule](./challenge-requirements-docs/game-schedule)
+- [Company Filter](./challenge-requirements-docs/company-filter)
 - [Org Chart](./challenge-requirements-docs/org-chart)
 - [Rick and Morty Characters](./challenge-requirements-docs/rick-and-morty)
