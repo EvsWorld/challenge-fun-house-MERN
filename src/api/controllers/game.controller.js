@@ -4,27 +4,13 @@ import { Game } from "../models/game.model";
 export const findByMonth = (req, res) => {
   Game.aggregate([
     {
-      $project: {
-        event_type: 1,
-        status: 1,
-        home_away: 1,
-        opponent_id: 1,
-        opponent_name: 1,
-        timezone: 1,
-        notes: 1,
-        location: 1,
-        start: 1,
-        date: "$start.datetime",
-      },
-    },
-    {
-      $unwind: "$date",
+      $unwind: "$start.datetime",
     },
     {
       $group: {
         _id: {
-          month: { $month: "$date" },
-          year: { $year: "$date" },
+          month: { $month: "$start.datetime" },
+          year: { $year: "$start.datetime" },
         },
         games: {
           $addToSet: {
@@ -41,6 +27,7 @@ export const findByMonth = (req, res) => {
         },
       },
     },
+    { $sort: { _id: 1 } },
   ])
     .then((data) => {
       res.send(data);

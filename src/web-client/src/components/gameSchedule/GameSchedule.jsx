@@ -26,15 +26,15 @@ const Months = styled.div`
 `;
 
 export const GameSchedule = () => {
-  const [games, setGames] = useState([]);
+  const [months, setMonths] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
       try {
-        const response = await api.get(`/api/schedule`);
+        const response = await api.get(`/api/schedules`);
         if (response.data) {
-          setGames(response.data);
+          setMonths(response.data);
         }
 
         setIsLoading(false);
@@ -46,7 +46,7 @@ export const GameSchedule = () => {
 
   return (
     <>
-      {isLoading && games?.length === 0 ? (
+      {isLoading && months?.length === 0 ? (
         <CenterSmallLayout>
           <ClipLoader size={150} color={'#123abc'} loading={true} />
         </CenterSmallLayout>
@@ -54,7 +54,7 @@ export const GameSchedule = () => {
         <Container>
           <Header> Schedule</Header>
           <Months>
-            {games.map((month) => (
+            {months.map((month) => (
               <Month month={month} />
             ))}
           </Months>

@@ -66,7 +66,7 @@ export function Companies() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await api.get('/api/company');
+        const response = await api.get('/api/companies');
         if (response.data) {
           setInitialCompanies(response.data);
         }
