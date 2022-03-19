@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import randomcolor from 'randomcolor';
 import faker from 'faker';
 import api from '../../utils/axiosConfig';
+import ClipLoader from 'react-spinners/ClipLoader';
+import { CenterSmallLayout } from '../../components/Layouts';
 
 function randomIntFromInterval(min, max) {
   // min and max included
@@ -155,7 +157,13 @@ export const OrgChart = () => {
         </span>
       </div>
       <div className="org-tree">
-        {isLoading ? <h2>Loading....</h2> : <Card persons={persons} />}
+        {isLoading ? (
+          <CenterSmallLayout>
+            <ClipLoader size={150} color={'#123abc'} loading={true} />
+          </CenterSmallLayout>
+        ) : (
+          <Card persons={persons} />
+        )}
       </div>
     </>
   );

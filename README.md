@@ -1,6 +1,6 @@
 # CRUD MERN Challenge
 
-This is a project that started as a code challenge, and I've added to it for experimentation, and some other challenges. The app, for now, is a create-react-app with an express backend and mongodb database.
+The app, for now, is a create-react-app with an express backend and mongodb database.
 
 ---
 
@@ -24,7 +24,6 @@ docker-compose up
 
 ## Documentation of other challenges contained in app
 
-- [Game Schedule](./challenge-requirements-docs/game-schedule)
-- [Company Filter](./challenge-requirements-docs/company-filter)
 - [Org Chart](./challenge-requirements-docs/org-chart)
+- [Company Filter](./challenge-requirements-docs/company-filter)
 - [Rick and Morty Characters](./challenge-requirements-docs/rick-and-morty)

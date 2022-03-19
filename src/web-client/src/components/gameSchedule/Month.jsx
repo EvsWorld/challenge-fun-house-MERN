@@ -128,7 +128,6 @@ export function Month({ month }) {
                   {atOrVs(game)} {game.opponent_name}
                 </Opponent>
                 <Location>at {game.location}</Location>
-                {/* <pre> {JSON.stringify(game, null, 2)}</pre> */}
               </CardBody>
             </GameLeft>
             <TimeContainer>

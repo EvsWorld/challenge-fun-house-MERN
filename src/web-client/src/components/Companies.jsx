@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import api from '../utils/axiosConfig';
 import { Company } from './Company';
 import { createFilterState, filterCompanies } from './filter/filterLogic';
+import ClipLoader from 'react-spinners/ClipLoader';
+import { CenterSmallLayout } from '../components/Layouts';
 
 const CompaniesContainer = styled.div`
   display: flex;
@@ -85,8 +87,9 @@ export function Companies() {
   }, [filter, initialCompanies]);
 
   const content = isLoading ? (
-    // TODO: format loader
-    <div>Loading...</div>
+    <CenterSmallLayout>
+      <ClipLoader size={150} color={'#123abc'} loading={true} />
+    </CenterSmallLayout>
   ) : (
     filteredCompanies &&
     filteredCompanies.map((company) => (

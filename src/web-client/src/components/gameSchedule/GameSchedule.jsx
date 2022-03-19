@@ -2,16 +2,20 @@ import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import api from '../../utils/axiosConfig';
 import { Month } from './Month';
+import ClipLoader from 'react-spinners/ClipLoader';
+import { CenterSmallLayout } from '../../components/Layouts';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Header = styled.h1`
+const Header = styled.div`
+  font-size: 2em;
+  font-weight: bold;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 20px;
+  margin-top: 15px;
 `;
 const Months = styled.div`
   display: flex;
@@ -43,7 +47,9 @@ export const GameSchedule = () => {
   return (
     <>
       {isLoading && games?.length === 0 ? (
-        <h2>Loading....</h2>
+        <CenterSmallLayout>
+          <ClipLoader size={150} color={'#123abc'} loading={true} />
+        </CenterSmallLayout>
       ) : (
         <Container>
           <Header> Schedule</Header>
