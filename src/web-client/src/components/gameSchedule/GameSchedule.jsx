@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState, Fragment, useMemo } from 'react';
 import styled from 'styled-components';
 import api from '../../utils/axiosConfig';
 import { Month } from './Month';
@@ -28,6 +28,23 @@ const Months = styled.div`
 export const GameSchedule = () => {
   const [months, setMonths] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [searchText, setSearchText] = useState('');
+  const handleSearch = (e) => {
+    setSearchText((prev) => e.target.value);
+  };
+  const filteredMonths = useMemo(() => {
+    const newMonths = months.map((month) => {
+      const filteredGames = month.games.filter((game) => {
+        return (
+          game.opponent_name.toLowerCase().includes(searchText.toLowerCase()) ||
+          game.location.toLowerCase().includes(searchText.toLowerCase())
+        );
+      });
+      return { ...month, games: filteredGames };
+    });
+    console.log('newMonths :>> ', newMonths);
+    return newMonths;
+  }, [searchText, months]);
 
   useEffect(() => {
     (async () => {
@@ -46,15 +63,17 @@ export const GameSchedule = () => {
 
   return (
     <>
-      {isLoading && months?.length === 0 ? (
+      {isLoading && filteredMonths?.length === 0 ? (
         <CenterSmallLayout>
           <ClipLoader size={150} color={'#123abc'} loading={true} />
         </CenterSmallLayout>
       ) : (
         <Container>
           <Header> Schedule</Header>
+          {/* TODO: test box filter */}
+          <input type="text" name="searchText" onChange={handleSearch} />
           <Months>
-            {months.map((month) => (
+            {filteredMonths.map((month) => (
               <Month month={month} />
             ))}
           </Months>
